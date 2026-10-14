@@ -26,6 +26,7 @@ from .parsers.plan_activities_api import (
     parse_plan_activities_bundle,
 )
 from .parsers.plan_pdf_summary import parse_plan_summary_tied_untied
+from .parsers.voucher_details import parse_voucher_detail_file
 from .parsers.vouchers import parse_voucher_file
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -256,6 +257,32 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
                 "records": [v.model_dump(mode="json") for v in vouchers],
             },
         )
+
+    # --- Voucher payment details (HTML from getPaymentVoucherDetail.do) ---
+    detail_count = 0
+    details_root = RAW / "vouchers" / "details"
+    if details_root.exists():
+        for api_dir in sorted(p for p in details_root.iterdir() if p.is_dir()):
+            api_fy = api_dir.name
+            for html_path in sorted(api_dir.glob("*.html")):
+                try:
+                    v_id = int(html_path.stem)
+                except ValueError:
+                    continue
+                detail, d_warnings = parse_voucher_detail_file(
+                    html_path, v_id=v_id, api_fin_year=api_fy
+                )
+                all_warnings.extend(d_warnings)
+                if detail is None:
+                    files_rejected.append(str(html_path))
+                    continue
+                files_processed.append(str(html_path.relative_to(ROOT)))
+                _write_json(
+                    out / "vouchers" / "details" / detail.financialYear / f"{v_id}.json",
+                    detail.model_dump(mode="json"),
+                )
+                detail_count += 1
+    rows_imported["voucherDetails"] = detail_count
 
     # --- Approved plans: prefer API bundles, then XLS folders ---
     import shutil

@@ -302,7 +302,17 @@
     "totalRow": "Total",
     "totalSummary": "{{count}} vouchers · Total {{amount}}",
     "unlinkedLegend": "Red rows = work/activity code not found in imported plan or completed works (data may have been missing online at the time)",
-    "unlinkedTitle": "Work code not found in current data"
+    "unlinkedTitle": "Work code not found in current data",
+    "detailScheme": "Scheme",
+    "detailActivity": "Activity",
+    "detailParticulars": "Particulars",
+    "detailPayee": "Paid to",
+    "detailPaymentMode": "Payment mode",
+    "detailTxnType": "Transaction type",
+    "detailAccountHeads": "Account heads",
+    "detailAttachment": "Attachment",
+    "detailNotImported": "Full detail not imported yet — view the voucher receipt on eGramSwaraj.",
+    "openOnEgram": "View voucher receipt"
   },
   "schemes": {
     "title": "Payment vouchers by scheme",

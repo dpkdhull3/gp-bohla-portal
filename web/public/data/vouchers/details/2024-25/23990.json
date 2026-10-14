@@ -1,0 +1,39 @@
+{
+  "vId": 23990,
+  "financialYear": "2024-25",
+  "apiFinancialYear": "2024-2025",
+  "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2024-2025&PRIEntity_code=33105&stateCode=6&voucherID=23990",
+  "month": "June",
+  "transactionType": "Expenditures",
+  "activityCode": "41487961",
+  "activityLabel": "other work in the village (2020-2021)",
+  "schemeName": "XV Finance Commission--Basic Grant (untied)",
+  "voucherDate": "13/06/2024",
+  "voucherNo": "XVFC/2024-25/P/3",
+  "accountHeads": [
+    "2515 - Panchayati Raj Programmes",
+    "103 - Gram Panchayat Programmes",
+    "88 - Handpump General Maintenance"
+  ],
+  "amountInr": 198240.0,
+  "particulars": "water work",
+  "attachedFile": null,
+  "payments": [
+    {
+      "modeOfPayment": "PFMS",
+      "accountType": "Bank",
+      "accountNoMasked": "***************5419",
+      "payeeName": "MALIK ENERGY SYSTEM",
+      "amountInr": 198240.0
+    }
+  ],
+  "source": {
+    "reportName": "Payment Voucher Detail",
+    "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/details/2024-2025/23990.html",
+    "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2024-2025&PRIEntity_code=33105&stateCode=6&voucherID=23990",
+    "downloadedAt": "2026-10-14T14:23:32.770733+00:00",
+    "sha256": "6659e3a01f720315494179459efc086df1bfe143d799d5a3f5d388d960b3f856",
+    "financialYear": "2024-25",
+    "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "reportName": "Payment Voucher Detail",
+  "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2023-2024&PRIEntity_code=33105&stateCode=6&voucherID=19420",
+  "parameters": {
+    "finYear": "2023-2024",
+    "PRIEntity_code": 33105,
+    "stateCode": 6,
+    "voucherID": 19420
+  },
+  "downloadedAt": "2026-10-14T14:23:31.949297+00:00",
+  "sha256": "d4761740b9c31a8043c59200bd2444ea8b898003594c2f0b4aafe7c43694f621",
+  "byteSize": 41285,
+  "geographicScope": "Gram Panchayat Bohla (LGD 33105)",
+  "format": "text/html",
+  "financialYear": "2023-24"
+}

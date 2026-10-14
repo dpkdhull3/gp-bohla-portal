@@ -1,0 +1,39 @@
+{
+  "vId": 38528,
+  "financialYear": "2026-27",
+  "apiFinancialYear": "2026-2027",
+  "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2026-2027&PRIEntity_code=33105&stateCode=6&voucherID=38528",
+  "month": "August",
+  "transactionType": "Expenditures",
+  "activityCode": "80161696",
+  "activityLabel": "Construction of Paver Block (2023-2024)",
+  "schemeName": "XV Finance Commission--Basic Grant (untied)",
+  "voucherDate": "18/08/2026",
+  "voucherNo": "XVFC/2026-27/P/3",
+  "accountHeads": [
+    "4402 - Capital Outlay on Soil and Water Conservation",
+    "101 - Land Improvement",
+    "27 - Minor Works"
+  ],
+  "amountInr": 1106.0,
+  "particulars": "dev work",
+  "attachedFile": "1787042357589~f_o rasta mitti bharat Bill.pdf",
+  "payments": [
+    {
+      "modeOfPayment": "PFMS",
+      "accountType": "Bank",
+      "accountNoMasked": "***************5419",
+      "payeeName": "CHAHAL ENTERPRISES",
+      "amountInr": 1106.0
+    }
+  ],
+  "source": {
+    "reportName": "Payment Voucher Detail",
+    "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/details/2026-2027/38528.html",
+    "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2026-2027&PRIEntity_code=33105&stateCode=6&voucherID=38528",
+    "downloadedAt": "2026-10-14T14:23:37.205386+00:00",
+    "sha256": "f19ddb922af726223fec4071c7e8848447c0c8161fadd3abf84997ddbcdc178f",
+    "financialYear": "2026-27",
+    "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+  }
+}

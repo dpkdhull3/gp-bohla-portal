@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T13:14:57.935032+00:00",
+  "generatedAt": "2026-10-14T14:23:38.314755+00:00",
   "notes": [
     "Work 41487549: approved=171942.0, voucherSum=169320.0, variance=-2622.0",
     "Work 41487704: approved=171942.0, voucherSum=159682.0, variance=-12260.0",
@@ -57,6 +57,9 @@
     "2026-2027.json vId=38528: planYear is unset/0",
     "2026-2027.json vId=38547: planYear is unset/0",
     "2026-2027.json vId=38540: planYear is unset/0",
-    "2026-2027.json vId=38517: planYear is unset/0"
+    "2026-2027.json vId=38517: planYear is unset/0",
+    "86704.html: parsed but little content found",
+    "86707.html: parsed but little content found",
+    "86712.html: parsed but little content found"
   ]
 }

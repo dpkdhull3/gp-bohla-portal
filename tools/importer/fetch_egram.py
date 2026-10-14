@@ -21,6 +21,7 @@ from .config import (
     DEFAULT_PLAN_YR_FROM,
     DEFAULT_PLAN_YR_TO,
     iter_plan_years,
+    payment_voucher_detail_url,
     plan_yr_to_canonical,
     voucher_api_fy,
 )
@@ -258,7 +259,36 @@ def fetch_plan_year(plan_yr: int, result: FetchResult) -> None:
     result.plan_years.append(plan_yr)
 
 
-def fetch_vouchers(plan_yr: int, result: FetchResult) -> None:
+def fetch_voucher_detail(plan_yr: int, voucher_id: int, result: FetchResult) -> None:
+    geo = BOHLA
+    api_fy = voucher_api_fy(plan_yr)
+    canon = plan_yr_to_canonical(plan_yr)
+    url = payment_voucher_detail_url(api_fy, voucher_id)
+    html = _http_get(url)
+    path = RAW / "vouchers" / "details" / api_fy / f"{voucher_id}.html"
+    _write_bytes(path, html)
+    _write_meta(
+        path,
+        report_name="Payment Voucher Detail",
+        source_url=url,
+        parameters={
+            "finYear": api_fy,
+            "PRIEntity_code": geo.lgd_code,
+            "stateCode": geo.state_cd,
+            "voucherID": voucher_id,
+        },
+        fmt="text/html",
+        financial_year=canon,
+    )
+    result.files_written.append(str(path.relative_to(ROOT)))
+
+
+def fetch_vouchers(
+    plan_yr: int,
+    result: FetchResult,
+    *,
+    details: bool = True,
+) -> None:
     geo = BOHLA
     api_fy = voucher_api_fy(plan_yr)
     canon = plan_yr_to_canonical(plan_yr)
@@ -287,6 +317,19 @@ def fetch_vouchers(plan_yr: int, result: FetchResult) -> None:
         financial_year=canon,
     )
     result.files_written.append(str(path.relative_to(ROOT)))
+
+    if not details:
+        return
+
+    for row in data:
+        try:
+            v_id = int(row["vId"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        try:
+            fetch_voucher_detail(plan_yr, v_id, result)
+        except Exception as exc:  # noqa: BLE001
+            result.warnings.append(f"voucher detail {api_fy}/{v_id}: {exc}")
 
 
 def fetch_physical_progress(plan_yr: int, result: FetchResult) -> None:
@@ -336,6 +379,7 @@ def fetch_all(
     *,
     plans: bool = True,
     vouchers: bool = True,
+    voucher_details: bool = True,
     physical_progress: bool = True,
 ) -> FetchResult:
     """Fetch configured year range into reports/raw/."""
@@ -349,7 +393,7 @@ def fetch_all(
                 result.warnings.append(f"planYr={plan_yr} plan fetch failed: {exc}")
         if vouchers:
             try:
-                fetch_vouchers(plan_yr, result)
+                fetch_vouchers(plan_yr, result, details=voucher_details)
             except Exception as exc:  # noqa: BLE001
                 result.warnings.append(f"planYr={plan_yr} voucher fetch failed: {exc}")
         if physical_progress:

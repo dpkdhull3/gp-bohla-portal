@@ -7,6 +7,7 @@ import type {
   PortalMeta,
   SchemeRollup,
   Voucher,
+  VoucherDetail,
   WorkActivity,
   YearSummary,
 } from './types'
@@ -144,4 +145,33 @@ export async function loadPlanActivityRaw(
   } catch {
     return null
   }
+}
+
+/**
+ * Optional enrichment from getPaymentVoucherDetail.do (parsed at import time).
+ * Returns null when the detail file was not published.
+ */
+export async function loadVoucherDetail(
+  financialYear: string,
+  vId: number,
+): Promise<VoucherDetail | null> {
+  const path = `data/vouchers/details/${financialYear}/${vId}.json`
+  try {
+    return await fetchJson<VoucherDetail>(path)
+  } catch {
+    return null
+  }
+}
+
+/** Build eGramSwaraj payment voucher detail URL when detailUrl is missing. */
+export function voucherDetailUrl(financialYear: string, vId: number): string {
+  const m = /^(\d{4})-(\d{2})$/.exec(financialYear)
+  const apiFy = m ? `${m[1]}-20${m[2]}` : financialYear
+  const qs = new URLSearchParams({
+    finYear: apiFy,
+    PRIEntity_code: '33105',
+    stateCode: '6',
+    voucherID: String(vId),
+  })
+  return `https://egramswaraj.gov.in/getPaymentVoucherDetail.do?${qs.toString()}`
 }

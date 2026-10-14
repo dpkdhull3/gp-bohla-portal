@@ -1,0 +1,39 @@
+{
+  "vId": 23987,
+  "financialYear": "2024-25",
+  "apiFinancialYear": "2024-2025",
+  "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2024-2025&PRIEntity_code=33105&stateCode=6&voucherID=23987",
+  "month": "June",
+  "transactionType": "Expenditures",
+  "activityCode": "41487704",
+  "activityLabel": "water harvesting system and save water management and save drinking water (2020-2021)",
+  "schemeName": "XV Finance Commission--Tied Grant",
+  "voucherDate": "13/06/2024",
+  "voucherNo": "XVFC/2024-25/P/1",
+  "accountHeads": [
+    "2215 - Water Supply and Sanitation",
+    "101 - Maintenance of Water Supply line",
+    "40 - Operation of drinking water supply management systems (JJM)"
+  ],
+  "amountInr": 159682.0,
+  "particulars": "water work",
+  "attachedFile": null,
+  "payments": [
+    {
+      "modeOfPayment": "PFMS",
+      "accountType": "Bank",
+      "accountNoMasked": "***************5419",
+      "payeeName": "MALIK ENERGY SYSTEM",
+      "amountInr": 159682.0
+    }
+  ],
+  "source": {
+    "reportName": "Payment Voucher Detail",
+    "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/details/2024-2025/23987.html",
+    "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2024-2025&PRIEntity_code=33105&stateCode=6&voucherID=23987",
+    "downloadedAt": "2026-10-14T14:23:32.522117+00:00",
+    "sha256": "e1fc3f9296ea41f8eea118fdc1aaf27eeecbecd71a319c5e140d5356de03568c",
+    "financialYear": "2024-25",
+    "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+  }
+}

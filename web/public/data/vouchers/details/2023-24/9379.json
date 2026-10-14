@@ -1,0 +1,39 @@
+{
+  "vId": 9379,
+  "financialYear": "2023-24",
+  "apiFinancialYear": "2023-2024",
+  "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2023-2024&PRIEntity_code=33105&stateCode=6&voucherID=9379",
+  "month": "April",
+  "transactionType": "Expenditures",
+  "activityCode": "46549721",
+  "activityLabel": "gali/nala/nali (2021-2022)",
+  "schemeName": "XV Finance Commission--Basic Grant (untied)",
+  "voucherDate": "28/04/2023",
+  "voucherNo": "XVFC/2023-24/P/1",
+  "accountHeads": [
+    "2515 - Panchayati Raj Programmes",
+    "103 - Gram Panchayat Programmes",
+    "80 - Other Expenditure"
+  ],
+  "amountInr": 191301.0,
+  "particulars": "installetion of jaal",
+  "attachedFile": null,
+  "payments": [
+    {
+      "modeOfPayment": "PFMS",
+      "accountType": "Bank",
+      "accountNoMasked": "***************5419",
+      "payeeName": "S M ENTERPRISES",
+      "amountInr": 191301.0
+    }
+  ],
+  "source": {
+    "reportName": "Payment Voucher Detail",
+    "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/details/2023-2024/9379.html",
+    "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2023-2024&PRIEntity_code=33105&stateCode=6&voucherID=9379",
+    "downloadedAt": "2026-10-14T14:23:27.067038+00:00",
+    "sha256": "a2ee6f733386191fba7caea9e5d1514d39745f83fc2db3ed35ca9a940305e8fe",
+    "financialYear": "2023-24",
+    "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+  }
+}

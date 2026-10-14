@@ -1,0 +1,31 @@
+{
+  "vId": 86712,
+  "financialYear": "2020-21",
+  "apiFinancialYear": "2020-2021",
+  "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2020-2021&PRIEntity_code=33105&stateCode=6&voucherID=86712",
+  "month": "State:",
+  "transactionType": null,
+  "activityCode": "()",
+  "activityLabel": null,
+  "schemeName": null,
+  "voucherDate": null,
+  "voucherNo": null,
+  "accountHeads": [
+    "-",
+    "-",
+    "-"
+  ],
+  "amountInr": null,
+  "particulars": null,
+  "attachedFile": null,
+  "payments": [],
+  "source": {
+    "reportName": "Payment Voucher Detail",
+    "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/details/2020-2021/86712.html",
+    "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2020-2021&PRIEntity_code=33105&stateCode=6&voucherID=86712",
+    "downloadedAt": "2026-10-14T14:23:26.006452+00:00",
+    "sha256": "bcd9eca2db407dbf084aed70b7f14a56707a4867d23a62386ba421678f4bb334",
+    "financialYear": "2020-21",
+    "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+  }
+}

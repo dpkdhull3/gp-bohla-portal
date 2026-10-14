@@ -737,6 +737,85 @@
   color: #5c5420;
 }
 
+.voucher-no-toggle {
+  font: inherit;
+  font-weight: 650;
+  text-align: left;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--color-brand-soft);
+}
+
+.voucher-no-toggle:hover,
+.voucher-no-toggle:focus-visible {
+  color: var(--color-brand);
+  text-decoration: underline;
+}
+
+.voucher-detail-row > td {
+  background: color-mix(in srgb, var(--color-bg-muted) 85%, transparent);
+  padding: 0.75rem 0.85rem 0.9rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.voucher-detail-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-width: 42rem;
+}
+
+.voucher-detail-loading,
+.voucher-detail-missing {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+}
+
+.voucher-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(7rem, 9.5rem) minmax(0, 1fr);
+  gap: 0.35rem 0.85rem;
+  margin: 0;
+  font-size: 0.86rem;
+}
+
+.voucher-detail-grid dt {
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-weight: 600;
+}
+
+.voucher-detail-grid dd {
+  margin: 0;
+  color: var(--color-ink);
+  overflow-wrap: anywhere;
+}
+
+.voucher-detail-heads {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.voucher-detail-heads li {
+  margin: 0 0 0.15rem;
+}
+
+@media (max-width: 640px) {
+  .voucher-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 0.15rem 0;
+  }
+
+  .voucher-detail-grid dt {
+    margin-top: 0.35rem;
+    font-size: 0.75rem;
+  }
+}
+
 .plans-view-tabs {
   display: flex;
   flex-wrap: wrap;

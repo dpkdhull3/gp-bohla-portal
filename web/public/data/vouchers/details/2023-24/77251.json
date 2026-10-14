@@ -1,0 +1,39 @@
+{
+  "vId": 77251,
+  "financialYear": "2023-24",
+  "apiFinancialYear": "2023-2024",
+  "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2023-2024&PRIEntity_code=33105&stateCode=6&voucherID=77251",
+  "month": "October",
+  "transactionType": "Expenditures",
+  "activityCode": "41487549",
+  "activityLabel": "sanitization work and solid waste management in village (2020-2021)",
+  "schemeName": "XV Finance Commission--Tied Grant",
+  "voucherDate": "26/10/2023",
+  "voucherNo": "XVFC/2023-24/P/13",
+  "accountHeads": [
+    "2215 - Water Supply and Sanitation",
+    "800 - Other Expenditure",
+    "80 - Other Expenditure"
+  ],
+  "amountInr": 4720.0,
+  "particulars": "copy of rti",
+  "attachedFile": null,
+  "payments": [
+    {
+      "modeOfPayment": "PFMS",
+      "accountType": "Bank",
+      "accountNoMasked": "***************5419",
+      "payeeName": "PC SERVICES",
+      "amountInr": 4720.0
+    }
+  ],
+  "source": {
+    "reportName": "Payment Voucher Detail",
+    "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/details/2023-2024/77251.html",
+    "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2023-2024&PRIEntity_code=33105&stateCode=6&voucherID=77251",
+    "downloadedAt": "2026-10-14T14:23:26.624940+00:00",
+    "sha256": "21f8d35d07d67f3a6bca2f499b76a8c92df5387041abf76bc1e1e637bc7b0d99",
+    "financialYear": "2023-24",
+    "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+  }
+}

@@ -302,7 +302,17 @@
     "totalRow": "कुल",
     "totalSummary": "{{count}} वाउचर · कुल {{amount}}",
     "unlinkedLegend": "लाल पंक्ति = वर्क/गतिविधि कोड आयातित योजना या पूर्ण काम में नहीं मिला (तब ऑनलाइन डेटा न रहा हो)",
-    "unlinkedTitle": "वर्क कोड वर्तमान डेटा में नहीं मिला"
+    "unlinkedTitle": "वर्क कोड वर्तमान डेटा में नहीं मिला",
+    "detailScheme": "स्कीम",
+    "detailActivity": "गतिविधि",
+    "detailParticulars": "विवरण",
+    "detailPayee": "भुगतान किसे",
+    "detailPaymentMode": "भुगतान तरीका",
+    "detailTxnType": "लेनदेन प्रकार",
+    "detailAccountHeads": "लेखांकन मदें",
+    "detailAttachment": "संलग्नक",
+    "detailNotImported": "पूरा विवरण अभी आयात नहीं हुआ — वाउचर रसीद ईग्रामस्वराज पर देखें।",
+    "openOnEgram": "वाउचर रसीद देखें"
   },
   "schemes": {
     "title": "स्कीमवार भुगतान वाउचर",

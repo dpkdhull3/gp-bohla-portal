@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import urllib.parse
 from dataclasses import dataclass
 
 
@@ -60,6 +61,19 @@ def voucher_api_fy(plan_yr: int) -> str:
     if plan_yr in VOUCHER_API_FY:
         return VOUCHER_API_FY[plan_yr]
     return f"{plan_yr}-{plan_yr + 1}"
+
+
+def payment_voucher_detail_url(api_fy: str, voucher_id: int) -> str:
+    """Official eGramSwaraj payment voucher detail page (HTML)."""
+    qs = urllib.parse.urlencode(
+        {
+            "finYear": api_fy,
+            "PRIEntity_code": BOHLA.lgd_code,
+            "stateCode": BOHLA.state_cd,
+            "voucherID": voucher_id,
+        }
+    )
+    return f"{BASE_URL}/getPaymentVoucherDetail.do?{qs}"
 
 
 def iter_plan_years(from_yr: int, to_yr: int) -> list[int]:

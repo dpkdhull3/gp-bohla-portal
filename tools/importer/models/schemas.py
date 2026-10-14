@@ -76,8 +76,39 @@ class Voucher(BaseModel):
     zpName: Optional[str] = None
     bpName: Optional[str] = None
     financialYear: str
+    detailUrl: Optional[str] = None
     source: SourceRef
     flags: list[DataQualityFlag] = Field(default_factory=list)
+
+
+class VoucherPaymentLine(BaseModel):
+    modeOfPayment: Optional[str] = None
+    accountType: Optional[str] = None
+    accountNoMasked: Optional[str] = None
+    payeeName: Optional[str] = None
+    amountInr: Optional[float] = None
+
+
+class VoucherDetail(BaseModel):
+    """Parsed fields from getPaymentVoucherDetail.do HTML."""
+
+    vId: int
+    financialYear: str
+    apiFinancialYear: str
+    detailUrl: str
+    month: Optional[str] = None
+    transactionType: Optional[str] = None
+    activityCode: Optional[str] = None
+    activityLabel: Optional[str] = None
+    schemeName: Optional[str] = None
+    voucherDate: Optional[str] = None
+    voucherNo: Optional[str] = None
+    accountHeads: list[str] = Field(default_factory=list)
+    amountInr: Optional[float] = None
+    particulars: Optional[str] = None
+    attachedFile: Optional[str] = None
+    payments: list[VoucherPaymentLine] = Field(default_factory=list)
+    source: SourceRef
 
 
 class WorkActivity(BaseModel):

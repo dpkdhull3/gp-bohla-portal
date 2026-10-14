@@ -1,0 +1,39 @@
+{
+  "vId": 23999,
+  "financialYear": "2024-25",
+  "apiFinancialYear": "2024-2025",
+  "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2024-2025&PRIEntity_code=33105&stateCode=6&voucherID=23999",
+  "month": "June",
+  "transactionType": "Expenditures",
+  "activityCode": "46550194",
+  "activityLabel": "drinking water (2021-2022)",
+  "schemeName": "XV Finance Commission--Tied Grant",
+  "voucherDate": "13/06/2024",
+  "voucherNo": "XVFC/2024-25/P/7",
+  "accountHeads": [
+    "2215 - Water Supply and Sanitation",
+    "103 - Sewerage and Sanitation",
+    "68 - Retrofitting of Toilet"
+  ],
+  "amountInr": 5000.0,
+  "particulars": "online work",
+  "attachedFile": null,
+  "payments": [
+    {
+      "modeOfPayment": "PFMS",
+      "accountType": "Bank",
+      "accountNoMasked": "***************5419",
+      "payeeName": "MANOJ",
+      "amountInr": 5000.0
+    }
+  ],
+  "source": {
+    "reportName": "Payment Voucher Detail",
+    "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/details/2024-2025/23999.html",
+    "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2024-2025&PRIEntity_code=33105&stateCode=6&voucherID=23999",
+    "downloadedAt": "2026-10-14T14:23:33.868874+00:00",
+    "sha256": "0e786d1f098dfa12a50286f5c184a570af721f65644ab5c475f73fe168054cac",
+    "financialYear": "2024-25",
+    "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+  }
+}

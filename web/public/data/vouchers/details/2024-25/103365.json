@@ -1,0 +1,39 @@
+{
+  "vId": 103365,
+  "financialYear": "2024-25",
+  "apiFinancialYear": "2024-2025",
+  "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2024-2025&PRIEntity_code=33105&stateCode=6&voucherID=103365",
+  "month": "January",
+  "transactionType": "Expenditures",
+  "activityCode": "62396658",
+  "activityLabel": "sanitation (2022-2023)",
+  "schemeName": "XV Finance Commission--Tied Grant",
+  "voucherDate": "20/01/2025",
+  "voucherNo": "XVFC/2024-25/P/8",
+  "accountHeads": [
+    "2215 - Water Supply and Sanitation",
+    "103 - Sewerage and Sanitation",
+    "50 - O and M for Community Managed Sanitation Complex (SBM-G)"
+  ],
+  "amountInr": 192788.0,
+  "particulars": "dev work",
+  "attachedFile": null,
+  "payments": [
+    {
+      "modeOfPayment": "PFMS",
+      "accountType": "Bank",
+      "accountNoMasked": "***************5419",
+      "payeeName": "CHAHAL ENTERPRISES",
+      "amountInr": 192788.0
+    }
+  ],
+  "source": {
+    "reportName": "Payment Voucher Detail",
+    "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/details/2024-2025/103365.html",
+    "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2024-2025&PRIEntity_code=33105&stateCode=6&voucherID=103365",
+    "downloadedAt": "2026-10-14T14:23:34.097183+00:00",
+    "sha256": "c2f3784db3012e7eb702aa681ef95e55c1d309d1b5f590fd0587782b4e37acf1",
+    "financialYear": "2024-25",
+    "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+  }
+}

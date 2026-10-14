@@ -1,0 +1,39 @@
+{
+  "vId": 38517,
+  "financialYear": "2026-27",
+  "apiFinancialYear": "2026-2027",
+  "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2026-2027&PRIEntity_code=33105&stateCode=6&voucherID=38517",
+  "month": "August",
+  "transactionType": "Expenditures",
+  "activityCode": "118460385",
+  "activityLabel": "Construction of roads (2025-2026)",
+  "schemeName": "XV Finance Commission--Basic Grant (untied)",
+  "voucherDate": "18/08/2026",
+  "voucherNo": "XVFC/2026-27/P/1",
+  "accountHeads": [
+    "5054 - Capital Outlay on Transportation",
+    "101 - Construction of Village District Roads",
+    "23 - Major Works"
+  ],
+  "amountInr": 185692.0,
+  "particulars": "dev work",
+  "attachedFile": "1787040790215~f_o rasta mitti bharat Bill.pdf",
+  "payments": [
+    {
+      "modeOfPayment": "PFMS",
+      "accountType": "Bank",
+      "accountNoMasked": "***************5419",
+      "payeeName": "CHAHAL ENTERPRISES",
+      "amountInr": 185692.0
+    }
+  ],
+  "source": {
+    "reportName": "Payment Voucher Detail",
+    "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/details/2026-2027/38517.html",
+    "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2026-2027&PRIEntity_code=33105&stateCode=6&voucherID=38517",
+    "downloadedAt": null,
+    "sha256": "a1c0d396ed56d5078f358497fb4cd09b752f4fa63b482275e745f8c6a2ad5e04",
+    "financialYear": "2026-27",
+    "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+  }
+}

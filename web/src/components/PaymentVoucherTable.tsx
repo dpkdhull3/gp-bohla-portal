@@ -1,5 +1,7 @@
+import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { EmptyState } from './EmptyState'
+import { VoucherDetailPanel } from './VoucherDetailPanel'
 import { formatInr } from '../lib/format'
 import type { PlannedActivity, Voucher, WorkActivity } from '../lib/types'
 
@@ -49,6 +51,7 @@ export function PaymentVoucherTable({
   linkMode?: 'payment_year' | 'work_year'
 }) {
   const { t } = useTranslation()
+  const [openId, setOpenId] = useState<number | null>(null)
 
   const voucherLinkLabel = (info: VoucherLinkInfo) => {
     if (info.kind === 'linked_same_fy') return t('works.voucherLinked')
@@ -77,6 +80,8 @@ export function PaymentVoucherTable({
 
   if (rows.length === 0) return <EmptyState title={t('common.empty')} />
 
+  const colCount = 8
+
   return (
     <div className="table-scroll">
       <table className="data-table-dense">
@@ -97,40 +102,58 @@ export function PaymentVoucherTable({
             const info = resolveVoucherLink(v, workByCode, planByCode)
             const linkText =
               linkMode === 'work_year' ? workPaymentLinkLabel(v, info) : voucherLinkLabel(info)
+            const open = openId === v.vId
             return (
-              <tr
-                key={v.vId}
-                className={linkMode === 'payment_year' ? voucherLinkRowClass(info.kind) : undefined}
-                title={
-                  linkMode === 'payment_year'
-                    ? info.kind === 'linked_other_fy'
-                      ? t('works.voucherLinkedOtherFyTitle', {
-                          year: info.workYear,
-                          name: info.workName,
-                        })
-                      : info.kind === 'plan_only'
-                        ? t('works.voucherPlanOnlyTitle', { year: info.planYear })
-                        : info.kind === 'unlinked'
-                          ? t('vouchers.unlinkedTitle')
-                          : undefined
-                    : info.workYear && v.financialYear !== info.workYear
-                      ? t('works.voucherPaidInFyTitle', {
-                          payYear: v.financialYear,
-                          workYear: info.workYear,
-                          name: info.workName,
-                        })
-                      : undefined
-                }
-              >
-                <td>{v.voucherNo}</td>
-                <td>{v.voucherDate}</td>
-                <td className="cell-strong">{formatInr(v.amountInr, locale)}</td>
-                <td>{v.workCode ?? '—'}</td>
-                <td>{v.majorHead?.label || v.majorHead?.raw || '—'}</td>
-                <td>{v.objectHead?.label || v.objectHead?.raw || '—'}</td>
-                <td>{v.financialYear}</td>
-                <td>{linkText}</td>
-              </tr>
+              <Fragment key={v.vId}>
+                <tr
+                  className={linkMode === 'payment_year' ? voucherLinkRowClass(info.kind) : undefined}
+                  title={
+                    linkMode === 'payment_year'
+                      ? info.kind === 'linked_other_fy'
+                        ? t('works.voucherLinkedOtherFyTitle', {
+                            year: info.workYear,
+                            name: info.workName,
+                          })
+                        : info.kind === 'plan_only'
+                          ? t('works.voucherPlanOnlyTitle', { year: info.planYear })
+                          : info.kind === 'unlinked'
+                            ? t('vouchers.unlinkedTitle')
+                            : undefined
+                      : info.workYear && v.financialYear !== info.workYear
+                        ? t('works.voucherPaidInFyTitle', {
+                            payYear: v.financialYear,
+                            workYear: info.workYear,
+                            name: info.workName,
+                          })
+                        : undefined
+                  }
+                >
+                  <td>
+                    <button
+                      type="button"
+                      className="text-link voucher-no-toggle"
+                      aria-expanded={open}
+                      onClick={() => setOpenId(open ? null : v.vId)}
+                    >
+                      {v.voucherNo}
+                    </button>
+                  </td>
+                  <td>{v.voucherDate}</td>
+                  <td className="cell-strong">{formatInr(v.amountInr, locale)}</td>
+                  <td>{v.workCode ?? '—'}</td>
+                  <td>{v.majorHead?.label || v.majorHead?.raw || '—'}</td>
+                  <td>{v.objectHead?.label || v.objectHead?.raw || '—'}</td>
+                  <td>{v.financialYear}</td>
+                  <td>{linkText}</td>
+                </tr>
+                {open ? (
+                  <tr className="voucher-detail-row">
+                    <td colSpan={colCount}>
+                      <VoucherDetailPanel voucher={v} locale={locale} />
+                    </td>
+                  </tr>
+                ) : null}
+              </Fragment>
             )
           })}
         </tbody>

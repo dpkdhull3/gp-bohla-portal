@@ -46,6 +46,7 @@
       "zpName": "SONIPAT",
       "bpName": "SONIPAT",
       "financialYear": "2020-21",
+      "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2020-2021&PRIEntity_code=33105&stateCode=6&voucherID=86704",
       "source": {
         "reportName": "GP Voucher Details",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2020-2021.json",
@@ -103,6 +104,7 @@
       "zpName": "SONIPAT",
       "bpName": "SONIPAT",
       "financialYear": "2020-21",
+      "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2020-2021&PRIEntity_code=33105&stateCode=6&voucherID=86707",
       "source": {
         "reportName": "GP Voucher Details",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2020-2021.json",
@@ -160,6 +162,7 @@
       "zpName": "SONIPAT",
       "bpName": "SONIPAT",
       "financialYear": "2020-21",
+      "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2020-2021&PRIEntity_code=33105&stateCode=6&voucherID=86712",
       "source": {
         "reportName": "GP Voucher Details",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2020-2021.json",

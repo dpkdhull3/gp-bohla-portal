@@ -40,6 +40,11 @@ def _add_year_range_args(p: argparse.ArgumentParser) -> None:
         help="Do not fetch voucher JSON",
     )
     p.add_argument(
+        "--skip-voucher-details",
+        action="store_true",
+        help="Do not fetch per-voucher payment detail HTML",
+    )
+    p.add_argument(
         "--skip-physical-progress",
         action="store_true",
         help="Do not fetch physical progress HTML",
@@ -99,6 +104,7 @@ def main(argv: list[str] | None = None) -> int:
             to_yr=args.to_yr,
             plans=not args.skip_plans,
             vouchers=not args.skip_vouchers,
+            voucher_details=not args.skip_voucher_details,
             physical_progress=not args.skip_physical_progress,
         )
         print(

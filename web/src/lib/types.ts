@@ -48,8 +48,37 @@ export interface Voucher {
   voucherKind: string
   schemeHint?: string | null
   financialYear: string
+  detailUrl?: string | null
   flags: string[]
   source?: { reportName: string; sourceUrl?: string }
+}
+
+export interface VoucherPaymentLine {
+  modeOfPayment?: string | null
+  accountType?: string | null
+  accountNoMasked?: string | null
+  payeeName?: string | null
+  amountInr?: number | null
+}
+
+/** Parsed getPaymentVoucherDetail.do fields (optional enrichment). */
+export interface VoucherDetail {
+  vId: number
+  financialYear: string
+  apiFinancialYear: string
+  detailUrl: string
+  month?: string | null
+  transactionType?: string | null
+  activityCode?: string | null
+  activityLabel?: string | null
+  schemeName?: string | null
+  voucherDate?: string | null
+  voucherNo?: string | null
+  accountHeads?: string[]
+  amountInr?: number | null
+  particulars?: string | null
+  attachedFile?: string | null
+  payments?: VoucherPaymentLine[]
 }
 
 export interface WorkActivity {

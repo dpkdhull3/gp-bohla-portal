@@ -1,0 +1,39 @@
+{
+  "vId": 19419,
+  "financialYear": "2023-24",
+  "apiFinancialYear": "2023-2024",
+  "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2023-2024&PRIEntity_code=33105&stateCode=6&voucherID=19419",
+  "month": "May",
+  "transactionType": "Expenditures",
+  "activityCode": "46550020",
+  "activityLabel": "clearinanace (2021-2022)",
+  "schemeName": "XV Finance Commission--Tied Grant",
+  "voucherDate": "26/05/2023",
+  "voucherNo": "XVFC/2023-24/P/3",
+  "accountHeads": [
+    "2215 - Water Supply and Sanitation",
+    "800 - Other Expenditure",
+    "80 - Other Expenditure"
+  ],
+  "amountInr": 26866.0,
+  "particulars": "matriyal jall fixing bill no 867,868,869",
+  "attachedFile": null,
+  "payments": [
+    {
+      "modeOfPayment": "PFMS",
+      "accountType": "Bank",
+      "accountNoMasked": "***************5419",
+      "payeeName": "CHAHAL ENTERPRISES",
+      "amountInr": 26866.0
+    }
+  ],
+  "source": {
+    "reportName": "Payment Voucher Detail",
+    "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/details/2023-2024/19419.html",
+    "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2023-2024&PRIEntity_code=33105&stateCode=6&voucherID=19419",
+    "downloadedAt": "2026-10-14T14:23:31.664590+00:00",
+    "sha256": "3305c47d05ed0a20ce304f53868f36d118255e49428daa63bb9c2b30a9b0410b",
+    "financialYear": "2023-24",
+    "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+  }
+}

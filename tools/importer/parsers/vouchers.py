@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from ..config import payment_voucher_detail_url
 from ..models.schemas import DataQualityFlag, Voucher
 from .common import (
     canonicalize_fy_api,
@@ -78,6 +79,7 @@ def parse_voucher_file(path: Path, api_fin_year: str) -> tuple[list[Voucher], li
                     zpName=row.get("zpName"),
                     bpName=row.get("bpName"),
                     financialYear=fy,
+                    detailUrl=payment_voucher_detail_url(api_fin_year, v_id),
                     source=source,
                     flags=flags,
                 )

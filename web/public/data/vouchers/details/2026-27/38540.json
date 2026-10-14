@@ -1,0 +1,39 @@
+{
+  "vId": 38540,
+  "financialYear": "2026-27",
+  "apiFinancialYear": "2026-2027",
+  "detailUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2026-2027&PRIEntity_code=33105&stateCode=6&voucherID=38540",
+  "month": "August",
+  "transactionType": "Expenditures",
+  "activityCode": "118458878",
+  "activityLabel": "Drainage Construction (2025-2026)",
+  "schemeName": "XV Finance Commission--Tied Grant",
+  "voucherDate": "18/08/2026",
+  "voucherNo": "XVFC/2026-27/P/5",
+  "accountHeads": [
+    "4215 - Capital Outlay on Water Supply and Sanitation",
+    "103 - Sewerage and Sanitation",
+    "23 - Major Works"
+  ],
+  "amountInr": 120789.0,
+  "particulars": "dev work",
+  "attachedFile": "1787043669953~bill drain1_compressed.pdf",
+  "payments": [
+    {
+      "modeOfPayment": "PFMS",
+      "accountType": "Bank",
+      "accountNoMasked": "***************5419",
+      "payeeName": "CHAHAL ENTERPRISES",
+      "amountInr": 120789.0
+    }
+  ],
+  "source": {
+    "reportName": "Payment Voucher Detail",
+    "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/details/2026-2027/38540.html",
+    "sourceUrl": "https://egramswaraj.gov.in/getPaymentVoucherDetail.do?finYear=2026-2027&PRIEntity_code=33105&stateCode=6&voucherID=38540",
+    "downloadedAt": "2026-10-14T14:23:37.721586+00:00",
+    "sha256": "990b57214a5ccc7f397568c8fb77e53812e94608d8fe57c705a8733930f4802e",
+    "financialYear": "2026-27",
+    "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+  }
+}

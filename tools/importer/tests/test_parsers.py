@@ -15,6 +15,7 @@ from tools.importer.parsers.common import (
     parse_iso_date,
 )
 from tools.importer.parsers.vouchers import parse_voucher_file
+from tools.importer.parsers.voucher_details import parse_voucher_detail_html
 from tools.importer.parsers.physical_progress import parse_physical_progress_file
 from tools.importer.parsers.approved_plan import parse_approved_plan_xls
 from tools.importer.parsers.plan_activities_api import (
@@ -98,7 +99,46 @@ def test_synthetic_vouchers(tmp_path: Path):
     assert len(vouchers) == 1
     assert vouchers[0].amountInr == 5000.0
     assert vouchers[0].financialYear == "2025-26"
+    assert vouchers[0].detailUrl and "voucherID=1" in vouchers[0].detailUrl
     assert any("99999" in w for w in warnings)
+
+
+def test_synthetic_voucher_detail_html(tmp_path: Path):
+    html = """
+    <html><body>
+    <div>Payment Voucher Detail</div>
+    <div>Type Of Transaction</div><div>Expenditures</div>
+    <div>Activity Code</div><div>12345</div><div>Road work (2025-2026)</div>
+    <div>Scheme Name</div><div>XV Finance Commission--Tied Grant</div>
+    <div>Voucher Date</div><div>01/05/2025</div>
+    <div>Voucher No</div><div>XVFC/2025-26/P/1</div>
+    <div>Account Head</div>
+    <div>Expenditure Heads</div>
+    <div>2215 - Water Supply</div>
+    <div>Amount (in Rs.)</div><div>5,000</div>
+    <div>Particulars</div><div>online work charges</div>
+    <div>Attached File</div><div>bill.pdf</div>
+    <div>Mode Of Payment</div>
+    <div>Details</div>
+    <div>To Whom Paid</div>
+    <div>Amount (in Rs.)</div>
+    <div>PFMS</div>
+    <div>Account Type:Bank</div>
+    <div>Account No.:***************1234</div>
+    <div>TEST PAYEE</div>
+    <div>5,000</div>
+    <div>Report generated through eGramSwaraj</div>
+    </body></html>
+    """
+    path = tmp_path / "1.html"
+    path.write_text(html, encoding="utf-8")
+    detail = parse_voucher_detail_html(path, v_id=1, api_fin_year="2025-2026")
+    assert detail.particulars == "online work charges"
+    assert detail.schemeName and "Finance Commission" in detail.schemeName
+    assert detail.activityCode == "12345"
+    assert detail.payments and detail.payments[0].payeeName == "TEST PAYEE"
+    assert detail.amountInr == 5000.0
+    assert "voucherID=1" in detail.detailUrl
 
 
 def test_synthetic_physical_progress(tmp_path: Path):

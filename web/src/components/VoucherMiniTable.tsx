@@ -1,4 +1,6 @@
+import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { VoucherDetailPanel } from './VoucherDetailPanel'
 import { formatInr } from '../lib/format'
 import type { Voucher } from '../lib/types'
 
@@ -12,7 +14,9 @@ export function VoucherMiniTable({
   unlinked?: boolean
 }) {
   const { t } = useTranslation()
+  const [openId, setOpenId] = useState<number | null>(null)
   const total = rows.reduce((s, v) => s + (v.amountInr || 0), 0)
+  const colCount = unlinked ? 7 : 6
 
   return (
     <div className="table-scroll work-voucher-table-wrap">
@@ -31,21 +35,41 @@ export function VoucherMiniTable({
           </tr>
         </thead>
         <tbody>
-          {rows.map((v) => (
-            <tr
-              key={v.vId}
-              className={unlinked ? 'voucher-row-unlinked' : undefined}
-              title={unlinked ? t('vouchers.unlinkedTitle') : undefined}
-            >
-              <td>{v.voucherNo}</td>
-              <td>{v.voucherDate}</td>
-              <td className="cell-strong">{formatInr(v.amountInr, locale)}</td>
-              <td>{v.majorHead?.label || v.majorHead?.raw || '—'}</td>
-              <td>{v.objectHead?.label || v.objectHead?.raw || '—'}</td>
-              {unlinked ? <td>{v.workCode ?? '—'}</td> : null}
-              <td>{v.financialYear}</td>
-            </tr>
-          ))}
+          {rows.map((v) => {
+            const open = openId === v.vId
+            return (
+              <Fragment key={v.vId}>
+                <tr
+                  className={unlinked ? 'voucher-row-unlinked' : undefined}
+                  title={unlinked ? t('vouchers.unlinkedTitle') : undefined}
+                >
+                  <td>
+                    <button
+                      type="button"
+                      className="text-link voucher-no-toggle"
+                      aria-expanded={open}
+                      onClick={() => setOpenId(open ? null : v.vId)}
+                    >
+                      {v.voucherNo}
+                    </button>
+                  </td>
+                  <td>{v.voucherDate}</td>
+                  <td className="cell-strong">{formatInr(v.amountInr, locale)}</td>
+                  <td>{v.majorHead?.label || v.majorHead?.raw || '—'}</td>
+                  <td>{v.objectHead?.label || v.objectHead?.raw || '—'}</td>
+                  {unlinked ? <td>{v.workCode ?? '—'}</td> : null}
+                  <td>{v.financialYear}</td>
+                </tr>
+                {open ? (
+                  <tr className="voucher-detail-row">
+                    <td colSpan={colCount}>
+                      <VoucherDetailPanel voucher={v} locale={locale} />
+                    </td>
+                  </tr>
+                ) : null}
+              </Fragment>
+            )
+          })}
         </tbody>
         <tfoot>
           <tr>
