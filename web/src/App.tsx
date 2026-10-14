@@ -4,12 +4,8 @@ import { Layout } from './components/Layout'
 import { YearProvider } from './context/YearContext'
 
 const HomePage = lazy(() => import('./pages/HomePage').then((m) => ({ default: m.HomePage })))
-const FundsPage = lazy(() => import('./pages/FundsPage').then((m) => ({ default: m.FundsPage })))
 const WorksPage = lazy(() => import('./pages/WorksPage').then((m) => ({ default: m.WorksPage })))
 const PlansPage = lazy(() => import('./pages/PlansPage').then((m) => ({ default: m.PlansPage })))
-const VouchersPage = lazy(() =>
-  import('./pages/VouchersPage').then((m) => ({ default: m.VouchersPage })),
-)
 const SchemesPage = lazy(() =>
   import('./pages/SchemesPage').then((m) => ({ default: m.SchemesPage })),
 )
@@ -35,8 +31,8 @@ export default function App() {
             <Route element={<Layout />}>
               <Route index element={<HomePage />} />
 
-              <Route path="funds" element={<FundsPage />} />
-              <Route path="funds/vouchers" element={<VouchersPage />} />
+              <Route path="funds" element={<Navigate to="/funds/schemes" replace />} />
+              <Route path="funds/vouchers" element={<Navigate to="/works" replace />} />
               <Route path="funds/schemes" element={<SchemesPage />} />
 
               <Route path="works" element={<WorksPage />} />
@@ -49,7 +45,7 @@ export default function App() {
 
               {/* Preserved deep links */}
               <Route path="home/year" element={<Navigate to="/" replace />} />
-              <Route path="vouchers" element={<Navigate to="/funds/vouchers" replace />} />
+              <Route path="vouchers" element={<Navigate to="/works" replace />} />
               <Route path="schemes" element={<Navigate to="/funds/schemes" replace />} />
               <Route path="downloads" element={<Navigate to="/reports/downloads" replace />} />
               <Route path="audit" element={<Navigate to="/reports/audit" replace />} />

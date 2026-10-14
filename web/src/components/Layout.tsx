@@ -15,7 +15,6 @@ const SECTION_LINKS = [
   { to: '/funds', labelKey: 'nav.fundsShort' },
   { to: '/works', labelKey: 'nav.completedWorksShort', end: true },
   { to: '/works/plans', labelKey: 'nav.plansShort' },
-  { to: '/reports', labelKey: 'nav.reportsShort' },
 ] as const
 
 function isSectionActive(pathname: string, to: string, end?: boolean): boolean {

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { FundsSubnav } from '../components/FundsSubnav'
 import { SourceBadge } from '../components/SourceBadge'
 import { useYear } from '../context/YearContext'
 import { loadSchemes } from '../lib/data'
@@ -19,7 +18,6 @@ export function SchemesPage() {
 
   return (
     <div className="page">
-      <FundsSubnav />
       <h1>{t('schemes.title')}</h1>
       <p className="lede">{t('schemes.intro')}</p>
       <SourceBadge

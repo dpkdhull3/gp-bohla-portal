@@ -158,6 +158,18 @@ export function HomePage() {
       .slice(0, 8)
   }, [plansInPeriod])
 
+  const spendByHead = useMemo(() => {
+    const map = new Map<string, number>()
+    for (const v of vouchersInPeriod) {
+      const key = v.majorHead?.label || v.majorHead?.raw || '—'
+      map.set(key, (map.get(key) ?? 0) + (v.amountInr || 0))
+    }
+    return [...map.entries()]
+      .map(([name, value]) => ({ name, value }))
+      .sort((a, b) => b.value - a.value)
+      .slice(0, 8)
+  }, [vouchersInPeriod])
+
   const periodLabel = isRangeView ? `${rangeStart} – ${rangeEnd}` : year
 
   const totals = useMemo(
@@ -181,11 +193,6 @@ export function HomePage() {
     void navigate('/works')
   }
 
-  const openYearVouchers = (fy: string) => {
-    selectSingleYear(fy)
-    void navigate('/funds/vouchers')
-  }
-
   const openYearPlans = (fy: string) => {
     selectSingleYear(fy)
     void navigate('/works/plans')
@@ -204,7 +211,7 @@ export function HomePage() {
           <Link className="text-link" to="/works/plans">
             {t('home.openPlans')}
           </Link>
-          <Link className="text-link" to="/funds">
+          <Link className="text-link" to="/works">
             {t('home.openFunds')}
           </Link>
         </div>
@@ -232,7 +239,7 @@ export function HomePage() {
           hint={t('home.moneyUsedHint', {
             count: formatNumber(totals.voucherCount, locale),
           })}
-          to="/funds/vouchers"
+          to="/works"
         />
         <KpiCard
           label={t('home.completedWorks')}
@@ -252,7 +259,7 @@ export function HomePage() {
               ? formatInrCompact(voucherLink.linkedInr)
               : undefined
           }
-          to="/funds/vouchers"
+          to="/works"
         />
       </section>
 
@@ -281,99 +288,141 @@ export function HomePage() {
         </section>
       ) : null}
 
-      <div className="home-charts-grid">
-        {isRangeView && yearCompare.some((r) => r.approvedInr > 0 || r.spentInr > 0) ? (
-          <section className="panel panel-chart">
-            <div className="panel-header-row">
-              <h2>{t('home.yearWiseSummaryShort')}</h2>
-            </div>
-            <p className="panel-help">{t('home.yearWiseSummaryHelp')}</p>
-            <div className="chart-wrap chart-wrap-tall">
-              <ResponsiveContainer width="100%" height={280}>
-                <BarChart
-                  data={yearCompare}
-                  role="img"
-                  aria-label={t('home.yearWiseSummaryShort')}
-                  margin={{ top: 12, right: 8, left: 0, bottom: 4 }}
-                >
-                  <CartesianGrid strokeDasharray="3 3" stroke="#cfd9d4" />
-                  <XAxis dataKey="financialYear" tick={{ fontSize: 12, fill: '#15262f' }} />
-                  <YAxis
-                    tick={{ fontSize: 12, fill: '#15262f' }}
-                    width={48}
-                    tickFormatter={(v) =>
-                      v >= 100000 ? `${Math.round(v / 100000)}L` : `${Math.round(v / 1000)}k`
-                    }
-                  />
-                  <Tooltip
-                    formatter={(value, name) => [formatInr(Number(value ?? 0), locale), String(name)]}
-                  />
-                  <Legend wrapperStyle={{ fontSize: 12 }} />
-                  <Bar
-                    dataKey="approvedInr"
-                    name={t('home.approvedSeries')}
-                    fill="#1b3a4b"
-                    radius={[4, 4, 0, 0]}
-                    maxBarSize={28}
-                  />
-                  <Bar
-                    dataKey="spentInr"
-                    name={t('home.spentSeries')}
-                    fill="#c45c26"
-                    radius={[4, 4, 0, 0]}
-                    maxBarSize={28}
-                  />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </section>
-        ) : null}
+      {isRangeView && yearCompare.some((r) => r.approvedInr > 0 || r.spentInr > 0) ? (
+        <section className="panel panel-chart">
+          <div className="panel-header-row">
+            <h2>{t('home.yearWiseSummaryShort')}</h2>
+          </div>
+          <p className="panel-help">{t('home.yearWiseSummaryHelp')}</p>
+          <div className="chart-wrap chart-wrap-tall">
+            <ResponsiveContainer width="100%" height={280}>
+              <BarChart
+                data={yearCompare}
+                role="img"
+                aria-label={t('home.yearWiseSummaryShort')}
+                margin={{ top: 12, right: 8, left: 0, bottom: 4 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" stroke="#cfd9d4" />
+                <XAxis dataKey="financialYear" tick={{ fontSize: 12, fill: '#15262f' }} />
+                <YAxis
+                  tick={{ fontSize: 12, fill: '#15262f' }}
+                  width={48}
+                  tickFormatter={(v) =>
+                    v >= 100000 ? `${Math.round(v / 100000)}L` : `${Math.round(v / 1000)}k`
+                  }
+                />
+                <Tooltip
+                  formatter={(value, name) => [formatInr(Number(value ?? 0), locale), String(name)]}
+                />
+                <Legend wrapperStyle={{ fontSize: 12 }} />
+                <Bar
+                  dataKey="approvedInr"
+                  name={t('home.approvedSeries')}
+                  fill="#1b3a4b"
+                  radius={[4, 4, 0, 0]}
+                  maxBarSize={28}
+                />
+                <Bar
+                  dataKey="spentInr"
+                  name={t('home.spentSeries')}
+                  fill="#c45c26"
+                  radius={[4, 4, 0, 0]}
+                  maxBarSize={28}
+                />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </section>
+      ) : null}
 
-        {sectorRows.length > 0 ? (
-          <section className="panel panel-chart">
-            <div className="panel-header-row">
-              <h2>{t('home.sectorChartTitle')}</h2>
-            </div>
-            <p className="panel-help">{t('home.sectorChartHelp')}</p>
-            <div className="chart-wrap chart-wrap-tall home-sector-chart">
-              <ResponsiveContainer width="100%" height={280}>
-                <PieChart>
-                  <Pie
-                    data={sectorRows}
-                    dataKey="value"
-                    nameKey="name"
-                    cx="42%"
-                    cy="50%"
-                    innerRadius={52}
-                    outerRadius={88}
-                    paddingAngle={2}
-                  >
-                    {sectorRows.map((_, i) => (
-                      <Cell key={sectorRows[i].name} fill={SECTOR_COLORS[i % SECTOR_COLORS.length]} />
-                    ))}
-                  </Pie>
-                  <Tooltip
-                    formatter={(value) => formatInr(Number(value ?? 0), locale)}
-                  />
-                  <Legend
-                    layout="vertical"
-                    align="right"
-                    verticalAlign="middle"
-                    wrapperStyle={{ fontSize: 11, maxWidth: '46%' }}
-                  />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
-          </section>
-        ) : null}
-      </div>
+      {sectorRows.length > 0 || spendByHead.length > 0 ? (
+        <div className="home-charts-grid">
+          {sectorRows.length > 0 ? (
+            <section className="panel panel-chart">
+              <div className="panel-header-row">
+                <h2>{t('home.sectorChartTitle')}</h2>
+              </div>
+              <p className="panel-help">{t('home.sectorChartHelp')}</p>
+              <div className="chart-wrap chart-wrap-tall home-sector-chart">
+                <ResponsiveContainer width="100%" height={280}>
+                  <PieChart>
+                    <Pie
+                      data={sectorRows}
+                      dataKey="value"
+                      nameKey="name"
+                      cx="42%"
+                      cy="50%"
+                      innerRadius={52}
+                      outerRadius={88}
+                      paddingAngle={2}
+                    >
+                      {sectorRows.map((_, i) => (
+                        <Cell
+                          key={sectorRows[i].name}
+                          fill={SECTOR_COLORS[i % SECTOR_COLORS.length]}
+                        />
+                      ))}
+                    </Pie>
+                    <Tooltip formatter={(value) => formatInr(Number(value ?? 0), locale)} />
+                    <Legend
+                      layout="vertical"
+                      align="right"
+                      verticalAlign="middle"
+                      wrapperStyle={{ fontSize: 11, maxWidth: '46%' }}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
+            </section>
+          ) : null}
+
+          {spendByHead.length > 0 ? (
+            <section className="panel panel-chart">
+              <div className="panel-header-row">
+                <h2>{t('home.spendByHeadTitle')}</h2>
+              </div>
+              <p className="panel-help">{t('home.spendByHeadHelp')}</p>
+              <div className="chart-wrap chart-wrap-tall home-sector-chart">
+                <ResponsiveContainer width="100%" height={280}>
+                  <PieChart>
+                    <Pie
+                      data={spendByHead}
+                      dataKey="value"
+                      nameKey="name"
+                      cx="42%"
+                      cy="50%"
+                      innerRadius={52}
+                      outerRadius={88}
+                      paddingAngle={2}
+                    >
+                      {spendByHead.map((_, i) => (
+                        <Cell
+                          key={spendByHead[i].name}
+                          fill={SECTOR_COLORS[i % SECTOR_COLORS.length]}
+                        />
+                      ))}
+                    </Pie>
+                    <Tooltip formatter={(value) => formatInr(Number(value ?? 0), locale)} />
+                    <Legend
+                      layout="vertical"
+                      align="right"
+                      verticalAlign="middle"
+                      wrapperStyle={{ fontSize: 11, maxWidth: '46%' }}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
+            </section>
+          ) : null}
+        </div>
+      ) : null}
 
       {vouchersInPeriod.length > 0 ? (
         <section className="panel" aria-label={t('home.vouchersLinkTitle')}>
           <div className="panel-header-row">
             <h2>{t('home.vouchersLinkTitle')}</h2>
-            <Link className="text-link" to="/funds/vouchers">
-              {t('home.openYearVouchers')}
+            <Link className="text-link" to="/works">
+              {t('home.openYearWorks')}
             </Link>
           </div>
           <p className="panel-help">{t('home.vouchersLinkHelp')}</p>
@@ -444,13 +493,6 @@ export function HomePage() {
                           onClick={() => openYearPlans(row.financialYear)}
                         >
                           {t('home.openYearPlans')}
-                        </button>
-                        <button
-                          type="button"
-                          className="btn-secondary btn-compact"
-                          onClick={() => openYearVouchers(row.financialYear)}
-                        >
-                          {t('home.openYearVouchers')}
                         </button>
                         <button
                           type="button"
