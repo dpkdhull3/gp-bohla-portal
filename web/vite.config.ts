@@ -5,4 +5,8 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   base: './',
+  preview: {
+    // Allow Cloudflare / localtunnel public hostnames while sharing.
+    allowedHosts: true,
+  },
 })
