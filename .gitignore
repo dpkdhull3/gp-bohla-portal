@@ -14,6 +14,7 @@ web/coverage/
 .env.*
 !.env.example
 .DS_Store
+.wrangler/
 
 # Python
 __pycache__/

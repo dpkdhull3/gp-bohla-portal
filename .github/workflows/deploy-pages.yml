@@ -1,4 +1,4 @@
-name: Deploy static site
+name: Deploy to Cloudflare Pages
 
 on:
   push:
@@ -7,45 +7,44 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  deployments: write
 
 concurrency:
-  group: pages
+  group: cloudflare-pages
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    name: Build and deploy
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Import data
         run: |
           pip install -r requirements.txt
           python -m tools.importer run
+
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: npm
           cache-dependency-path: web/package-lock.json
+
       - name: Build web
         working-directory: web
         run: |
           npm ci
           npm run build
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: web/dist
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy web/dist --project-name=bohla-portal-56e03e
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
