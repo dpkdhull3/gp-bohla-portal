@@ -12,6 +12,7 @@ type ActivityStatus = 'done' | 'unpaid' | 'not_done'
 type UnifiedActivity = {
   code: string
   title: string
+  description: string | null
   scheme: string
   sector: string
   planYear?: string
@@ -26,17 +27,49 @@ type UnifiedActivity = {
 }
 
 type FilterChip = 'all' | 'not_done' | 'done' | 'unpaid' | 'unlinked'
-type ViewMode = 'activities' | 'pdf' | 'sheet'
+type ViewMode = 'activities' | 'vouchers' | 'work_payments' | 'pdf' | 'sheet'
+
+type VoucherLinkKind = 'linked_same_fy' | 'linked_other_fy' | 'plan_only' | 'unlinked'
+
+type VoucherLinkInfo = {
+  kind: VoucherLinkKind
+  workYear?: string
+  planYear?: string
+  workName?: string
+}
 
 function viewFromSearch(raw: string | null): ViewMode {
   if (raw === 'pdf' || raw === 'docs') return 'pdf'
   if (raw === 'sheet') return 'sheet'
+  if (raw === 'vouchers') return 'vouchers'
+  if (raw === 'work_payments' || raw === 'by_work') return 'work_payments'
   return 'activities'
 }
 
 function spendRatio(approved: number | null, spent: number): number | null {
   if (approved === null || approved <= 0) return null
   return Math.min(100, Math.round((spent / approved) * 100))
+}
+
+function resolveVoucherLink(
+  v: Voucher,
+  workByCode: Map<string, WorkActivity>,
+  planByCode: Map<string, PlannedActivity>,
+): VoucherLinkInfo {
+  const code = v.workCode?.trim()
+  if (!code) return { kind: 'unlinked' }
+  const work = workByCode.get(code)
+  if (work) {
+    if (work.financialYear === v.financialYear) {
+      return { kind: 'linked_same_fy', workYear: work.financialYear, workName: work.activityName }
+    }
+    return { kind: 'linked_other_fy', workYear: work.financialYear, workName: work.activityName }
+  }
+  const plan = planByCode.get(code)
+  if (plan) {
+    return { kind: 'plan_only', planYear: plan.planYear }
+  }
+  return { kind: 'unlinked' }
 }
 
 function StatusGlyph({ status, label }: { status: ActivityStatus; label: string }) {
@@ -188,25 +221,18 @@ export function WorksPage() {
       const plan = planByCode.get(code)
       const work = workByCode.get(code)
       const allVouchers = vouchersByCode.get(code) ?? []
-      const periodVouchers = allVouchers.filter((v) => activeYears.includes(v.financialYear))
 
+      // Belong to this period by plan/work year.
       const inPeriod =
         (plan && activeYears.includes(plan.planYear)) ||
-        (work && activeYears.includes(work.financialYear)) ||
-        periodVouchers.length > 0
+        (work && activeYears.includes(work.financialYear))
 
       if (!inPeriod) continue
 
-      // Prefer vouchers in period for spend display; fall back to all linked if work/plan in period
-      const displayVouchers =
-        periodVouchers.length > 0
-          ? periodVouchers
-          : plan && activeYears.includes(plan.planYear)
-            ? allVouchers
-            : work && activeYears.includes(work.financialYear)
-              ? allVouchers
-              : periodVouchers
-
+      // All payments attached to this work (may be recorded in a later FY).
+      const displayVouchers = [...allVouchers].sort((a, b) =>
+        b.voucherDate.localeCompare(a.voucherDate),
+      )
       const spentInr = displayVouchers.reduce((s, v) => s + (v.amountInr || 0), 0)
       const approvedInr =
         plan?.estimatedCostInr != null
@@ -222,16 +248,22 @@ export function WorksPage() {
         status = 'not_done'
       }
 
+      const title = plan?.activityName || work?.activityName || code
+      const rawDesc = (plan?.activityDescription || '').trim()
+      const description =
+        rawDesc && rawDesc.toLowerCase() !== title.trim().toLowerCase() ? rawDesc : null
+
       rows.push({
         code,
-        title: plan?.activityName || work?.activityName || code,
+        title,
+        description,
         scheme: plan?.schemeName || work?.schemeName || '—',
         sector: plan?.sector || work?.focusArea || '—',
         planYear: plan?.planYear,
         workYear: work?.financialYear,
         plan,
         work,
-        vouchers: [...displayVouchers].sort((a, b) => b.voucherDate.localeCompare(a.voucherDate)),
+        vouchers: displayVouchers,
         approvedInr,
         spentInr,
         status,
@@ -239,19 +271,21 @@ export function WorksPage() {
       })
     }
 
-    const statusOrder: Record<ActivityStatus, number> = {
-      not_done: 0,
-      unpaid: 1,
-      done: 2,
-    }
-    rows.sort((a, b) => {
-      if (statusOrder[a.status] !== statusOrder[b.status]) {
-        return statusOrder[a.status] - statusOrder[b.status]
-      }
-      return (b.approvedInr || 0) - (a.approvedInr || 0)
-    })
+    rows.sort((a, b) => (b.approvedInr || 0) - (a.approvedInr || 0))
     return rows
   }, [planByCode, workByCode, vouchersByCode, activeYears])
+
+  /** Activity codes approved / completed in the selected FY(s). */
+  const periodActivityCodes = useMemo(() => {
+    const codes = new Set<string>()
+    for (const p of planByCode.values()) {
+      if (activeYears.includes(p.planYear)) codes.add(p.activityCode)
+    }
+    for (const w of workByCode.values()) {
+      if (activeYears.includes(w.financialYear)) codes.add(w.activityCode)
+    }
+    return codes
+  }, [planByCode, workByCode, activeYears])
 
   const unlinked = useMemo(() => {
     return vouchers
@@ -275,8 +309,20 @@ export function WorksPage() {
     return rows
   }, [activities, filter, q])
 
-  // Period-scoped KPIs (same basis as Overview) — do not inflate with other years'
-  // plan rows that only appear because a payment fell in this year.
+  /** Vouchers recorded in the selected FY(s) — cash-out by payment year. */
+  const vouchersForSpend = useMemo(() => {
+    return vouchers
+      .filter((v) => activeYears.includes(v.financialYear))
+      .sort((a, b) => (b.amountInr || 0) - (a.amountInr || 0))
+  }, [vouchers, activeYears])
+
+  /** Payments attached to approved/completed works of the selected FY(s), any payment year. */
+  const vouchersForWorks = useMemo(() => {
+    return vouchers
+      .filter((v) => v.workCode && periodActivityCodes.has(v.workCode))
+      .sort((a, b) => (b.amountInr || 0) - (a.amountInr || 0))
+  }, [vouchers, periodActivityCodes])
+
   const kpis = useMemo(() => {
     const planInPeriod = [...planByCode.values()].filter((p) =>
       activeYears.includes(p.planYear),
@@ -284,23 +330,34 @@ export function WorksPage() {
     const workInPeriod = [...workByCode.values()].filter((w) =>
       activeYears.includes(w.financialYear),
     )
-    const workCodes = new Set(workByCode.keys())
-    const linkedSpend = vouchers
-      .filter((v) => activeYears.includes(v.financialYear))
+    const workCodes = allWorkCodes
+    const totalSpend = vouchersForSpend.reduce((s, v) => s + (v.amountInr || 0), 0)
+    const linkedSpend = vouchersForSpend
       .filter((v) => v.workCode && workCodes.has(v.workCode))
       .reduce((s, v) => s + (v.amountInr || 0), 0)
-
+    const workSpend = vouchersForWorks.reduce((s, v) => s + (v.amountInr || 0), 0)
     const completedCodes = new Set(workInPeriod.map((w) => w.activityCode))
     const notDone = planInPeriod.filter((p) => !workByCode.has(p.activityCode)).length
 
     return {
       approved: planInPeriod.reduce((s, p) => s + (p.estimatedCostInr || 0), 0),
-      spent: linkedSpend,
+      totalSpend,
+      linkedSpend,
+      workSpend,
+      workVoucherCount: vouchersForWorks.length,
       completed: completedCodes.size,
       notDone,
       count: planInPeriod.length,
+      voucherCount: vouchersForSpend.length,
     }
-  }, [planByCode, workByCode, vouchers, activeYears])
+  }, [
+    planByCode,
+    workByCode,
+    vouchersForSpend,
+    vouchersForWorks,
+    activeYears,
+    allWorkCodes,
+  ])
 
   const planFilesInPeriod = useMemo(
     () =>
@@ -359,6 +416,112 @@ export function WorksPage() {
     return t('works.statusNotDone')
   }
 
+  const voucherLinkLabel = (info: VoucherLinkInfo) => {
+    if (info.kind === 'linked_same_fy') return t('works.voucherLinked')
+    if (info.kind === 'linked_other_fy') {
+      return t('works.voucherLinkedOtherFy', { year: info.workYear })
+    }
+    if (info.kind === 'plan_only') {
+      return t('works.voucherPlanOnly', { year: info.planYear })
+    }
+    return t('works.voucherUnlinked')
+  }
+
+  const workPaymentLinkLabel = (v: Voucher, info: VoucherLinkInfo) => {
+    const workYear = info.workYear || info.planYear
+    if (workYear && v.financialYear !== workYear) {
+      return t('works.voucherPaidInFy', { year: v.financialYear })
+    }
+    return t('works.voucherLinked')
+  }
+
+  const voucherLinkRowClass = (kind: VoucherLinkKind) => {
+    if (kind === 'unlinked') return 'voucher-row-unlinked'
+    if (kind === 'plan_only') return 'voucher-row-plan-only'
+    return undefined
+  }
+
+  const renderVoucherTable = (
+    rows: Voucher[],
+    total: number,
+    linkMode: 'payment_year' | 'work_year',
+  ) => {
+    if (rows.length === 0) return <EmptyState title={t('common.empty')} />
+    return (
+      <div className="table-scroll">
+        <table className="data-table-dense">
+          <thead>
+            <tr>
+              <th>{t('vouchers.voucherNo')}</th>
+              <th>{t('vouchers.date')}</th>
+              <th>{t('common.amountInr')}</th>
+              <th>{t('vouchers.workCode')}</th>
+              <th>{t('vouchers.majorHead')}</th>
+              <th>{t('vouchers.objectHead')}</th>
+              <th>FY</th>
+              <th>{t('works.voucherLinkCol')}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((v) => {
+              const info = resolveVoucherLink(v, workByCode, planByCode)
+              const linkText =
+                linkMode === 'work_year'
+                  ? workPaymentLinkLabel(v, info)
+                  : voucherLinkLabel(info)
+              return (
+                <tr
+                  key={v.vId}
+                  className={
+                    linkMode === 'payment_year' ? voucherLinkRowClass(info.kind) : undefined
+                  }
+                  title={
+                    linkMode === 'payment_year'
+                      ? info.kind === 'linked_other_fy'
+                        ? t('works.voucherLinkedOtherFyTitle', {
+                            year: info.workYear,
+                            name: info.workName,
+                          })
+                        : info.kind === 'plan_only'
+                          ? t('works.voucherPlanOnlyTitle', { year: info.planYear })
+                          : info.kind === 'unlinked'
+                            ? t('vouchers.unlinkedTitle')
+                            : undefined
+                      : info.workYear && v.financialYear !== info.workYear
+                        ? t('works.voucherPaidInFyTitle', {
+                            payYear: v.financialYear,
+                            workYear: info.workYear,
+                            name: info.workName,
+                          })
+                        : undefined
+                  }
+                >
+                  <td>{v.voucherNo}</td>
+                  <td>{v.voucherDate}</td>
+                  <td className="cell-strong">{formatInr(v.amountInr, locale)}</td>
+                  <td>{v.workCode ?? '—'}</td>
+                  <td>{v.majorHead?.label || v.majorHead?.raw || '—'}</td>
+                  <td>{v.objectHead?.label || v.objectHead?.raw || '—'}</td>
+                  <td>{v.financialYear}</td>
+                  <td>{linkText}</td>
+                </tr>
+              )
+            })}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td className="cell-strong" colSpan={2}>
+                {t('vouchers.totalRow')}
+              </td>
+              <td className="cell-strong">{formatInr(total, locale)}</td>
+              <td colSpan={5} />
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    )
+  }
+
   if (loading) {
     return (
       <div className="page">
@@ -369,14 +532,7 @@ export function WorksPage() {
 
   return (
     <div className="page page-unified-works">
-      <div className="home-topbar">
-        <div>
-          <h1 className="home-title">{t('works.unifiedTitle')}</h1>
-          <p className="home-meta">{t('works.unifiedIntro')}</p>
-        </div>
-      </div>
-
-      <div className="plans-view-tabs" aria-label={t('works.unifiedTitle')}>
+      <div className="plans-view-tabs" aria-label={t('nav.planWorksShort')}>
         <div className="plans-view-tabs-main" role="tablist">
           <button
             type="button"
@@ -388,6 +544,28 @@ export function WorksPage() {
             onClick={() => setView('activities')}
           >
             {t('works.tabActivities')}
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={viewMode === 'vouchers'}
+            className={
+              viewMode === 'vouchers' ? 'section-subnav-link active' : 'section-subnav-link'
+            }
+            onClick={() => setView('vouchers')}
+          >
+            {t('works.tabVouchers')}
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={viewMode === 'work_payments'}
+            className={
+              viewMode === 'work_payments' ? 'section-subnav-link active' : 'section-subnav-link'
+            }
+            onClick={() => setView('work_payments')}
+          >
+            {t('works.tabWorkPayments')}
           </button>
           <button
             type="button"
@@ -478,9 +656,42 @@ export function WorksPage() {
             <EmptyState title={t('works.noSheetForPeriod')} />
           )}
         </section>
+      ) : viewMode === 'vouchers' ? (
+        <section className="panel" aria-label={t('works.tabVouchers')}>
+          <div className="panel-header-row">
+            <h2>{t('works.tabVouchers')}</h2>
+            <span className="home-muted-total">
+              {formatNumber(kpis.voucherCount, locale)} · {formatInr(kpis.totalSpend, locale)}
+            </span>
+          </div>
+          <p className="panel-help">
+            {t('works.vouchersTabHelp', {
+              linked: formatInr(kpis.linkedSpend, locale),
+              total: formatInr(kpis.totalSpend, locale),
+            })}
+          </p>
+          <p className="panel-help">{t('works.vouchersLinkLegend')}</p>
+          {renderVoucherTable(vouchersForSpend, kpis.totalSpend, 'payment_year')}
+        </section>
+      ) : viewMode === 'work_payments' ? (
+        <section className="panel" aria-label={t('works.tabWorkPayments')}>
+          <div className="panel-header-row">
+            <h2>{t('works.tabWorkPayments')}</h2>
+            <span className="home-muted-total">
+              {formatNumber(kpis.workVoucherCount, locale)} · {formatInr(kpis.workSpend, locale)}
+            </span>
+          </div>
+          <p className="panel-help">
+            {t('works.workPaymentsTabHelp', {
+              total: formatInr(kpis.workSpend, locale),
+              count: formatNumber(kpis.workVoucherCount, locale),
+            })}
+          </p>
+          {renderVoucherTable(vouchersForWorks, kpis.workSpend, 'work_year')}
+        </section>
       ) : (
         <>
-      <section className="kpi-grid kpi-grid-four" aria-label={t('works.unifiedKpiAria')}>
+      <section className="kpi-grid kpi-grid-five" aria-label={t('works.unifiedKpiAria')}>
         <article className="kpi-card kpi-accent">
           <p className="kpi-label">{t('works.kpiApproved')}</p>
           <p className="kpi-value">{formatInrCompact(kpis.approved)}</p>
@@ -490,8 +701,18 @@ export function WorksPage() {
         </article>
         <article className="kpi-card">
           <p className="kpi-label">{t('works.kpiSpent')}</p>
-          <p className="kpi-value">{formatInrCompact(kpis.spent)}</p>
-          <p className="kpi-hint">{t('works.kpiSpentHint')}</p>
+          <p className="kpi-value">{formatInrCompact(kpis.totalSpend)}</p>
+          <p className="kpi-hint">
+            {t('works.kpiSpentSplit', {
+              linked: formatInrCompact(kpis.linkedSpend),
+              total: formatInrCompact(kpis.totalSpend),
+            })}
+          </p>
+        </article>
+        <article className="kpi-card">
+          <p className="kpi-label">{t('works.kpiWorkSpend')}</p>
+          <p className="kpi-value">{formatInrCompact(kpis.workSpend)}</p>
+          <p className="kpi-hint">{t('works.kpiWorkSpendHint')}</p>
         </article>
         <article className="kpi-card">
           <p className="kpi-label">{t('works.kpiCompleted')}</p>
@@ -581,6 +802,9 @@ export function WorksPage() {
                     <StatusGlyph status={a.status} label={statusLabel(a.status)} />
                     <div>
                       <h3>{a.title}</h3>
+                      {a.description ? (
+                        <p className="activity-card-desc">{a.description}</p>
+                      ) : null}
                       <p className="activity-card-meta">
                         {a.code}
                         {a.scheme !== '—' ? ` · ${a.scheme}` : ''}

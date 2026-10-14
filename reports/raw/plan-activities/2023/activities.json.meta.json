@@ -1,0 +1,15 @@
+{
+  "reportName": "Plan Activities Bundle",
+  "sourceUrl": "https://egramswaraj.gov.in/getActivityList.do?planCd=4725597&activityStts=0",
+  "parameters": {
+    "planCd": 4725597,
+    "planYr": 2023,
+    "activityCount": 53
+  },
+  "downloadedAt": "2026-10-14T12:47:38.170064+00:00",
+  "sha256": "46e8f409a5c5c756bdbde03a03441de191e4d8df741ad406ef57cb67f0eca4a3",
+  "byteSize": 70746,
+  "geographicScope": "Gram Panchayat Bohla (LGD 33105)",
+  "format": "application/json",
+  "financialYear": "2023-24"
+}

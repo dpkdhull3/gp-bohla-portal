@@ -13,6 +13,7 @@ from ..models.schemas import AccountingHead, SourceRef
 
 
 FY_API_TO_CANONICAL = {
+    "2020-2021": "2020-21",
     "2021-2022": "2021-22",
     "2022-2023": "2022-23",
     "2023-2024": "2023-24",
@@ -22,6 +23,7 @@ FY_API_TO_CANONICAL = {
 }
 
 FYEAR_TO_CANONICAL = {
+    2020: "2020-21",
     2021: "2021-22",
     2022: "2022-23",
     2023: "2023-24",

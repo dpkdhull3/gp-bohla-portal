@@ -1,0 +1,13 @@
+{
+  "reportName": "Activity Section Data",
+  "sourceUrl": "https://egramswaraj.gov.in/activitySectionData.do?activityCd=135003777",
+  "parameters": {
+    "activityCd": 135003777
+  },
+  "downloadedAt": "2026-10-14T12:48:03.634975+00:00",
+  "sha256": "5e6cdd51c86af23d9b468dae0d29c23960d8877db9a576fb6fe2a31fff02b23e",
+  "byteSize": 1196,
+  "geographicScope": "Gram Panchayat Bohla (LGD 33105)",
+  "format": "application/json",
+  "financialYear": "2026-27"
+}

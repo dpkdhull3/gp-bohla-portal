@@ -45,6 +45,7 @@ def parse_approved_plan_xls(
 
     activities: list[PlannedActivity] = []
     seen: set[str] = set()
+    activity_no = 0
 
     for tr in table.find_all("tr"):
         tds = [td.get_text(" ", strip=True) for td in tr.find_all("td")]
@@ -61,6 +62,7 @@ def parse_approved_plan_xls(
             warnings.append(f"{path.name}: duplicate activityCode={code}")
             continue
         seen.add(code)
+        activity_no += 1
 
         flags = [DataQualityFlag.OFFICIAL_REPORTED]
         est = None
@@ -98,6 +100,7 @@ def parse_approved_plan_xls(
                 scFundInr=opt_amount("SC Fund"),
                 stFundInr=opt_amount("ST Fund"),
                 planYear=plan_year,
+                activityNo=activity_no,
                 source=source,
                 flags=flags,
             )

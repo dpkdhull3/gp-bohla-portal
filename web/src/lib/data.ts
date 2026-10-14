@@ -1,5 +1,6 @@
 import type {
   DownloadItem,
+  PlanActivityRaw,
   PlanIndex,
   PlanYearFile,
   PlannedActivity,
@@ -119,4 +120,28 @@ export function loadDownloads() {
 export function publicAssetUrl(path: string): string {
   const clean = path.replace(/^\//, '')
   return `${import.meta.env.BASE_URL}${clean}`
+}
+
+/** Canonical FY `2024-25` → calendar plan year folder `2024`. */
+export function planYearToApiYear(planYear: string): string | null {
+  const m = /^(\d{4})-\d{2}$/.exec(planYear)
+  return m ? m[1] : null
+}
+
+/**
+ * Optional enrichment from fetched activitySectionData JSON.
+ * Returns null when the raw file was not published.
+ */
+export async function loadPlanActivityRaw(
+  planYear: string,
+  activityCode: string,
+): Promise<PlanActivityRaw | null> {
+  const apiYear = planYearToApiYear(planYear)
+  if (!apiYear) return null
+  const path = `reports/raw/plan-activities/${apiYear}/activities/${activityCode}.json`
+  try {
+    return await fetchJson<PlanActivityRaw>(path)
+  } catch {
+    return null
+  }
 }

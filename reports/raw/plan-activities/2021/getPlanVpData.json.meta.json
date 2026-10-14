@@ -1,0 +1,18 @@
+{
+  "reportName": "Plan VP Data",
+  "sourceUrl": "https://egramswaraj.gov.in/getPlanVpData.do?planYr=2021&stateCd=6&zpCd=75&bpCd=1142&typCd=3&level=3",
+  "parameters": {
+    "planYr": 2021,
+    "stateCd": 6,
+    "zpCd": 75,
+    "bpCd": 1142,
+    "typCd": 3,
+    "level": 3
+  },
+  "downloadedAt": "2026-10-14T12:47:26.521608+00:00",
+  "sha256": "3693a9a8ba56c8f81baccf16c24eb1a7e76025508a4bbea2a13be7cbdfbf6d00",
+  "byteSize": 14875,
+  "geographicScope": "Gram Panchayat Bohla (LGD 33105)",
+  "format": "application/json",
+  "financialYear": "2021-22"
+}

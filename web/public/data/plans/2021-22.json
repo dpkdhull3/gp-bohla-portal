@@ -1,0 +1,162 @@
+{
+  "planYear": "2021-22",
+  "count": 4,
+  "totalEstimatedCostInr": 714891.0,
+  "tiedInr": 343884.0,
+  "untiedInr": 343884.0,
+  "linkedPaymentInr": 674732.0,
+  "linkedActivityCount": 3,
+  "unlinkedActivityCount": 1,
+  "sectorBreakdown": [
+    {
+      "sector": "Roads",
+      "plannedInr": 371007.0
+    },
+    {
+      "sector": "Drinking water",
+      "plannedInr": 171942.0
+    },
+    {
+      "sector": "Sanitation",
+      "plannedInr": 171942.0
+    }
+  ],
+  "pdfPath": null,
+  "xlsPath": null,
+  "htmlPath": null,
+  "records": [
+    {
+      "activityCode": "46549721",
+      "activityName": "gali/nala/nali",
+      "activityDescription": "gali/nala/nali",
+      "themeName": null,
+      "sector": "Roads",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150) (59783)",
+      "estimatedCostInr": 343884.0,
+      "activityType": "Community Works",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": null,
+      "scFundInr": null,
+      "stFundInr": null,
+      "planYear": "2021-22",
+      "activityNo": 1,
+      "activityStts": "WORK ONGOING",
+      "linkedVoucherSumInr": 343541.0,
+      "linkedVoucherCount": 6,
+      "spendStatus": "linked",
+      "source": {
+        "reportName": "Plan Activities Bundle",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/plan-activities/2021/activities.json",
+        "sourceUrl": "https://egramswaraj.gov.in/getActivityList.do?planCd=3285431&activityStts=0",
+        "downloadedAt": "2026-10-14T12:47:27.059132+00:00",
+        "sha256": "2646b043de8e9b149b45e9c858c2535083a68f52e7286e61009961fea12d4f13",
+        "financialYear": "2021-22",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "46550194",
+      "activityName": "drinking water",
+      "activityDescription": "drinking water",
+      "themeName": null,
+      "sector": "Drinking water",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150) (59783)",
+      "estimatedCostInr": 171942.0,
+      "activityType": "Community Works",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": null,
+      "scFundInr": null,
+      "stFundInr": null,
+      "planYear": "2021-22",
+      "activityNo": 2,
+      "activityStts": "WORK ONGOING",
+      "linkedVoucherSumInr": 159580.0,
+      "linkedVoucherCount": 2,
+      "spendStatus": "linked",
+      "source": {
+        "reportName": "Plan Activities Bundle",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/plan-activities/2021/activities.json",
+        "sourceUrl": "https://egramswaraj.gov.in/getActivityList.do?planCd=3285431&activityStts=0",
+        "downloadedAt": "2026-10-14T12:47:27.059132+00:00",
+        "sha256": "2646b043de8e9b149b45e9c858c2535083a68f52e7286e61009961fea12d4f13",
+        "financialYear": "2021-22",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "46550380",
+      "activityName": "building/nala/nali",
+      "activityDescription": "building/nala/nali",
+      "themeName": null,
+      "sector": "Roads",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150) (59783)",
+      "estimatedCostInr": 27123.0,
+      "activityType": "Community Works",
+      "schemeName": "Own Funds",
+      "generalFundInr": null,
+      "scFundInr": null,
+      "stFundInr": null,
+      "planYear": "2021-22",
+      "activityNo": 3,
+      "activityStts": "WORK ONGOING",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
+      "source": {
+        "reportName": "Plan Activities Bundle",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/plan-activities/2021/activities.json",
+        "sourceUrl": "https://egramswaraj.gov.in/getActivityList.do?planCd=3285431&activityStts=0",
+        "downloadedAt": "2026-10-14T12:47:27.059132+00:00",
+        "sha256": "2646b043de8e9b149b45e9c858c2535083a68f52e7286e61009961fea12d4f13",
+        "financialYear": "2021-22",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "no_linked_vouchers"
+      ]
+    },
+    {
+      "activityCode": "46550020",
+      "activityName": "clearinanace",
+      "activityDescription": "clearinanace",
+      "themeName": null,
+      "sector": "Sanitation",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150) (59783)",
+      "estimatedCostInr": 171942.0,
+      "activityType": "Community Works",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": null,
+      "scFundInr": null,
+      "stFundInr": null,
+      "planYear": "2021-22",
+      "activityNo": 4,
+      "activityStts": "WORK ONGOING",
+      "linkedVoucherSumInr": 171611.0,
+      "linkedVoucherCount": 6,
+      "spendStatus": "linked",
+      "source": {
+        "reportName": "Plan Activities Bundle",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/plan-activities/2021/activities.json",
+        "sourceUrl": "https://egramswaraj.gov.in/getActivityList.do?planCd=3285431&activityStts=0",
+        "downloadedAt": "2026-10-14T12:47:27.059132+00:00",
+        "sha256": "2646b043de8e9b149b45e9c858c2535083a68f52e7286e61009961fea12d4f13",
+        "financialYear": "2021-22",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    }
+  ]
+}

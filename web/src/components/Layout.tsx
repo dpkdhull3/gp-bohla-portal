@@ -12,13 +12,24 @@ import {
 
 const SECTION_LINKS = [
   { to: '/', labelKey: 'nav.overviewShort', end: true },
-  { to: '/funds', labelKey: 'nav.fundsShort' },
-  { to: '/works', labelKey: 'nav.planWorksShort', end: true },
+  { to: '/grants', labelKey: 'nav.grantsShort', end: true },
+  { to: '/payments', labelKey: 'nav.paymentsShort', end: true },
 ] as const
 
 function isSectionActive(pathname: string, to: string, end?: boolean): boolean {
   if (to === '/') return pathname === '/'
-  if (to === '/works') return pathname === '/works' || pathname.startsWith('/works/')
+  if (to === '/grants') {
+    return pathname === '/grants' || pathname.startsWith('/grants/') || pathname.startsWith('/works')
+  }
+  if (to === '/payments') {
+    return (
+      pathname === '/payments' ||
+      pathname.startsWith('/payments/') ||
+      pathname === '/funds/vouchers' ||
+      pathname === '/vouchers' ||
+      pathname.startsWith('/funds')
+    )
+  }
   if (end) return pathname === to
   return pathname === to || pathname.startsWith(`${to}/`)
 }
@@ -31,8 +42,17 @@ export function Layout() {
   const yearTabs = useMemo(() => {
     const available = meta?.availableFinancialYears?.length
       ? meta.availableFinancialYears
-      : [DEFAULT_RANGE_START, '2024-25', '2025-26', DEFAULT_RANGE_END]
-    return lastNFinancialYears(available, 5)
+      : [
+          DEFAULT_RANGE_START,
+          '2021-22',
+          '2022-23',
+          '2023-24',
+          '2024-25',
+          '2025-26',
+          DEFAULT_RANGE_END,
+        ]
+    // Show full imported span including 2020-21 and 2021-22
+    return lastNFinancialYears(available, 7)
   }, [meta])
 
   const toggleLang = () => {

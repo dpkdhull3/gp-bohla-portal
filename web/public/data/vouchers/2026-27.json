@@ -49,15 +49,14 @@
       "source": {
         "reportName": "GP Voucher Details",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2026-2027.json",
-        "sourceUrl": null,
-        "downloadedAt": null,
-        "sha256": "c8bb35e8b53e01e895efe1938932978d317d46bf011578b083bfe4c12f819d91",
+        "sourceUrl": "https://egramswaraj.gov.in/getGPVoucherDetailsData.do?finYear=2026-2027&stateId=6&lgdCode=33105",
+        "downloadedAt": "2026-10-14T12:48:07.322729+00:00",
+        "sha256": "c4bf31a6e2479efccec52153198fdff7258619b2c242c1fdbaa721e27425936b",
         "financialYear": "2026-27",
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported",
-        "unmatched_work"
+        "official_reported"
       ]
     },
     {
@@ -106,9 +105,9 @@
       "source": {
         "reportName": "GP Voucher Details",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2026-2027.json",
-        "sourceUrl": null,
-        "downloadedAt": null,
-        "sha256": "c8bb35e8b53e01e895efe1938932978d317d46bf011578b083bfe4c12f819d91",
+        "sourceUrl": "https://egramswaraj.gov.in/getGPVoucherDetailsData.do?finYear=2026-2027&stateId=6&lgdCode=33105",
+        "downloadedAt": "2026-10-14T12:48:07.322729+00:00",
+        "sha256": "c4bf31a6e2479efccec52153198fdff7258619b2c242c1fdbaa721e27425936b",
         "financialYear": "2026-27",
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
@@ -162,9 +161,9 @@
       "source": {
         "reportName": "GP Voucher Details",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2026-2027.json",
-        "sourceUrl": null,
-        "downloadedAt": null,
-        "sha256": "c8bb35e8b53e01e895efe1938932978d317d46bf011578b083bfe4c12f819d91",
+        "sourceUrl": "https://egramswaraj.gov.in/getGPVoucherDetailsData.do?finYear=2026-2027&stateId=6&lgdCode=33105",
+        "downloadedAt": "2026-10-14T12:48:07.322729+00:00",
+        "sha256": "c4bf31a6e2479efccec52153198fdff7258619b2c242c1fdbaa721e27425936b",
         "financialYear": "2026-27",
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
@@ -218,9 +217,9 @@
       "source": {
         "reportName": "GP Voucher Details",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2026-2027.json",
-        "sourceUrl": null,
-        "downloadedAt": null,
-        "sha256": "c8bb35e8b53e01e895efe1938932978d317d46bf011578b083bfe4c12f819d91",
+        "sourceUrl": "https://egramswaraj.gov.in/getGPVoucherDetailsData.do?finYear=2026-2027&stateId=6&lgdCode=33105",
+        "downloadedAt": "2026-10-14T12:48:07.322729+00:00",
+        "sha256": "c4bf31a6e2479efccec52153198fdff7258619b2c242c1fdbaa721e27425936b",
         "financialYear": "2026-27",
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
@@ -274,9 +273,9 @@
       "source": {
         "reportName": "GP Voucher Details",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2026-2027.json",
-        "sourceUrl": null,
-        "downloadedAt": null,
-        "sha256": "c8bb35e8b53e01e895efe1938932978d317d46bf011578b083bfe4c12f819d91",
+        "sourceUrl": "https://egramswaraj.gov.in/getGPVoucherDetailsData.do?finYear=2026-2027&stateId=6&lgdCode=33105",
+        "downloadedAt": "2026-10-14T12:48:07.322729+00:00",
+        "sha256": "c4bf31a6e2479efccec52153198fdff7258619b2c242c1fdbaa721e27425936b",
         "financialYear": "2026-27",
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
@@ -330,9 +329,9 @@
       "source": {
         "reportName": "GP Voucher Details",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2026-2027.json",
-        "sourceUrl": null,
-        "downloadedAt": null,
-        "sha256": "c8bb35e8b53e01e895efe1938932978d317d46bf011578b083bfe4c12f819d91",
+        "sourceUrl": "https://egramswaraj.gov.in/getGPVoucherDetailsData.do?finYear=2026-2027&stateId=6&lgdCode=33105",
+        "downloadedAt": "2026-10-14T12:48:07.322729+00:00",
+        "sha256": "c4bf31a6e2479efccec52153198fdff7258619b2c242c1fdbaa721e27425936b",
         "financialYear": "2026-27",
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },

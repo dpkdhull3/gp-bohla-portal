@@ -16,9 +16,9 @@ import {
 } from 'recharts'
 import { KpiCard } from '../components/KpiCard'
 import { useYear } from '../context/YearContext'
-import { loadAllPlans, loadAllVouchers, loadAllWorks } from '../lib/data'
+import { loadAllPlans, loadAllVouchers, publicAssetUrl } from '../lib/data'
 import { formatInr, formatInrCompact, formatNumber } from '../lib/format'
-import type { PlanYearFile, Voucher, WorkActivity, YearSummary } from '../lib/types'
+import type { PlanYearFile, Voucher, YearSummary } from '../lib/types'
 import { filterYearsInRange } from '../lib/years'
 
 const SECTOR_COLORS = [
@@ -31,11 +31,6 @@ const SECTOR_COLORS = [
   '#8a4b2e',
   '#3d6b5a',
 ]
-
-function isVoucherLinked(v: Voucher): boolean {
-  if (!v.workCode) return false
-  return !(v.flags || []).includes('unmatched_work')
-}
 
 export function HomePage() {
   const { t, i18n } = useTranslation()
@@ -51,7 +46,6 @@ export function HomePage() {
     activeYears,
     selectSingleYear,
   } = useYear()
-  const [works, setWorks] = useState<WorkActivity[]>([])
   const [plans, setPlans] = useState<PlanYearFile[]>([])
   const [vouchers, setVouchers] = useState<Voucher[]>([])
 
@@ -62,10 +56,9 @@ export function HomePage() {
         ? meta.availableFinancialYears
         : yearSummaries.map((y) => y.financialYear)
     if (fys.length === 0) return
-    Promise.all([loadAllWorks(fys), loadAllPlans(fys), loadAllVouchers(fys)])
-      .then(([w, p, v]) => {
+    Promise.all([loadAllPlans(fys), loadAllVouchers(fys)])
+      .then(([p, v]) => {
         if (cancelled) return
-        setWorks(w)
         setPlans(p)
         setVouchers(v)
       })
@@ -93,44 +86,54 @@ export function HomePage() {
     [vouchers, activeYears],
   )
 
-  const worksInPeriod = useMemo(
-    () => works.filter((w) => activeYears.includes(w.financialYear)),
-    [works, activeYears],
-  )
-
+  /**
+   * Approved-plan KPI must come from year-summaries (written at import from
+   * eGramSwaraj curl/API data). Do not wait on async loadAllPlans — that race
+   * left the first KPI as "—" while activity hints already appeared.
+   */
   const planTotals = useMemo(() => {
-    const approved = plansInPeriod.reduce((s, p) => s + (p.totalEstimatedCostInr || 0), 0)
-    const tied = plansInPeriod.reduce((s, p) => s + (p.tiedInr || 0), 0)
-    const untied = plansInPeriod.reduce((s, p) => s + (p.untiedInr || 0), 0)
-    const activities = plansInPeriod.reduce((s, p) => s + (p.count || 0), 0)
-    const linkedPlanSpend = plansInPeriod.reduce((s, p) => s + (p.linkedPaymentInr || 0), 0)
-    return { approved, tied, untied, activities, linkedPlanSpend }
-  }, [plansInPeriod])
-
-  const voucherLink = useMemo(() => {
-    let linkedCount = 0
-    let unlinkedCount = 0
-    let linkedInr = 0
-    let unlinkedInr = 0
-    for (const v of vouchersInPeriod) {
-      if (isVoucherLinked(v)) {
-        linkedCount += 1
-        linkedInr += v.amountInr || 0
-      } else {
-        unlinkedCount += 1
-        unlinkedInr += v.amountInr || 0
-      }
+    const fromSummaries = {
+      approved: detailRows.reduce((s, y) => s + (Number(y.approvedPlanInr) || 0), 0),
+      tied: detailRows.reduce((s, y) => s + (Number(y.tiedInr) || 0), 0),
+      untied: detailRows.reduce((s, y) => s + (Number(y.untiedInr) || 0), 0),
+      activities: detailRows.reduce((s, y) => s + (Number(y.plannedActivityCount) || 0), 0),
+      linkedPlanSpend: 0,
     }
-    return { linkedCount, unlinkedCount, linkedInr, unlinkedInr }
-  }, [vouchersInPeriod])
+    if (fromSummaries.approved > 0 || fromSummaries.activities > 0) {
+      return fromSummaries
+    }
+    // Fallback only if summaries predate this field (old JSON).
+    const approved = plansInPeriod.reduce((s, p) => {
+      const top = Number(p.totalEstimatedCostInr)
+      if (Number.isFinite(top) && top > 0) return s + top
+      return (
+        s +
+        (p.records || []).reduce((a, r) => a + (Number(r.estimatedCostInr) || 0), 0)
+      )
+    }, 0)
+    const tied = plansInPeriod.reduce((s, p) => s + (Number(p.tiedInr) || 0), 0)
+    const untied = plansInPeriod.reduce((s, p) => s + (Number(p.untiedInr) || 0), 0)
+    const activities = plansInPeriod.reduce((s, p) => s + (Number(p.count) || 0), 0)
+    const linkedPlanSpend = plansInPeriod.reduce(
+      (s, p) => s + (Number(p.linkedPaymentInr) || 0),
+      0,
+    )
+    return { approved, tied, untied, activities, linkedPlanSpend }
+  }, [detailRows, plansInPeriod])
 
   const yearCompare = useMemo(() => {
-    const planByYear = new Map(plans.map((p) => [p.planYear, p]))
     return filterYearsInRange(yearSummaries, rangeStart, rangeEnd).map((row) => {
-      const plan = planByYear.get(row.financialYear)
+      const approvedFromSummary = Number(row.approvedPlanInr) || 0
+      const planFile = plans.find((p) => p.planYear === row.financialYear)
+      const approvedFallback =
+        Number(planFile?.totalEstimatedCostInr) ||
+        (planFile?.records || []).reduce(
+          (a, r) => a + (Number(r.estimatedCostInr) || 0),
+          0,
+        )
       return {
         financialYear: row.financialYear,
-        approvedInr: plan?.totalEstimatedCostInr || 0,
+        approvedInr: approvedFromSummary > 0 ? approvedFromSummary : approvedFallback,
         spentInr: row.recordedPaymentInr || 0,
         completedWorksCount: row.completedWorksCount || 0,
         voucherCount: row.voucherCount || 0,
@@ -183,6 +186,8 @@ export function HomePage() {
 
   const locale = i18n.language === 'hi' ? 'hi-IN' : 'en-IN'
   const hasData = detailRows.length > 0 || plansInPeriod.length > 0
+  const approvedPlanValue =
+    planTotals.approved > 0 ? formatInrCompact(planTotals.approved) : '—'
   const tiedShare =
     planTotals.tied + planTotals.untied > 0
       ? Math.round((planTotals.tied / (planTotals.tied + planTotals.untied)) * 100)
@@ -190,7 +195,42 @@ export function HomePage() {
 
   const openYearWorks = (fy: string) => {
     selectSingleYear(fy)
-    void navigate('/works')
+    void navigate('/grants')
+  }
+
+  const openYearPayments = (fy: string) => {
+    selectSingleYear(fy)
+    void navigate('/payments')
+  }
+
+  const singleYearPlan =
+    !isRangeView
+      ? plans.find((p) => p.planYear === year) ?? plansInPeriod[0] ?? null
+      : null
+  const singleYearPdf = singleYearPlan?.pdfPath
+    ? publicAssetUrl(singleYearPlan.pdfPath)
+    : null
+  const singleYearSheet = singleYearPlan?.htmlPath
+    ? publicAssetUrl(singleYearPlan.htmlPath)
+    : singleYearPlan?.xlsPath
+      ? publicAssetUrl(singleYearPlan.xlsPath)
+      : null
+  const singleYearXls = singleYearPlan?.xlsPath
+    ? publicAssetUrl(singleYearPlan.xlsPath)
+    : null
+
+  const planDocsForYear = (fy: string) => {
+    const file = plans.find((p) => p.planYear === fy)
+    if (!file) return { pdf: null as string | null, sheet: null as string | null, xls: null as string | null }
+    return {
+      pdf: file.pdfPath ? publicAssetUrl(file.pdfPath) : null,
+      sheet: file.htmlPath
+        ? publicAssetUrl(file.htmlPath)
+        : file.xlsPath
+          ? publicAssetUrl(file.xlsPath)
+          : null,
+      xls: file.xlsPath ? publicAssetUrl(file.xlsPath) : null,
+    }
   }
 
   return (
@@ -203,19 +243,19 @@ export function HomePage() {
           </p>
         </div>
         <div className="home-topbar-links">
-          <Link className="text-link" to="/works">
+          <Link className="text-link" to="/grants">
             {t('home.openPlans')}
           </Link>
-          <Link className="text-link" to="/funds/schemes">
-            {t('home.openFunds')}
+          <Link className="text-link" to="/payments">
+            {t('home.openPayments')}
           </Link>
         </div>
       </div>
 
-      <section className="kpi-grid kpi-grid-four" aria-label={t('home.summaryAria')}>
+      <section className="kpi-grid kpi-grid-three" aria-label={t('home.summaryAria')}>
         <KpiCard
           label={t('home.approvedPlan')}
-          value={hasData && planTotals.approved > 0 ? formatInrCompact(planTotals.approved) : '—'}
+          value={loading && !hasData ? t('common.loading') : approvedPlanValue}
           hint={
             planTotals.activities > 0
               ? t('home.approvedPlanHint', {
@@ -226,7 +266,7 @@ export function HomePage() {
                 : undefined
           }
           tone="accent"
-          to="/works"
+          to="/grants"
         />
         <KpiCard
           label={t('home.moneyUsed')}
@@ -234,29 +274,61 @@ export function HomePage() {
           hint={t('home.moneyUsedHint', {
             count: formatNumber(totals.voucherCount, locale),
           })}
-          to="/works"
+          to="/payments"
         />
         <KpiCard
           label={t('home.completedWorks')}
           value={hasData ? formatNumber(totals.completedWorksCount, locale) : '—'}
           hint={t('home.completedWorksHint')}
-          to="/works"
-        />
-        <KpiCard
-          label={t('home.vouchersLinked')}
-          value={
-            vouchersInPeriod.length
-              ? `${formatNumber(voucherLink.linkedCount, locale)} / ${formatNumber(vouchersInPeriod.length, locale)}`
-              : '—'
-          }
-          hint={
-            vouchersInPeriod.length
-              ? formatInrCompact(voucherLink.linkedInr)
-              : undefined
-          }
-          to="/works"
+          to="/grants"
         />
       </section>
+
+      {!isRangeView ? (
+        <section className="panel home-year-docs" aria-label={t('home.yearPlanDocsTitle', { year })}>
+          <div className="panel-header-row">
+            <h2>{t('home.yearPlanDocsTitle', { year })}</h2>
+          </div>
+          <p className="panel-help">{t('home.yearPlanDocsHelp')}</p>
+          {singleYearPdf || singleYearSheet || singleYearXls ? (
+            <div className="home-year-docs-actions">
+              {singleYearPdf ? (
+                <a
+                  className="btn-secondary"
+                  href={singleYearPdf}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t('home.viewPlanPdf')}
+                </a>
+              ) : null}
+              {singleYearSheet ? (
+                <a
+                  className="btn-secondary"
+                  href={singleYearSheet}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t('home.viewPlanSheet')}
+                </a>
+              ) : null}
+              {singleYearXls ? (
+                <a className="btn-secondary" href={singleYearXls} download>
+                  {t('home.downloadPlanSheet')}
+                </a>
+              ) : null}
+              <Link
+                className="btn-secondary"
+                to={{ pathname: '/grants', search: '?view=pdf' }}
+              >
+                {t('home.openPlanViewer')}
+              </Link>
+            </div>
+          ) : (
+            <p className="panel-help">{t('home.yearPlanDocsMissing')}</p>
+          )}
+        </section>
+      ) : null}
 
       {planTotals.tied + planTotals.untied > 0 ? (
         <section className="panel home-split-panel" aria-label={t('home.tiedUntiedSplit')}>
@@ -412,42 +484,14 @@ export function HomePage() {
         </div>
       ) : null}
 
-      {vouchersInPeriod.length > 0 ? (
-        <section className="panel" aria-label={t('home.vouchersLinkTitle')}>
-          <div className="panel-header-row">
-            <h2>{t('home.vouchersLinkTitle')}</h2>
-            <Link className="text-link" to="/works">
-              {t('home.openYearWorks')}
-            </Link>
-          </div>
-          <p className="panel-help">{t('home.vouchersLinkHelp')}</p>
-          <div className="home-link-stats">
-            <article className="home-link-stat home-link-stat-ok">
-              <p className="kpi-label">{t('home.vouchersLinkedShort')}</p>
-              <p className="kpi-value">{formatNumber(voucherLink.linkedCount, locale)}</p>
-              <p className="kpi-hint">{formatInr(voucherLink.linkedInr, locale)}</p>
-            </article>
-            <article className="home-link-stat home-link-stat-warn">
-              <p className="kpi-label">{t('home.vouchersUnlinkedShort')}</p>
-              <p className="kpi-value">{formatNumber(voucherLink.unlinkedCount, locale)}</p>
-              <p className="kpi-hint">{formatInr(voucherLink.unlinkedInr, locale)}</p>
-            </article>
-            <article className="home-link-stat">
-              <p className="kpi-label">{t('home.completedWorks')}</p>
-              <p className="kpi-value">{formatNumber(worksInPeriod.length, locale)}</p>
-              <p className="kpi-hint">{t('home.completedWorksHint')}</p>
-            </article>
-          </div>
-        </section>
-      ) : null}
-
       <section className="panel">
         <div className="panel-header-row">
           <h2>{isRangeView ? t('home.yearTableTitleShort') : t('home.yearDetailTitle')}</h2>
-          <Link className="text-link" to="/works">
+          <Link className="text-link" to="/grants">
             {t('home.openWorks')}
           </Link>
         </div>
+        <p className="panel-help">{t('home.yearTableHelp')}</p>
         <div className="table-scroll">
           <table className="data-table-dense">
             <thead>
@@ -457,7 +501,7 @@ export function HomePage() {
                 <th>{t('home.colMoneyUsed')}</th>
                 <th>{t('home.colWorks')}</th>
                 <th>{t('home.colVouchers')}</th>
-                <th />
+                <th>{t('home.colPlanDocs')}</th>
               </tr>
             </thead>
             <tbody>
@@ -465,7 +509,9 @@ export function HomePage() {
                 .filter((row) =>
                   isRangeView ? true : row.financialYear === year,
                 )
-                .map((row) => (
+                .map((row) => {
+                  const docs = planDocsForYear(row.financialYear)
+                  return (
                   <tr key={row.financialYear}>
                     <td className="cell-strong">{row.financialYear}</td>
                     <td className="cell-strong">
@@ -482,17 +528,49 @@ export function HomePage() {
                     <td className="cell-strong">{formatNumber(row.voucherCount, locale)}</td>
                     <td>
                       <div className="row-actions">
+                        {docs.pdf ? (
+                          <a
+                            className="btn-secondary btn-compact"
+                            href={docs.pdf}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {t('home.planPdfShort')}
+                          </a>
+                        ) : null}
+                        {docs.xls ? (
+                          <a className="btn-secondary btn-compact" href={docs.xls} download>
+                            {t('home.planSheetShort')}
+                          </a>
+                        ) : docs.sheet ? (
+                          <a
+                            className="btn-secondary btn-compact"
+                            href={docs.sheet}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {t('home.planSheetShort')}
+                          </a>
+                        ) : null}
                         <button
                           type="button"
                           className="btn-secondary btn-compact"
                           onClick={() => openYearWorks(row.financialYear)}
                         >
-                          {t('home.openYearWorks')}
+                          {t('home.openYearGrants')}
+                        </button>
+                        <button
+                          type="button"
+                          className="btn-secondary btn-compact"
+                          onClick={() => openYearPayments(row.financialYear)}
+                        >
+                          {t('home.openYearVouchers')}
                         </button>
                       </div>
                     </td>
                   </tr>
-                ))}
+                  )
+                })}
             </tbody>
           </table>
         </div>

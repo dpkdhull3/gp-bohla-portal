@@ -1,0 +1,178 @@
+{
+  "financialYear": "2020-21",
+  "count": 3,
+  "totalPaymentInr": 268352.0,
+  "records": [
+    {
+      "vId": 86704,
+      "voucherNo": "XVFC/2020-21/P/1",
+      "voucherDate": "2020-12-28",
+      "amountInr": 26880.0,
+      "workCode": "0",
+      "majorHead": {
+        "code": "2515",
+        "label": "Panchayati Raj Programmes",
+        "raw": "2515-Panchayati Raj Programmes"
+      },
+      "subMajorHead": {
+        "code": "",
+        "label": "",
+        "raw": "00-"
+      },
+      "minorHead": {
+        "code": "103",
+        "label": "Gram Panchayat Programmes",
+        "raw": "103-Gram Panchayat Programmes"
+      },
+      "subHead": {
+        "code": "81",
+        "label": "Central Finance Commission Grant",
+        "raw": "81-Central Finance Commission Grant"
+      },
+      "detailHead": {
+        "code": "",
+        "label": "",
+        "raw": "00-"
+      },
+      "objectHead": {
+        "code": "80",
+        "label": "Other Expenditure",
+        "raw": "80-Other Expenditure"
+      },
+      "voucherKind": "payment",
+      "schemeHint": "XV Finance Commission",
+      "lgdCode": 33105,
+      "lgdName": "BOHLA",
+      "zpName": "SONIPAT",
+      "bpName": "SONIPAT",
+      "financialYear": "2020-21",
+      "source": {
+        "reportName": "GP Voucher Details",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2020-2021.json",
+        "sourceUrl": "https://egramswaraj.gov.in/getGPVoucherDetailsData.do?finYear=2020-2021&stateId=6&lgdCode=33105",
+        "downloadedAt": "2026-10-14T12:47:26.320588+00:00",
+        "sha256": "ee85b7207ded119bc74c6dd53ac42797918d17ec955011d4c03ca54c1f0a2458",
+        "financialYear": "2020-21",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "unmatched_work"
+      ]
+    },
+    {
+      "vId": 86707,
+      "voucherNo": "XVFC/2020-21/P/2",
+      "voucherDate": "2020-12-28",
+      "amountInr": 120000.0,
+      "workCode": "0",
+      "majorHead": {
+        "code": "2515",
+        "label": "Panchayati Raj Programmes",
+        "raw": "2515-Panchayati Raj Programmes"
+      },
+      "subMajorHead": {
+        "code": "",
+        "label": "",
+        "raw": "00-"
+      },
+      "minorHead": {
+        "code": "103",
+        "label": "Gram Panchayat Programmes",
+        "raw": "103-Gram Panchayat Programmes"
+      },
+      "subHead": {
+        "code": "81",
+        "label": "Central Finance Commission Grant",
+        "raw": "81-Central Finance Commission Grant"
+      },
+      "detailHead": {
+        "code": "",
+        "label": "",
+        "raw": "00-"
+      },
+      "objectHead": {
+        "code": "80",
+        "label": "Other Expenditure",
+        "raw": "80-Other Expenditure"
+      },
+      "voucherKind": "payment",
+      "schemeHint": "XV Finance Commission",
+      "lgdCode": 33105,
+      "lgdName": "BOHLA",
+      "zpName": "SONIPAT",
+      "bpName": "SONIPAT",
+      "financialYear": "2020-21",
+      "source": {
+        "reportName": "GP Voucher Details",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2020-2021.json",
+        "sourceUrl": "https://egramswaraj.gov.in/getGPVoucherDetailsData.do?finYear=2020-2021&stateId=6&lgdCode=33105",
+        "downloadedAt": "2026-10-14T12:47:26.320588+00:00",
+        "sha256": "ee85b7207ded119bc74c6dd53ac42797918d17ec955011d4c03ca54c1f0a2458",
+        "financialYear": "2020-21",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "unmatched_work"
+      ]
+    },
+    {
+      "vId": 86712,
+      "voucherNo": "XVFC/2020-21/P/3",
+      "voucherDate": "2020-12-28",
+      "amountInr": 121472.0,
+      "workCode": "0",
+      "majorHead": {
+        "code": "2215",
+        "label": "Water Supply and Sanitation",
+        "raw": "2215-Water Supply and Sanitation"
+      },
+      "subMajorHead": {
+        "code": "01",
+        "label": "Water Supply",
+        "raw": "01-Water Supply"
+      },
+      "minorHead": {
+        "code": "800",
+        "label": "Other Expenditure",
+        "raw": "800-Other Expenditure"
+      },
+      "subHead": {
+        "code": "81",
+        "label": "Central Finance Commission Grant",
+        "raw": "81-Central Finance Commission Grant"
+      },
+      "detailHead": {
+        "code": "",
+        "label": "",
+        "raw": "00-"
+      },
+      "objectHead": {
+        "code": "80",
+        "label": "Other Expenditure",
+        "raw": "80-Other Expenditure"
+      },
+      "voucherKind": "payment",
+      "schemeHint": "XV Finance Commission",
+      "lgdCode": 33105,
+      "lgdName": "BOHLA",
+      "zpName": "SONIPAT",
+      "bpName": "SONIPAT",
+      "financialYear": "2020-21",
+      "source": {
+        "reportName": "GP Voucher Details",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/vouchers/2020-2021.json",
+        "sourceUrl": "https://egramswaraj.gov.in/getGPVoucherDetailsData.do?finYear=2020-2021&stateId=6&lgdCode=33105",
+        "downloadedAt": "2026-10-14T12:47:26.320588+00:00",
+        "sha256": "ee85b7207ded119bc74c6dd53ac42797918d17ec955011d4c03ca54c1f0a2458",
+        "financialYear": "2020-21",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "unmatched_work"
+      ]
+    }
+  ]
+}

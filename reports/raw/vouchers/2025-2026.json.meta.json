@@ -1,0 +1,15 @@
+{
+  "reportName": "GP Voucher Details",
+  "sourceUrl": "https://egramswaraj.gov.in/getGPVoucherDetailsData.do?finYear=2025-2026&stateId=6&lgdCode=33105",
+  "parameters": {
+    "finYear": "2025-2026",
+    "stateId": 6,
+    "lgdCode": 33105
+  },
+  "downloadedAt": "2026-10-14T12:48:01.389831+00:00",
+  "sha256": "f354d65d770658b0acecba2627217d32c5f0584bac080e821eab3aa2d4fe71a3",
+  "byteSize": 6118,
+  "geographicScope": "Gram Panchayat Bohla (LGD 33105)",
+  "format": "application/json",
+  "financialYear": "2025-26"
+}

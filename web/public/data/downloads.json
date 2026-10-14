@@ -1,6 +1,17 @@
 {
   "records": [
     {
+      "id": "voucher-2020-2021",
+      "titleEn": "GP Voucher Details 2020-21",
+      "titleHi": "ग्राम पंचायत वाउचर विवरण 2020-21",
+      "category": "vouchers",
+      "financialYear": "2020-21",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/vouchers/2020-2021.json",
+      "source": "eGramSwaraj getGPVoucherDetailsData.do"
+    },
+    {
       "id": "voucher-2021-2022",
       "titleEn": "GP Voucher Details 2021-22",
       "titleHi": "ग्राम पंचायत वाउचर विवरण 2021-22",
@@ -67,6 +78,17 @@
       "source": "eGramSwaraj getGPVoucherDetailsData.do"
     },
     {
+      "id": "phys-2020-21",
+      "titleEn": "Physical Progress (completed filter) 2020-21",
+      "titleHi": "भौतिक प्रगति (पूर्ण) 2020-21",
+      "category": "physical-progress",
+      "financialYear": "2020-21",
+      "kind": "original",
+      "format": "html",
+      "path": "/reports/raw/physical-progress/fyear-2020-wrkstts-176.html",
+      "source": "eGramSwaraj physicalprogressReport.do wrkstts=176"
+    },
+    {
       "id": "phys-2021-22",
       "titleEn": "Physical Progress (completed filter) 2021-22",
       "titleHi": "भौतिक प्रगति (पूर्ण) 2021-22",
@@ -131,6 +153,83 @@
       "format": "html",
       "path": "/reports/raw/physical-progress/fyear-2026-wrkstts-176.html",
       "source": "eGramSwaraj physicalprogressReport.do wrkstts=176"
+    },
+    {
+      "id": "plan-api-2020-21",
+      "titleEn": "Plan activities (API) 2020-21",
+      "titleHi": "योजना गतिविधियाँ (API) 2020-21",
+      "category": "approved-action-plan",
+      "financialYear": "2020-21",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/plan-activities/2020/activities.json",
+      "source": "eGramSwaraj getActivityList.do / activitySectionData.do"
+    },
+    {
+      "id": "plan-api-2021-22",
+      "titleEn": "Plan activities (API) 2021-22",
+      "titleHi": "योजना गतिविधियाँ (API) 2021-22",
+      "category": "approved-action-plan",
+      "financialYear": "2021-22",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/plan-activities/2021/activities.json",
+      "source": "eGramSwaraj getActivityList.do / activitySectionData.do"
+    },
+    {
+      "id": "plan-api-2022-23",
+      "titleEn": "Plan activities (API) 2022-23",
+      "titleHi": "योजना गतिविधियाँ (API) 2022-23",
+      "category": "approved-action-plan",
+      "financialYear": "2022-23",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/plan-activities/2022/activities.json",
+      "source": "eGramSwaraj getActivityList.do / activitySectionData.do"
+    },
+    {
+      "id": "plan-api-2023-24",
+      "titleEn": "Plan activities (API) 2023-24",
+      "titleHi": "योजना गतिविधियाँ (API) 2023-24",
+      "category": "approved-action-plan",
+      "financialYear": "2023-24",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/plan-activities/2023/activities.json",
+      "source": "eGramSwaraj getActivityList.do / activitySectionData.do"
+    },
+    {
+      "id": "plan-api-2024-25",
+      "titleEn": "Plan activities (API) 2024-25",
+      "titleHi": "योजना गतिविधियाँ (API) 2024-25",
+      "category": "approved-action-plan",
+      "financialYear": "2024-25",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/plan-activities/2024/activities.json",
+      "source": "eGramSwaraj getActivityList.do / activitySectionData.do"
+    },
+    {
+      "id": "plan-api-2025-26",
+      "titleEn": "Plan activities (API) 2025-26",
+      "titleHi": "योजना गतिविधियाँ (API) 2025-26",
+      "category": "approved-action-plan",
+      "financialYear": "2025-26",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/plan-activities/2025/activities.json",
+      "source": "eGramSwaraj getActivityList.do / activitySectionData.do"
+    },
+    {
+      "id": "plan-api-2026-27",
+      "titleEn": "Plan activities (API) 2026-27",
+      "titleHi": "योजना गतिविधियाँ (API) 2026-27",
+      "category": "approved-action-plan",
+      "financialYear": "2026-27",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/plan-activities/2026/activities.json",
+      "source": "eGramSwaraj getActivityList.do / activitySectionData.do"
     },
     {
       "id": "plan-2026-27-pdf",

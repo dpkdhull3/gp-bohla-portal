@@ -113,6 +113,7 @@ export function YearProvider({ children }: { children: ReactNode }) {
         ? meta.availableFinancialYears
         : // Before meta loads, still expose the default selected range.
           [
+            '2020-21',
             '2021-22',
             '2022-23',
             '2023-24',

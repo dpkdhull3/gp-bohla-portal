@@ -1,18 +1,27 @@
 {
-  "generatedAt": "2026-10-14T08:23:07.332525Z",
+  "generatedAt": "2026-10-14T13:14:58.354983Z",
   "filesProcessed": [
+    "reports/raw/vouchers/2020-2021.json",
     "reports/raw/vouchers/2021-2022.json",
     "reports/raw/vouchers/2022-2023.json",
     "reports/raw/vouchers/2023-2024.json",
     "reports/raw/vouchers/2024-2025.json",
     "reports/raw/vouchers/2025-2026.json",
     "reports/raw/vouchers/2026-2027.json",
+    "reports/raw/physical-progress/fyear-2020-wrkstts-176.html",
     "reports/raw/physical-progress/fyear-2021-wrkstts-176.html",
     "reports/raw/physical-progress/fyear-2022-wrkstts-176.html",
     "reports/raw/physical-progress/fyear-2023-wrkstts-176.html",
     "reports/raw/physical-progress/fyear-2024-wrkstts-176.html",
     "reports/raw/physical-progress/fyear-2025-wrkstts-176.html",
     "reports/raw/physical-progress/fyear-2026-wrkstts-176.html",
+    "reports/raw/plan-activities/2020/activities.json",
+    "reports/raw/plan-activities/2021/activities.json",
+    "reports/raw/plan-activities/2022/activities.json",
+    "reports/raw/plan-activities/2023/activities.json",
+    "reports/raw/plan-activities/2024/activities.json",
+    "reports/raw/plan-activities/2025/activities.json",
+    "reports/raw/plan-activities/2026/activities.json",
     "reports/Approved action plans/2022-23/approved_action_plan_report.xls",
     "reports/Approved action plans/2022-23/2022-23.pdf",
     "reports/Approved action plans/2023-24/approved_action_plan_report.xls",
@@ -26,13 +35,16 @@
   ],
   "filesRejected": [],
   "rowsImported": {
-    "vouchers": 37,
-    "works": 11,
-    "plannedActivities": 83
+    "vouchers": 40,
+    "works": 14,
+    "plannedActivities": 183
   },
   "duplicateRows": [],
   "missingValues": [],
   "reconciliationNotes": [
+    "Work 41487549: approved=171942.0, voucherSum=169320.0, variance=-2622.0",
+    "Work 41487704: approved=171942.0, voucherSum=159682.0, variance=-12260.0",
+    "Work 41487961: approved=343885.0, voucherSum=343885.0, variance=0.0",
     "Work 46549721: approved=343884.0, voucherSum=343541.0, variance=-343.0",
     "Work 46550020: approved=171942.0, voucherSum=171611.0, variance=-331.0",
     "Work 46550194: approved=171942.0, voucherSum=159580.0, variance=-12362.0",
@@ -44,11 +56,10 @@
     "Work 98414812 has no matching payment vouchers",
     "Work 118458878: approved=206330.0, voucherSum=120789.0, variance=-85541.0",
     "Work 118460385: approved=206325.0, voucherSum=185692.0, variance=-20633.0",
-    "Voucher workCode 41487549 has no completed-works row (wrkstts=176)",
-    "Voucher workCode 41487704 has no completed-works row (wrkstts=176)",
-    "Voucher workCode 41487961 has no completed-works row (wrkstts=176)"
+    "Voucher workCode 0 has no completed-works row (wrkstts=176)"
   ],
   "yearsCovered": [
+    "2020-21",
     "2021-22",
     "2022-23",
     "2023-24",
@@ -62,6 +73,7 @@
     "Pradhan Mantri Krishi Sinchayi Yojna",
     "Prime Minister Gramin Awaas Yojana",
     "Swachh Bharat Mission",
+    "Unspecified",
     "Viksit Bharat-Guarantee for Rozgar and Ajeevika Mission (Gramin)",
     "XV Finance Commission",
     "XVI Finance Commission"

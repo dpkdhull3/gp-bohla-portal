@@ -1,19 +1,45 @@
 {
   "years": [
     {
-      "financialYear": "2021-22",
-      "recordedPaymentInr": 0,
+      "financialYear": "2020-21",
+      "recordedPaymentInr": 268352.0,
       "recordedReceiptInr": 0,
-      "voucherCount": 0,
-      "completedWorksCount": 4,
-      "adminApprovedWorksInr": 714891.0,
+      "voucherCount": 3,
+      "completedWorksCount": 3,
+      "adminApprovedWorksInr": 687769.0,
+      "approvedPlanInr": 687769.0,
+      "plannedActivityCount": 3,
+      "tiedInr": 343884.0,
+      "untiedInr": 343885.0,
       "openingBalanceInr": null,
       "closingBalanceInr": null,
       "fundsReceivedInr": null,
       "balanceCoverage": "missing",
       "notes": [
         "Opening/closing balance and funds received are not available in imported voucher JSON.",
-        "Do not treat recorded payments as the full official expenditure statement."
+        "Do not treat recorded payments as the full official expenditure statement.",
+        "approvedPlanInr comes from eGramSwaraj plan activity JSON (import-time fetch)."
+      ]
+    },
+    {
+      "financialYear": "2021-22",
+      "recordedPaymentInr": 0,
+      "recordedReceiptInr": 0,
+      "voucherCount": 0,
+      "completedWorksCount": 4,
+      "adminApprovedWorksInr": 714891.0,
+      "approvedPlanInr": 714891.0,
+      "plannedActivityCount": 4,
+      "tiedInr": 343884.0,
+      "untiedInr": 343884.0,
+      "openingBalanceInr": null,
+      "closingBalanceInr": null,
+      "fundsReceivedInr": null,
+      "balanceCoverage": "missing",
+      "notes": [
+        "Opening/closing balance and funds received are not available in imported voucher JSON.",
+        "Do not treat recorded payments as the full official expenditure statement.",
+        "approvedPlanInr comes from eGramSwaraj plan activity JSON (import-time fetch)."
       ]
     },
     {
@@ -23,13 +49,18 @@
       "voucherCount": 0,
       "completedWorksCount": 1,
       "adminApprovedWorksInr": 400000.0,
+      "approvedPlanInr": 887760.0,
+      "plannedActivityCount": 4,
+      "tiedInr": 412660.0,
+      "untiedInr": 275100.0,
       "openingBalanceInr": null,
       "closingBalanceInr": null,
       "fundsReceivedInr": null,
       "balanceCoverage": "missing",
       "notes": [
         "Opening/closing balance and funds received are not available in imported voucher JSON.",
-        "Do not treat recorded payments as the full official expenditure statement."
+        "Do not treat recorded payments as the full official expenditure statement.",
+        "approvedPlanInr comes from eGramSwaraj plan activity JSON (import-time fetch)."
       ]
     },
     {
@@ -39,13 +70,18 @@
       "voucherCount": 14,
       "completedWorksCount": 2,
       "adminApprovedWorksInr": 412655.0,
+      "approvedPlanInr": 887760.0,
+      "plannedActivityCount": 53,
+      "tiedInr": 412660.0,
+      "untiedInr": 275100.0,
       "openingBalanceInr": null,
       "closingBalanceInr": null,
       "fundsReceivedInr": null,
       "balanceCoverage": "missing",
       "notes": [
         "Opening/closing balance and funds received are not available in imported voucher JSON.",
-        "Do not treat recorded payments as the full official expenditure statement."
+        "Do not treat recorded payments as the full official expenditure statement.",
+        "approvedPlanInr comes from eGramSwaraj plan activity JSON (import-time fetch)."
       ]
     },
     {
@@ -55,13 +91,18 @@
       "voucherCount": 8,
       "completedWorksCount": 2,
       "adminApprovedWorksInr": 412655.0,
+      "approvedPlanInr": 1087760.0,
+      "plannedActivityCount": 35,
+      "tiedInr": 412660.0,
+      "untiedInr": 275100.0,
       "openingBalanceInr": null,
       "closingBalanceInr": null,
       "fundsReceivedInr": null,
       "balanceCoverage": "missing",
       "notes": [
         "Opening/closing balance and funds received are not available in imported voucher JSON.",
-        "Do not treat recorded payments as the full official expenditure statement."
+        "Do not treat recorded payments as the full official expenditure statement.",
+        "approvedPlanInr comes from eGramSwaraj plan activity JSON (import-time fetch)."
       ]
     },
     {
@@ -71,13 +112,18 @@
       "voucherCount": 9,
       "completedWorksCount": 2,
       "adminApprovedWorksInr": 412655.0,
+      "approvedPlanInr": 887760.0,
+      "plannedActivityCount": 49,
+      "tiedInr": 412660.0,
+      "untiedInr": 275100.0,
       "openingBalanceInr": null,
       "closingBalanceInr": null,
       "fundsReceivedInr": null,
       "balanceCoverage": "missing",
       "notes": [
         "Opening/closing balance and funds received are not available in imported voucher JSON.",
-        "Do not treat recorded payments as the full official expenditure statement."
+        "Do not treat recorded payments as the full official expenditure statement.",
+        "approvedPlanInr comes from eGramSwaraj plan activity JSON (import-time fetch)."
       ]
     },
     {
@@ -87,13 +133,18 @@
       "voucherCount": 6,
       "completedWorksCount": 0,
       "adminApprovedWorksInr": 0,
+      "approvedPlanInr": 1305002.0,
+      "plannedActivityCount": 35,
+      "tiedInr": 280000.0,
+      "untiedInr": 280002.0,
       "openingBalanceInr": null,
       "closingBalanceInr": null,
       "fundsReceivedInr": null,
       "balanceCoverage": "missing",
       "notes": [
         "Opening/closing balance and funds received are not available in imported voucher JSON.",
-        "Do not treat recorded payments as the full official expenditure statement."
+        "Do not treat recorded payments as the full official expenditure statement.",
+        "approvedPlanInr comes from eGramSwaraj plan activity JSON (import-time fetch)."
       ]
     }
   ]

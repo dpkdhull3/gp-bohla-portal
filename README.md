@@ -13,9 +13,11 @@ This is **not** an official government website. Figures are taken from public [e
 ## Quick start
 
 ```bash
-# 1) Normalize reports → web/public/data
+# 1) Fetch public eGramSwaraj JSON/HTML (optional refresh) then normalize
 pip install -r requirements.txt
-python -m tools.importer run
+python -m tools.importer.cli fetch-and-run --from 2020 --to 2026
+# Or only normalize existing reports/raw/:
+# python -m tools.importer.cli run
 
 # 2) Run the site
 cd web
@@ -29,7 +31,9 @@ Open the URL Vite prints (usually `http://localhost:5173`).
 
 | Command | Purpose |
 |---------|---------|
-| `python -m tools.importer run` | Parse `reports/raw/` → `web/public/data/` |
+| `python -m tools.importer.cli fetch --from 2020 --to 2026` | Download plan/voucher/progress into `reports/raw/` |
+| `python -m tools.importer.cli run` | Parse `reports/raw/` → `web/public/data/` |
+| `python -m tools.importer.cli fetch-and-run` | Fetch then import |
 | `python -m pytest tools/importer/tests -q` | Parser / money logic tests (synthetic fixtures) |
 | `cd web && npm run build` | Production static build → `web/dist` |
 | `cd web && npm run preview` | Preview production build |

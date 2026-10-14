@@ -1,0 +1,128 @@
+{
+  "planYear": "2020-21",
+  "count": 3,
+  "totalEstimatedCostInr": 687769.0,
+  "tiedInr": 343884.0,
+  "untiedInr": 343885.0,
+  "linkedPaymentInr": 672887.0,
+  "linkedActivityCount": 3,
+  "unlinkedActivityCount": 0,
+  "sectorBreakdown": [
+    {
+      "sector": "Others",
+      "plannedInr": 343885.0
+    },
+    {
+      "sector": "Drinking water",
+      "plannedInr": 171942.0
+    },
+    {
+      "sector": "Sanitation",
+      "plannedInr": 171942.0
+    }
+  ],
+  "pdfPath": null,
+  "xlsPath": null,
+  "htmlPath": null,
+  "records": [
+    {
+      "activityCode": "41487961",
+      "activityName": "other work in the village",
+      "activityDescription": "other work in the village",
+      "themeName": null,
+      "sector": "Others",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150) (59783)",
+      "estimatedCostInr": 343885.0,
+      "activityType": "Community Works",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": null,
+      "scFundInr": null,
+      "stFundInr": null,
+      "planYear": "2020-21",
+      "activityNo": 1,
+      "activityStts": "WORK ONGOING",
+      "linkedVoucherSumInr": 343885.0,
+      "linkedVoucherCount": 3,
+      "spendStatus": "linked",
+      "source": {
+        "reportName": "Plan Activities Bundle",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/plan-activities/2020/activities.json",
+        "sourceUrl": "https://egramswaraj.gov.in/getActivityList.do?planCd=2620959&activityStts=0",
+        "downloadedAt": "2026-10-14T12:47:26.201057+00:00",
+        "sha256": "3d051e42df7d1089ab85061959d2a7c0169dbac579505ed4166aadec23ea3568",
+        "financialYear": "2020-21",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "41487704",
+      "activityName": "water harvesting system and save water management and save drinking water",
+      "activityDescription": "water harvesting system and save water management and save drinking water",
+      "themeName": null,
+      "sector": "Drinking water",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150) (59783)",
+      "estimatedCostInr": 171942.0,
+      "activityType": "Community Works",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": null,
+      "scFundInr": null,
+      "stFundInr": null,
+      "planYear": "2020-21",
+      "activityNo": 2,
+      "activityStts": "WORK ONGOING",
+      "linkedVoucherSumInr": 159682.0,
+      "linkedVoucherCount": 1,
+      "spendStatus": "linked",
+      "source": {
+        "reportName": "Plan Activities Bundle",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/plan-activities/2020/activities.json",
+        "sourceUrl": "https://egramswaraj.gov.in/getActivityList.do?planCd=2620959&activityStts=0",
+        "downloadedAt": "2026-10-14T12:47:26.201057+00:00",
+        "sha256": "3d051e42df7d1089ab85061959d2a7c0169dbac579505ed4166aadec23ea3568",
+        "financialYear": "2020-21",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "41487549",
+      "activityName": "sanitization work and solid waste management in village",
+      "activityDescription": "sanitization work and solid waste management in village",
+      "themeName": null,
+      "sector": "Sanitation",
+      "activityLocation": null,
+      "locationOfAsset": null,
+      "estimatedCostInr": 171942.0,
+      "activityType": "Community Works",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": null,
+      "scFundInr": null,
+      "stFundInr": null,
+      "planYear": "2020-21",
+      "activityNo": 3,
+      "activityStts": "WORK ONGOING",
+      "linkedVoucherSumInr": 169320.0,
+      "linkedVoucherCount": 5,
+      "spendStatus": "linked",
+      "source": {
+        "reportName": "Plan Activities Bundle",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/plan-activities/2020/activities.json",
+        "sourceUrl": "https://egramswaraj.gov.in/getActivityList.do?planCd=2620959&activityStts=0",
+        "downloadedAt": "2026-10-14T12:47:26.201057+00:00",
+        "sha256": "3d051e42df7d1089ab85061959d2a7c0169dbac579505ed4166aadec23ea3568",
+        "financialYear": "2020-21",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 /** Canonical financial-year helpers. Comparison works lexicographically for YYYY-YY. */
 
-export const DEFAULT_RANGE_START = '2023-24'
+export const DEFAULT_RANGE_START = '2020-21'
 export const DEFAULT_RANGE_END = '2026-27'
 
 export function isFyInRange(fy: string, start: string, end: string): boolean {

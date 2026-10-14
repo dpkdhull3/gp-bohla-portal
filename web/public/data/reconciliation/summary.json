@@ -1,6 +1,9 @@
 {
-  "generatedAt": "2026-10-14T08:23:07.305064+00:00",
+  "generatedAt": "2026-10-14T13:14:57.935032+00:00",
   "notes": [
+    "Work 41487549: approved=171942.0, voucherSum=169320.0, variance=-2622.0",
+    "Work 41487704: approved=171942.0, voucherSum=159682.0, variance=-12260.0",
+    "Work 41487961: approved=343885.0, voucherSum=343885.0, variance=0.0",
     "Work 46549721: approved=343884.0, voucherSum=343541.0, variance=-343.0",
     "Work 46550020: approved=171942.0, voucherSum=171611.0, variance=-331.0",
     "Work 46550194: approved=171942.0, voucherSum=159580.0, variance=-12362.0",
@@ -12,11 +15,12 @@
     "Work 98414812 has no matching payment vouchers",
     "Work 118458878: approved=206330.0, voucherSum=120789.0, variance=-85541.0",
     "Work 118460385: approved=206325.0, voucherSum=185692.0, variance=-20633.0",
-    "Voucher workCode 41487549 has no completed-works row (wrkstts=176)",
-    "Voucher workCode 41487704 has no completed-works row (wrkstts=176)",
-    "Voucher workCode 41487961 has no completed-works row (wrkstts=176)"
+    "Voucher workCode 0 has no completed-works row (wrkstts=176)"
   ],
   "warnings": [
+    "2020-2021.json vId=86704: planYear is unset/0",
+    "2020-2021.json vId=86707: planYear is unset/0",
+    "2020-2021.json vId=86712: planYear is unset/0",
     "2023-2024.json vId=77247: planYear is unset/0",
     "2023-2024.json vId=77251: planYear is unset/0",
     "2023-2024.json vId=86470: planYear is unset/0",

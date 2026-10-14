@@ -17,6 +17,10 @@ from tools.importer.parsers.common import (
 from tools.importer.parsers.vouchers import parse_voucher_file
 from tools.importer.parsers.physical_progress import parse_physical_progress_file
 from tools.importer.parsers.approved_plan import parse_approved_plan_xls
+from tools.importer.parsers.plan_activities_api import (
+    parse_plan_activities_bundle,
+    tied_untied_from_allocations,
+)
 
 FIXTURES = Path(__file__).parent.parent / "fixtures"
 
@@ -144,3 +148,83 @@ def test_no_double_count_payments():
     # These metrics must remain distinct
     assert payment_total != approved
     assert payment_total + approved != payment_total  # sanity
+
+
+def test_plan_activities_api_bundle(tmp_path: Path):
+    bundle = {
+        "planYr": 2024,
+        "planYear": "2024-25",
+        "planCd": 5142337,
+        "gp_cd": 33105,
+        "count": 2,
+        "records": [
+            {
+                "activityCd": 98325278,
+                "activityName": "Water Supply to villages",
+                "activityDesc": "nala pond",
+                "focusArea": "Drinking water",
+                "themeName": "Theme 4 - Water Sufficient Village",
+                "location": "Bohla (150)",
+                "totalCost": 206330,
+                "activityType": "Community Works",
+                "activityStts": "Activity Approved",
+                "plnUntCd": 33105,
+                "fundAllocation": [
+                    {
+                        "schemeCode": "XV Finance Commission",
+                        "componentCode": "Tied Grant",
+                        "amountTotal": 206330,
+                    }
+                ],
+            },
+            {
+                "activityCd": 98414812,
+                "activityName": "Clean up drive",
+                "activityDesc": None,
+                "focusArea": "Health",
+                "themeName": None,
+                "location": "Bohla",
+                "totalCost": 100000,
+                "activityType": "Community Works",
+                "activityStts": "WORK ONGOING",
+                "plnUntCd": 33105,
+                "fundAllocation": [
+                    {
+                        "schemeCode": "XV Finance Commission",
+                        "componentCode": "Basic Grant (untied)",
+                        "amountTotal": 100000,
+                    }
+                ],
+            },
+        ],
+    }
+    path = tmp_path / "activities.json"
+    path.write_text(json.dumps(bundle), encoding="utf-8")
+    rows, warnings, tied, untied = parse_plan_activities_bundle(path)
+    assert not warnings
+    assert len(rows) == 2
+    assert rows[0].activityCode == "98325278"
+    assert rows[0].activityNo == 1
+    assert rows[1].activityNo == 2
+    assert rows[0].schemeName == "XV Finance Commission"
+    assert rows[0].sector == "Drinking water"
+    assert rows[0].activityStts == "Activity Approved"
+    assert rows[0].estimatedCostInr == 206330
+    assert rows[0].planYear == "2024-25"
+    assert tied == 206330
+    assert untied == 100000
+
+
+def test_tied_untied_helpers():
+    tied, untied = tied_untied_from_allocations(
+        [
+            {
+                "fundAllocation": [
+                    {"componentCode": "Tied Grant", "amountTotal": 10},
+                    {"componentCode": "Basic Grant (untied)", "amountTotal": 5},
+                ]
+            }
+        ]
+    )
+    assert tied == 10
+    assert untied == 5

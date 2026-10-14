@@ -20,9 +20,9 @@
       "source": {
         "reportName": "Physical Progress Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/physical-progress/fyear-2025-wrkstts-176.html",
-        "sourceUrl": null,
-        "downloadedAt": null,
-        "sha256": "2ef140d2b4498b7f0a605517017cbdf6a3f184aa945565bdeded53a032dce699",
+        "sourceUrl": "https://egramswaraj.gov.in/physicalprogressReport.do?statecd=6&fyear=2025&gpcd=33105&wrkstts=176",
+        "downloadedAt": "2026-10-14T12:48:01.503239+00:00",
+        "sha256": "7deabae296a81a8d5b09e4c98ae3ff7cf4f6ce99855b4ac0456704934f4dbe78",
         "financialYear": "2025-26",
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
@@ -46,9 +46,9 @@
       "source": {
         "reportName": "Physical Progress Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/physical-progress/fyear-2025-wrkstts-176.html",
-        "sourceUrl": null,
-        "downloadedAt": null,
-        "sha256": "2ef140d2b4498b7f0a605517017cbdf6a3f184aa945565bdeded53a032dce699",
+        "sourceUrl": "https://egramswaraj.gov.in/physicalprogressReport.do?statecd=6&fyear=2025&gpcd=33105&wrkstts=176",
+        "downloadedAt": "2026-10-14T12:48:01.503239+00:00",
+        "sha256": "7deabae296a81a8d5b09e4c98ae3ff7cf4f6ce99855b4ac0456704934f4dbe78",
         "financialYear": "2025-26",
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },

@@ -21,6 +21,10 @@ from .models.schemas import (
 )
 from .parsers.approved_plan import parse_approved_plan_xls
 from .parsers.physical_progress import parse_physical_progress_file
+from .parsers.plan_activities_api import (
+    discover_plan_activity_bundles,
+    parse_plan_activities_bundle,
+)
 from .parsers.plan_pdf_summary import parse_plan_summary_tied_untied
 from .parsers.vouchers import parse_voucher_file
 
@@ -29,6 +33,7 @@ RAW = ROOT / "reports" / "raw"
 OUT = ROOT / "web" / "public" / "data"
 
 VOUCHER_YEARS = [
+    "2020-2021",
     "2021-2022",
     "2022-2023",
     "2023-2024",
@@ -36,7 +41,7 @@ VOUCHER_YEARS = [
     "2025-2026",
     "2026-2027",
 ]
-PHYS_FYEARS = [2021, 2022, 2023, 2024, 2025, 2026]
+PHYS_FYEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026]
 
 
 def _json_default(obj: Any) -> Any:
@@ -252,7 +257,7 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
             },
         )
 
-    # --- Approved plans (year-wise folder: reports/Approved action plans/{fy}/) ---
+    # --- Approved plans: prefer API bundles, then XLS folders ---
     import shutil
 
     plans_src_root = ROOT / "reports" / "Approved action plans"
@@ -261,6 +266,29 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
     planned = []
     plan_years_imported: list[str] = []
     plan_assets: dict[str, dict[str, Any]] = {}
+    api_plan_years: set[str] = set()
+
+    for bundle_path, fy in discover_plan_activity_bundles(RAW):
+        try:
+            rows, warnings, tied_inr, untied_inr = parse_plan_activities_bundle(
+                bundle_path, fy
+            )
+        except ValueError as exc:
+            files_rejected.append(f"{bundle_path}: {exc}")
+            continue
+        all_warnings.extend(warnings)
+        files_processed.append(str(bundle_path.relative_to(ROOT)))
+        planned.extend(rows)
+        plan_years_imported.append(fy)
+        api_plan_years.add(fy)
+        plan_assets[fy] = {
+            "pdfPath": None,
+            "xlsPath": None,
+            "htmlPath": None,
+            "tiedInr": tied_inr,
+            "untiedInr": untied_inr,
+            "source": "api",
+        }
 
     year_dirs = sorted(
         d for d in plans_src_root.iterdir() if d.is_dir() and not d.name.startswith(".")
@@ -270,27 +298,47 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
         fy = year_dir.name
         xls = year_dir / "approved_action_plan_report.xls"
         pdf = year_dir / f"{fy}.pdf"
+
+        # Always publish optional PDF/XLS assets when present (for Grants iframes)
+        pdf_public_path = None
+        xls_public_path = None
+        html_public_path = None
+        if xls.exists():
+            xls_public_path = f"/reports/approved-action-plans/{fy}.xls"
+            html_public_path = f"/reports/approved-action-plans/{fy}.html"
+            shutil.copy2(xls, plans_public / f"{fy}.xls")
+            _write_plan_html_preview(xls, plans_public / f"{fy}.html")
+            files_processed.append(str(xls.relative_to(ROOT)))
+        if pdf.exists():
+            pdf_public_path = f"/reports/approved-action-plans/{fy}.pdf"
+            shutil.copy2(pdf, plans_public / f"{fy}.pdf")
+            files_processed.append(str(pdf.relative_to(ROOT)))
+
+        if fy in api_plan_years:
+            assets = plan_assets.setdefault(fy, {})
+            assets["pdfPath"] = pdf_public_path
+            assets["xlsPath"] = xls_public_path
+            assets["htmlPath"] = html_public_path
+            # Prefer PDF tied/untied when API could not classify components
+            if (assets.get("tiedInr") is None or assets.get("untiedInr") is None) and pdf.exists():
+                try:
+                    pdf_tied, pdf_untied = parse_plan_summary_tied_untied(pdf)
+                    if assets.get("tiedInr") is None:
+                        assets["tiedInr"] = pdf_tied
+                    if assets.get("untiedInr") is None:
+                        assets["untiedInr"] = pdf_untied
+                except (ValueError, OSError, subprocess.CalledProcessError) as exc:
+                    all_warnings.append(f"{fy}: could not parse tied/untied from PDF ({exc})")
+            continue
+
         if not xls.exists():
             files_rejected.append(f"{year_dir}: missing approved_action_plan_report.xls")
             continue
         try:
             rows, warnings = parse_approved_plan_xls(xls, fy)
             all_warnings.extend(warnings)
-            files_processed.append(str(xls.relative_to(ROOT)))
             planned.extend(rows)
             plan_years_imported.append(fy)
-            pdf_public_path = f"/reports/approved-action-plans/{fy}.pdf"
-            xls_public_path = f"/reports/approved-action-plans/{fy}.xls"
-            # eGramSwaraj "xls" is HTML — publish a readable .html for in-browser viewing
-            html_public_path = f"/reports/approved-action-plans/{fy}.html"
-            shutil.copy2(xls, plans_public / f"{fy}.xls")
-            _write_plan_html_preview(xls, plans_public / f"{fy}.html")
-            if pdf.exists():
-                shutil.copy2(pdf, plans_public / f"{fy}.pdf")
-                files_processed.append(str(pdf.relative_to(ROOT)))
-            else:
-                pdf_public_path = None
-                all_warnings.append(f"{fy}: PDF missing beside spreadsheet")
             tied_inr: float | None = None
             untied_inr: float | None = None
             if pdf.exists():
@@ -298,17 +346,20 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
                     tied_inr, untied_inr = parse_plan_summary_tied_untied(pdf)
                 except (ValueError, OSError, subprocess.CalledProcessError) as exc:
                     all_warnings.append(f"{fy}: could not parse tied/untied from PDF ({exc})")
+            else:
+                all_warnings.append(f"{fy}: PDF missing beside spreadsheet")
             plan_assets[fy] = {
                 "pdfPath": pdf_public_path,
                 "xlsPath": xls_public_path,
                 "htmlPath": html_public_path,
                 "tiedInr": tied_inr,
                 "untiedInr": untied_inr,
+                "source": "xls",
             }
         except ValueError as exc:
             files_rejected.append(f"{xls}: {exc}")
 
-    # Fallback: legacy single-year raw path if folder import found nothing
+    # Fallback: legacy single-year raw path if no plans imported yet
     if not planned:
         plan_path = RAW / "approved-action-plan" / "2026-27-ApprovedActionPlan.xls"
         if plan_path.exists():
@@ -409,14 +460,14 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
                 "linkedActivityCount": sum(r["linkedActivityCount"] for r in plan_index_rows),
             },
             "noteEn": (
-                "Approved amounts come from Approved Action Plans. "
-                "Fixed-purpose (tied) and flexible (untied) splits come from the plan PDF summary. "
+                "Approved amounts come from eGramSwaraj plan activity APIs (preferred) or Approved Action Plan XLS. "
+                "Fixed-purpose (tied) and flexible (untied) splits come from fundAllocation component codes or the plan PDF summary. "
                 "“Actually spent (linked)” sums payment vouchers whose workCode matches the plan activity code. "
                 "Items with no matching voucher are not treated as ₹0 spent."
             ),
             "noteHi": (
-                "स्वीकृत राशि स्वीकृत कार्य योजना से है। "
-                "निर्धारित (tied) और लचीली (untied) राशि योजना PDF सारांश से है। "
+                "स्वीकृत राशि ईग्रामस्वराज योजना गतिविधि API (प्राथमिक) या स्वीकृत कार्य योजना XLS से है। "
+                "निर्धारित (tied) और लचीली (untied) राशि fundAllocation घटक कोड या योजना PDF सारांश से है। "
                 "“वास्तविक खर्च (जुड़ा)” उन भुगतान वाउचरों का योग है जिनका workCode योजना गतिविधि कोड से मिलता है। "
                 "जिनका वाउचर नहीं मिला, उन्हें ₹0 खर्च नहीं माना गया।"
             ),
@@ -470,7 +521,7 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
         },
     )
 
-    # --- Year summaries for funds page ---
+    # --- Year summaries (payments + API plan totals for stable Home KPIs) ---
     year_summaries = []
     all_years = sorted(
         set(vouchers_by_fy.keys())
@@ -481,6 +532,9 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
     for fy in all_years:
         vs = vouchers_by_fy.get(fy, [])
         ws = works_by_fy.get(fy, [])
+        plan_rows = planned_by_fy.get(fy, [])
+        assets = plan_assets.get(fy, {})
+        approved_plan_inr = sum(a.estimatedCostInr or 0 for a in plan_rows)
         year_summaries.append(
             {
                 "financialYear": fy,
@@ -493,6 +547,11 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
                 "voucherCount": len(vs),
                 "completedWorksCount": len(ws),
                 "adminApprovedWorksInr": sum(w.adminApprovedCostInr or 0 for w in ws),
+                # From eGramSwaraj plan activity APIs (activitySectionData totalCost)
+                "approvedPlanInr": approved_plan_inr,
+                "plannedActivityCount": len(plan_rows),
+                "tiedInr": assets.get("tiedInr"),
+                "untiedInr": assets.get("untiedInr"),
                 "openingBalanceInr": None,
                 "closingBalanceInr": None,
                 "fundsReceivedInr": None,
@@ -500,6 +559,7 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
                 "notes": [
                     "Opening/closing balance and funds received are not available in imported voucher JSON.",
                     "Do not treat recorded payments as the full official expenditure statement.",
+                    "approvedPlanInr comes from eGramSwaraj plan activity JSON (import-time fetch).",
                 ],
             }
         )
@@ -559,6 +619,21 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
             }
         )
 
+    for bundle_path, fy in discover_plan_activity_bundles(RAW):
+        downloads.append(
+            {
+                "id": f"plan-api-{fy}",
+                "titleEn": f"Plan activities (API) {fy}",
+                "titleHi": f"योजना गतिविधियाँ (API) {fy}",
+                "category": "approved-action-plan",
+                "financialYear": fy,
+                "kind": "original",
+                "format": "json",
+                "path": f"/reports/raw/plan-activities/{bundle_path.parent.name}/activities.json",
+                "source": "eGramSwaraj getActivityList.do / activitySectionData.do",
+            }
+        )
+
     for row in plan_index_rows:
         fy = row["planYear"]
         if row.get("pdfPath"):
@@ -575,20 +650,20 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
                     "source": "eGramSwaraj Approved Action Plan",
                 }
             )
-        downloads.append(
-            {
-                "id": f"plan-{fy}-xls",
-                "titleEn": f"Approved Action Plan {fy} (XLS/HTML)",
-                "titleHi": f"स्वीकृत कार्य योजना {fy} (XLS)",
-                "category": "approved-action-plan",
-                "financialYear": fy,
-                "kind": "original",
-                "format": "xls",
-                "path": row.get("xlsPath")
-                or f"/reports/approved-action-plans/{fy}.xls",
-                "source": "eGramSwaraj Approved Action Plan",
-            }
-        )
+        if row.get("xlsPath"):
+            downloads.append(
+                {
+                    "id": f"plan-{fy}-xls",
+                    "titleEn": f"Approved Action Plan {fy} (XLS/HTML)",
+                    "titleHi": f"स्वीकृत कार्य योजना {fy} (XLS)",
+                    "category": "approved-action-plan",
+                    "financialYear": fy,
+                    "kind": "original",
+                    "format": "xls",
+                    "path": row["xlsPath"],
+                    "source": "eGramSwaraj Approved Action Plan",
+                }
+            )
     downloads.append(
         {
             "id": "generated-year-summaries",
@@ -659,12 +734,19 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
             metric="approved_action_plan",
             status=CoverageStatus.AVAILABLE if plan_years_imported else CoverageStatus.MISSING,
             noteEn=(
-                f"Approved Action Plans imported for: {', '.join(sorted(plan_years_imported, reverse=True))}."
+                (
+                    f"Approved Action Plans imported for: {', '.join(sorted(plan_years_imported, reverse=True))}."
+                    + (
+                        f" API-sourced years: {', '.join(sorted(api_plan_years, reverse=True))}."
+                        if api_plan_years
+                        else ""
+                    )
+                )
                 if plan_years_imported
                 else "No approved action plan imported yet."
             ),
             noteHi=(
-                f"स्वीकृत कार्य योजना आयात: {', '.join(sorted(plan_years_imported, reverse=True))}।"
+                f"स्वीकृत कार्य योजना आयात: {', '.join(sorted(plan_years_imported, reverse=True))}."
                 if plan_years_imported
                 else "अभी कोई स्वीकृत कार्य योजना आयात नहीं हुई।"
             ),
@@ -711,8 +793,12 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
                 "url": "https://egramswaraj.gov.in/physicalprogressReport.do",
             },
             {
-                "name": "eGramSwaraj Approved Action Plan",
-                "url": "https://egramswaraj.gov.in/planningDashBoard.do",
+                "name": "eGramSwaraj Plan Activities",
+                "url": "https://egramswaraj.gov.in/getPlanVpData.do",
+            },
+            {
+                "name": "eGramSwaraj Activity Section Data",
+                "url": "https://egramswaraj.gov.in/activitySectionData.do",
             },
         ],
     )
@@ -720,7 +806,7 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
 
     # Copy raw reports into web/public for downloads
     public_reports = ROOT / "web" / "public" / "reports" / "raw"
-    for sub in ("vouchers", "physical-progress", "approved-action-plan"):
+    for sub in ("vouchers", "physical-progress", "approved-action-plan", "plan-activities"):
         src = RAW / sub
         dst = public_reports / sub
         if src.exists():

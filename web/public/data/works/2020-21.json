@@ -1,0 +1,86 @@
+{
+  "financialYear": "2020-21",
+  "statusFilter": "wrkstts=176",
+  "statusLabel": "completed_as_recorded",
+  "count": 3,
+  "records": [
+    {
+      "activityCode": "41487549",
+      "activityName": "sanitization work and solid waste management in village",
+      "focusArea": "Sanitation",
+      "adminApprovedCostInr": 171942.0,
+      "schemeName": "XV Finance Commission",
+      "componentName": "Tied Grant",
+      "completionDate": "2023-10-06",
+      "financialYear": "2020-21",
+      "statusLabel": "completed_as_recorded",
+      "statusSource": "eGramSwaraj Physical Progress wrkstts=176",
+      "linkedVoucherSumInr": 169320.0,
+      "linkedVoucherCount": 5,
+      "source": {
+        "reportName": "Physical Progress Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/physical-progress/fyear-2020-wrkstts-176.html",
+        "sourceUrl": "https://egramswaraj.gov.in/physicalprogressReport.do?statecd=6&fyear=2020&gpcd=33105&wrkstts=176",
+        "downloadedAt": "2026-10-14T12:47:26.429190+00:00",
+        "sha256": "b7d5dc593f8cbb3c798bcc8a3133a448e6b23c5f6357debc6f78c72a0be63216",
+        "financialYear": "2020-21",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "41487704",
+      "activityName": "water harvesting system and save water management and save drinking water",
+      "focusArea": "Drinking water",
+      "adminApprovedCostInr": 171942.0,
+      "schemeName": "XV Finance Commission",
+      "componentName": "Tied Grant",
+      "completionDate": "2024-03-20",
+      "financialYear": "2020-21",
+      "statusLabel": "completed_as_recorded",
+      "statusSource": "eGramSwaraj Physical Progress wrkstts=176",
+      "linkedVoucherSumInr": 159682.0,
+      "linkedVoucherCount": 1,
+      "source": {
+        "reportName": "Physical Progress Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/physical-progress/fyear-2020-wrkstts-176.html",
+        "sourceUrl": "https://egramswaraj.gov.in/physicalprogressReport.do?statecd=6&fyear=2020&gpcd=33105&wrkstts=176",
+        "downloadedAt": "2026-10-14T12:47:26.429190+00:00",
+        "sha256": "b7d5dc593f8cbb3c798bcc8a3133a448e6b23c5f6357debc6f78c72a0be63216",
+        "financialYear": "2020-21",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "41487961",
+      "activityName": "other work in the village",
+      "focusArea": "Others",
+      "adminApprovedCostInr": 343885.0,
+      "schemeName": "XV Finance Commission",
+      "componentName": "Basic Grant (untied)",
+      "completionDate": "2024-03-20",
+      "financialYear": "2020-21",
+      "statusLabel": "completed_as_recorded",
+      "statusSource": "eGramSwaraj Physical Progress wrkstts=176",
+      "linkedVoucherSumInr": 343885.0,
+      "linkedVoucherCount": 3,
+      "source": {
+        "reportName": "Physical Progress Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/physical-progress/fyear-2020-wrkstts-176.html",
+        "sourceUrl": "https://egramswaraj.gov.in/physicalprogressReport.do?statecd=6&fyear=2020&gpcd=33105&wrkstts=176",
+        "downloadedAt": "2026-10-14T12:47:26.429190+00:00",
+        "sha256": "b7d5dc593f8cbb3c798bcc8a3133a448e6b23c5f6357debc6f78c72a0be63216",
+        "financialYear": "2020-21",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    }
+  ]
+}

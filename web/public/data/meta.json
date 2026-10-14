@@ -15,6 +15,7 @@
   },
   "lastDataUpdate": "2026-10-14",
   "availableFinancialYears": [
+    "2020-21",
     "2021-22",
     "2022-23",
     "2023-24",
@@ -30,6 +31,7 @@
       "noteEn": "Payment vouchers from eGramSwaraj GP Voucher Details for Bohla (LGD 33105).",
       "noteHi": "ईग्रामस्वराज ग्राम पंचायत वाउचर विवरण से बोहला के भुगतान वाउचर।",
       "financialYears": [
+        "2020-21",
         "2023-24",
         "2024-25",
         "2025-26",
@@ -56,6 +58,7 @@
       "noteEn": "Works listed under Physical Progress filter wrkstts=176 (completed as recorded).",
       "noteHi": "भौतिक प्रगति फ़िल्टर wrkstts=176 में सूचीबद्ध कार्य (रिकॉर्ड के अनुसार पूर्ण)।",
       "financialYears": [
+        "2020-21",
         "2021-22",
         "2022-23",
         "2023-24",
@@ -73,9 +76,11 @@
     {
       "metric": "approved_action_plan",
       "status": "available",
-      "noteEn": "Approved Action Plans imported for: 2026-27, 2025-26, 2024-25, 2023-24, 2022-23.",
-      "noteHi": "स्वीकृत कार्य योजना आयात: 2026-27, 2025-26, 2024-25, 2023-24, 2022-23।",
+      "noteEn": "Approved Action Plans imported for: 2026-27, 2025-26, 2024-25, 2023-24, 2022-23, 2021-22, 2020-21. API-sourced years: 2026-27, 2025-26, 2024-25, 2023-24, 2022-23, 2021-22, 2020-21.",
+      "noteHi": "स्वीकृत कार्य योजना आयात: 2026-27, 2025-26, 2024-25, 2023-24, 2022-23, 2021-22, 2020-21.",
       "financialYears": [
+        "2020-21",
+        "2021-22",
         "2022-23",
         "2023-24",
         "2024-25",
@@ -110,8 +115,12 @@
       "url": "https://egramswaraj.gov.in/physicalprogressReport.do"
     },
     {
-      "name": "eGramSwaraj Approved Action Plan",
-      "url": "https://egramswaraj.gov.in/planningDashBoard.do"
+      "name": "eGramSwaraj Plan Activities",
+      "url": "https://egramswaraj.gov.in/getPlanVpData.do"
+    },
+    {
+      "name": "eGramSwaraj Activity Section Data",
+      "url": "https://egramswaraj.gov.in/activitySectionData.do"
     }
   ]
 }

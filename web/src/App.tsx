@@ -4,9 +4,12 @@ import { Layout } from './components/Layout'
 import { YearProvider } from './context/YearContext'
 
 const HomePage = lazy(() => import('./pages/HomePage').then((m) => ({ default: m.HomePage })))
-const WorksPage = lazy(() => import('./pages/WorksPage').then((m) => ({ default: m.WorksPage })))
-const SchemesPage = lazy(() =>
-  import('./pages/SchemesPage').then((m) => ({ default: m.SchemesPage })),
+const GrantsPage = lazy(() => import('./pages/GrantsPage').then((m) => ({ default: m.GrantsPage })))
+const GrantDetailPage = lazy(() =>
+  import('./pages/GrantDetailPage').then((m) => ({ default: m.GrantDetailPage })),
+)
+const PaymentsPage = lazy(() =>
+  import('./pages/PaymentsPage').then((m) => ({ default: m.PaymentsPage })),
 )
 const AuditPage = lazy(() => import('./pages/AuditPage').then((m) => ({ default: m.AuditPage })))
 const DownloadsPage = lazy(() =>
@@ -30,14 +33,19 @@ export default function App() {
             <Route element={<Layout />}>
               <Route index element={<HomePage />} />
 
-              <Route path="funds" element={<Navigate to="/funds/schemes" replace />} />
-              <Route path="funds/vouchers" element={<Navigate to="/works" replace />} />
-              <Route path="funds/schemes" element={<SchemesPage />} />
+              <Route path="grants" element={<GrantsPage />} />
+              <Route path="grants/:activityCode" element={<GrantDetailPage />} />
+              <Route path="payments" element={<PaymentsPage />} />
 
-              <Route path="works" element={<WorksPage />} />
+              <Route path="funds" element={<Navigate to="/payments" replace />} />
+              <Route path="funds/vouchers" element={<Navigate to="/payments" replace />} />
+              <Route path="funds/schemes" element={<Navigate to="/payments" replace />} />
+
+              {/* Preserved deep links from former Works section */}
+              <Route path="works" element={<Navigate to="/grants" replace />} />
               <Route
                 path="works/plans"
-                element={<Navigate to={{ pathname: '/works', search: '?view=docs' }} replace />}
+                element={<Navigate to={{ pathname: '/grants', search: '?view=pdf' }} replace />}
               />
 
               <Route path="reports" element={<ReportsPage />} />
@@ -45,10 +53,9 @@ export default function App() {
               <Route path="reports/audit" element={<AuditPage />} />
               <Route path="reports/about" element={<AboutPage />} />
 
-              {/* Preserved deep links */}
               <Route path="home/year" element={<Navigate to="/" replace />} />
-              <Route path="vouchers" element={<Navigate to="/works" replace />} />
-              <Route path="schemes" element={<Navigate to="/funds/schemes" replace />} />
+              <Route path="vouchers" element={<Navigate to="/payments" replace />} />
+              <Route path="schemes" element={<Navigate to="/payments" replace />} />
               <Route path="downloads" element={<Navigate to="/reports/downloads" replace />} />
               <Route path="audit" element={<Navigate to="/reports/audit" replace />} />
               <Route path="about" element={<Navigate to="/reports/about" replace />} />

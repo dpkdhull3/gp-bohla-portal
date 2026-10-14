@@ -112,6 +112,9 @@ class PlannedActivity(BaseModel):
     scFundInr: Optional[float] = None
     stFundInr: Optional[float] = None
     planYear: str
+    # 1-based index from eGramSwaraj getActivityList.do order (Activity 1, 2, …)
+    activityNo: Optional[int] = None
+    activityStts: Optional[str] = None  # e.g. Activity Approved, WORK ONGOING
     linkedVoucherSumInr: float = 0.0
     linkedVoucherCount: int = 0
     spendStatus: str = "no_linked_payment"  # linked | no_linked_payment

@@ -65,6 +65,7 @@ export interface WorkActivity {
   linkedVoucherSumInr?: number | null
   linkedVoucherCount: number
   flags: string[]
+  source?: { reportName: string; sourceUrl?: string | null }
 }
 
 export interface PlannedActivity {
@@ -82,10 +83,42 @@ export interface PlannedActivity {
   scFundInr?: number | null
   stFundInr?: number | null
   planYear: string
+  /** 1-based eGramSwaraj getActivityList order (Activity 1, 2, …). */
+  activityNo?: number | null
+  activityStts?: string | null
   linkedVoucherSumInr?: number
   linkedVoucherCount?: number
   spendStatus?: 'linked' | 'no_linked_payment' | string
   flags: string[]
+  source?: { reportName: string; sourceUrl?: string | null }
+}
+
+/** Raw eGramSwaraj activitySectionData.do payload (optional enrichment). */
+export interface PlanActivityRaw {
+  activityCd: number
+  activityName?: string | null
+  activityDesc?: string | null
+  focusArea?: string | null
+  themeName?: string | null
+  location?: string | null
+  activityType?: string | null
+  activityStts?: string | null
+  workTyp?: string | null
+  outputTyp?: string | null
+  totalCost?: number | null
+  stateName?: string | null
+  plnUntNm?: string | null
+  fnclYr?: number | null
+  assetDetails?: boolean | null
+  astCatNm?: string | null
+  astSubCatNm?: string | null
+  astNumOfUnt?: number | null
+  astUnitCost?: number | null
+  fundAllocation?: Array<{
+    schemeCode?: string | null
+    componentCode?: string | null
+    amountTotal?: number | null
+  }> | null
 }
 
 export interface PlanSectorBreakdown {
@@ -154,6 +187,11 @@ export interface YearSummary {
   voucherCount: number
   completedWorksCount: number
   adminApprovedWorksInr: number
+  /** Sum of plan activity estimated costs (from eGramSwaraj API import). */
+  approvedPlanInr?: number
+  plannedActivityCount?: number
+  tiedInr?: number | null
+  untiedInr?: number | null
   openingBalanceInr: number | null
   closingBalanceInr: number | null
   fundsReceivedInr: number | null

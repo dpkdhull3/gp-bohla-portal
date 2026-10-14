@@ -1,0 +1,1053 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:x='urn:schemas-microsoft-com:office:excel' xmlns='http://www.w3.org/TR/REC-html40'><head><meta http-equiv="Content-type" content="text/html;charset=utf-8" /><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Approved Plan Wise Activity Details</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><div class='row ng-scope' id='activityTable' data-ng-if='loader==false'>
+											<div class='col-12'>
+												<div class='row'>
+													<div class='col-12 p-0'>	
+														<table class='table table-striped table-bordered'>
+							                                <thead class='bg-dark text-white font10px'>
+							                                    <tr>
+							                                        <th> Financial Year</th>
+							                                        <!-- ngIf: stateName!=null --><th data-ng-if='stateName!=null' class='ng-scope'>State Name</th><!-- end ngIf: stateName!=null -->
+							                                       	<!-- ngIf: zpName!=null --><th data-ng-if='zpName!=null' class='ng-scope'>District Panchayat &amp; Equivalent</th><!-- end ngIf: zpName!=null -->
+							                                       	<!-- ngIf: bpName!=null --><th data-ng-if='bpName!=null' class='ng-scope'>Block Panchayat and Equivalent</th><!-- end ngIf: bpName!=null -->
+									                                <!-- ngIf: gpName!=null --><th data-ng-if='gpName!=null' class='ng-scope'>Village Panchayat and Equivalent</th><!-- end ngIf: gpName!=null -->
+							                                    </tr>
+							                                    <tr>
+							                                        <th><span class='text-sm ng-binding' data-ng-bind='planYear'>2020-2021</span></th>
+							                                        <!-- ngIf: stateName!=null --><th data-ng-if='stateName!=null' class='ng-scope'><span data-ng-bind='stateName' class='ng-binding'>Haryana </span></th><!-- end ngIf: stateName!=null -->
+							                                      	<!-- ngIf: zpName!=null --><th data-ng-if='zpName!=null' class='ng-scope'><span data-ng-bind='zpName' class='ng-binding'>Sonipat</span></th><!-- end ngIf: zpName!=null -->
+							                                      	<!-- ngIf: bpName!=null --><th data-ng-if='bpName!=null' class='ng-scope'><span data-ng-bind='bpName' class='ng-binding'>Sonipat</span></th><!-- end ngIf: bpName!=null -->
+							                                        <!-- ngIf: gpName!=null --><th data-ng-if='gpName!=null' class='ng-scope'><span data-ng-bind='gpName' class='ng-binding'>Bohla</span></th><!-- end ngIf: gpName!=null -->
+							                                    </tr>
+							                                </thead>
+							                            </table>
+						                            </div>
+					                            </div>
+					                             
+					                           <!--  <div class='d-flex justify-content-end mb-2' id='filterDiv'>
+												    <div class='dropdown d-inline-block'>
+												        <button class='btn btn-outline-primary' type='button' id='filterMenuButton' data-toggle='dropdown'
+												            aria-haspopup='true' aria-expanded='false'>
+												            <i class='fa fa-filter'></i>
+												        </button>
+												        <div class='dropdown-menu p-3' aria-labelledby='filterMenuButton' style='min-width: 250px;' data-ng-click='$event.stopPropagation()'>
+												            <div style='max-height: 200px; overflow-y: auto;'>
+												                <div class='custom-control custom-checkbox mb-2'>
+												                    <input type='checkbox' class='custom-control-input' id='ongoing'
+												                        data-ng-checked='selectedActivityStatus === 176'
+												                        data-ng-click='selectActivityStatus(176)'>
+												                    <label class='custom-control-label' for='ongoing'>Ongoing</label>
+												                </div>
+												                <div class='custom-control custom-checkbox mb-2'>
+												                    <input type='checkbox' class='custom-control-input' id='completed'
+												                        data-ng-checked='selectedActivityStatus === 178'
+												                        data-ng-click='selectActivityStatus(178)'>
+												                    <label class='custom-control-label' for='completed'>Completed</label>
+												                </div>
+												            </div>
+												
+												            Buttons
+												            <div class='d-flex justify-content-between mt-2'>
+												                <button class='btn btn-outline-danger btn-sm' data-ng-click='clearActivitySelection()'>Clear</button>
+												                <button class='btn btn-success btn-sm' data-ng-click='applyActivityFilter(selectedActivityStatus)'>Apply</button>
+												            </div>
+												        </div>
+												    </div>
+												</div>
+												<div class='d-flex justify-content-end mb-2' id='filterDiv'>
+												    <div class='d-flex align-items-center'>
+												        <span class='mr-3 font-weight-bold'>
+												            Filter:
+												        </span>
+												
+												        <div class='custom-control custom-checkbox mr-3'>
+												            <input type='checkbox'
+												                   class='custom-control-input'
+												                   id='ongoing'
+												                   data-ng-checked='selectedActivityStatus === 176'
+												                   data-ng-click='selectActivityStatus(176)'>
+												
+												            <label class='custom-control-label' for='ongoing'>
+												                Ongoing
+												            </label>
+												        </div>
+												
+												        <div class='custom-control custom-checkbox mr-3'>
+												            <input type='checkbox'
+												                   class='custom-control-input'
+												                   id='completed'
+												                   data-ng-checked='selectedActivityStatus === 178'
+												                   data-ng-click='selectActivityStatus(178)'>
+												
+												            <label class='custom-control-label' for='completed'>
+												                Completed
+												            </label>
+												        </div>
+												
+												        <button class='btn btn-outline-secondary btn-sm mr-2'
+												                data-ng-click='clearActivitySelection()'>
+												            Clear
+												        </button>
+												
+												        <button class='btn btn-success btn-sm'
+												                data-ng-click='applyActivityFilter(selectedActivityStatus)'>
+												            Apply
+												        </button>
+												
+												    </div>
+												
+												</div>
+ -->
+
+												<div class='d-flex justify-content-center mb-2' id='filterDiv'>
+												    <div class='d-flex align-items-center'>
+												
+												        <span class='mr-3 font-weight-bold'>Filter:</span>
+												
+												        <div class='custom-control custom-checkbox mr-3'>
+												            <input type='checkbox' class='custom-control-input' id='ongoing' data-ng-checked='filterOngoing' data-ng-click='selectActivityStatus(176)'>
+												
+												            <label class='custom-control-label' for='ongoing'>
+												                Ongoing
+												            </label>
+												        </div>
+												
+												        <div class='custom-control custom-checkbox'>
+												            <input type='checkbox' class='custom-control-input' id='completed' data-ng-checked='filterCompleted' data-ng-click='selectActivityStatus(178)'>
+												
+												            <label class='custom-control-label' for='completed'>
+												                Completed
+												            </label>
+												        </div>
+												
+												    </div>
+												</div>
+
+
+
+												<!-- ngIf: data.length > 0 --><div class='table-responsive ng-scope' data-ng-if='data.length &gt; 0'>
+													<div class='accordion tab-content' id='accordion'>
+														<!-- ngRepeat: d in data --><div data-ng-repeat='d in data' class='ng-scope'>
+													    	<div class='card'>
+														    	<div class='card-header p-0 px-2' id='heading-0'>
+														         	<h5 class='mb-0'>
+														         		<button type='button' class='btn btn-link collapsed w-100 text-left ng-binding' data-toggle='collapse' data-target='#collapse-0' aria-expanded='false' aria-controls='collapse-0' data-ng-click='getActivitySectionData(d)'>
+														         		Activity 1 - other work in the village (41487961) </button></h5>
+															    </div>
+															    <div id='collapse-0' class='collapse' data-parent='#accordion' aria-labelledby='heading-0'>
+															    	<div class='card-body'>
+															    		 <!-- ngIf: loaderAccordian==true -->
+															        	<!-- ngIf: loaderAccordian==false --><div id='accordion-0' data-ng-if='loaderAccordian==false' class='ng-scope'>
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-0-1'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-0-1' aria-expanded='false' aria-controls='collapse-0-1'>
+															              				Activity Details </button></h5>
+															            		</div>
+															            		<div id='collapse-0-1' class='collapse' data-parent='#accordion-0' aria-labelledby='heading-0-1'>
+															              			<div class='card-body'>
+															                			<div class='table-responsive'>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th width='5%' class='text-center'>Activity Code</th>
+																										<th width='20%' class='text-center'>Activity Name</th>
+																										<th width='20%' class='text-center'>Activity Description</th>
+																										<!-- ngIf: activitySectionData.fnclYr > 2022 -->
+																										<th width='10%' class='text-center'>Activity Type</th>
+																										<th width='10%' class='text-center'>State Name</th>
+																										<th width='10%' class='text-center'>Local Body Name</th>
+																										<th width='10%' class='text-center'>Financial Year</th>
+																									</tr>
+																								</thead>
+																								<tbody>
+																									<tr>
+																										<td class='ng-binding'> 46550380</td>
+																										<td class='ng-binding'>building/nala/nali </td>
+																										<td class='ng-binding'>building/nala/nali</td>
+																										<!-- ngIf: activitySectionData.fnclYr > 2022 -->
+																										<td class='ng-binding'>Community Works</td>
+																										<td class='ng-binding'>Haryana</td>
+																										<td class='ng-binding'>Bohla (33105)</td>
+																										<td class='ng-binding'>2021</td>
+																									</tr>
+																								</tbody>
+																							</table>
+																							<table class='table table-bordered table-striped table-hover'>	
+																								<thead class='bg-dark text-white font10px'>	
+																									<tr>
+																										<th class='text-center'>Focus Area</th>
+																										<th class='text-center'>Activity Status</th>
+																										<th class='text-center'>Activity Cost</th>
+																										<th class='text-center'>Output Type</th>
+																										<th class='text-center'>Work Type</th>
+																										<th class='text-center'>Costless Activity</th>
+																										<th class='text-center'>Delegated Activity</th>
+																										<!-- ngIf: activitySectionData.dlagtdFlag!=null && activitySectionData.dlagtdFlag -->
+																										<th class='text-center'>Sharable Activity</th>
+																									</tr>
+																								</thead>
+																								<tbody>
+																									<tr>
+																										<td class='ng-binding'> Roads</td>
+																										<td class='ng-binding'>WORK ONGOING </td>
+																										<td class='ng-binding'>27123</td>
+																										<td class='ng-binding'>Asset</td>
+																										<td class='ng-binding'>New/Fresh</td>
+																										<!-- ngIf: activitySectionData.activityForCostlessFlag == 1 -->
+																										<!-- ngIf: activitySectionData.activityForCostlessFlag == 0 --><td data-ng-if='activitySectionData.activityForCostlessFlag == 0' class='ng-scope'>No</td><!-- end ngIf: activitySectionData.activityForCostlessFlag == 0 -->
+																										<!-- ngIf: activitySectionData.dlagtdFlag!=null && activitySectionData.dlagtdFlag -->
+																										<!-- ngIf: activitySectionData.dlagtdFlag==null || !activitySectionData.dlagtdFlag --><td data-ng-if='activitySectionData.dlagtdFlag==null || !activitySectionData.dlagtdFlag' class='ng-scope'>No</td><!-- end ngIf: activitySectionData.dlagtdFlag==null || !activitySectionData.dlagtdFlag -->
+																										<!-- ngIf: activitySectionData.dlagtdFlag!=null && activitySectionData.dlagtdFlag -->
+																										<!-- ngIf: activitySectionData.shareable -->
+																										<!-- ngIf: activitySectionData.shareable==null || !activitySectionData.shareable --><td data-ng-if='activitySectionData.shareable==null || !activitySectionData.shareable' class='ng-scope'>No</td><!-- end ngIf: activitySectionData.shareable==null || !activitySectionData.shareable -->
+																									</tr>
+																								</tbody> 
+																							</table>
+																						</div>
+																						<!-- ngIf: activitySectionData.assetDetails --><div class='table-responsive ng-scope' data-ng-if='activitySectionData.assetDetails'>
+																							 Activity Asset Details-
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th class='text-center'>Asset Type</th>
+																									    <th class='text-center'>Asset Category</th>
+																									    <th class='text-center'>Asset Sub Category</th>
+																										<th class='text-center'>Coverage Area</th>
+																										<th class='text-center'>Asset Unit Type</th>
+																										<th class='text-center'>Asset No. Of Unit</th>
+																										<th class='text-center'>Asset Unit Cost</th>
+																										<th class='text-center'>Asset Location</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><tr>
+																										<!-- ngIf: activitySectionData.astTyp==1 -->
+																										<!-- ngIf: activitySectionData.astTyp==2 --><td data-ng-if='activitySectionData.astTyp==2' class='ng-scope'>Immovable</td><!-- end ngIf: activitySectionData.astTyp==2 -->
+																										<td class='ng-binding'>Buildings</td>
+																										<td class='ng-binding'>Chaupal</td>
+																										<!-- ngIf: activitySectionData.astCvrgCd == 'A' --><td data-ng-if='activitySectionData.astCvrgCd == 'A'' class='ng-scope'>Area</td><!-- end ngIf: activitySectionData.astCvrgCd == 'A' -->
+																										<!-- ngIf: activitySectionData.astCvrgCd == 'O' -->
+																										
+																										<!-- ngIf: activitySectionData.astUntTyp==0 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==1 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==2 --><td data-ng-if='activitySectionData.astUntTyp==2' class='ng-scope'>Number</td><!-- end ngIf: activitySectionData.astUntTyp==2 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==3 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==4 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==5 -->
+																										<td class='ng-binding'>1</td>
+																										<td class='ng-binding'></td>
+																										<td class='ng-binding'>Bohla (150) (59783) 
+ </td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: activitySectionData.assetDetails -->
+																						
+																						<!-- ngIf: activitySectionData.outputTypCd == 104 -->           
+																						
+																						<!-- ngIf: activitySectionData.outputTypCd == 102 -->           
+																						
+															              			</div>
+															            		</div>
+															          		</div>
+															          			<!-- 	Section 2 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-0-2'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-0-2' aria-expanded='false' aria-controls='collapse-0-2'>
+															              				Fund Allocation</button></h5>
+															            		</div>
+															            		<div id='collapse-0-2' class='collapse' data-parent='#accordion-0' aria-labelledby='heading-0-2'>
+															              			<div class='card-body'>
+																						<div class='table-responsive'>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																									    <th class='text-center'>Scheme</th>
+																										<th class='text-center'>Scheme/Component</th>
+																										<th class='text-center'>Amount Allocated</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><!-- ngRepeat: f in activitySectionData.fundAllocation --><!-- ngIf: activitySectionData.fundAllocation!=null --><tr data-ng-if='activitySectionData.fundAllocation!=null' data-ng-repeat='f in activitySectionData.fundAllocation' class='ng-scope'>
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='ng-binding'>27123 </td>
+																									</tr><!-- end ngIf: activitySectionData.fundAllocation!=null --><!-- end ngRepeat: f in activitySectionData.fundAllocation -->
+																									<!-- ngIf: activitySectionData.fundAllocation==null -->
+																								</tbody>
+																							</table>
+																						</div>
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 3 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-0-3'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-0-3' aria-expanded='false' aria-controls='collapse-0-3'>
+															              				Technical Approval Details</button></h5>
+															            		</div>
+															            		<div id='collapse-0-3' class='collapse' data-parent='#accordion-0' aria-labelledby='heading-0-3'>
+															              			<div class='card-body'>
+																						<!-- ngIf: technicalSectionData!='' --><div class='table-responsive ng-scope' data-ng-if='technicalSectionData!='''>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th class='text-center'>Technical Approved Cost (In Rs.)</th>
+																									    <th class='text-center'>Order Issuing Authority</th>
+																									    <th class='text-center'>Technical Approval Order Number</th>
+																										<th class='text-center'>Technical Approval Date</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><tr>
+																										<td class='text-right ng-binding'></td>
+																							            <td class='text-left ng-binding'>NR</td>
+																									    <td class='text-left ng-binding'>NR</td>
+																										<td class='text-left ng-binding'>2024-06-13</td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: technicalSectionData!='' -->
+																						<!-- ngIf: technicalSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 4 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-0-4'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-0-4' aria-expanded='false' aria-controls='collapse-0-4'>
+															              				Administrative Approval Details</button></h5>
+															            		</div>
+															            		<div id='collapse-0-4' class='collapse' data-parent='#accordion-0' aria-labelledby='heading-0-4'>
+															              			<div class='card-body'>
+															                			<!-- ngIf: adminSectionData!='' --><div class='table-responsive ng-scope' data-ng-if='adminSectionData!='''>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th class='text-center'>Admin Approval order No.</th>
+																										<th class='text-center'>Admin Approval Order Issuing Authority</th>
+																										<th class='text-center'>Admin Approval order Date</th>
+																										<th class='text-center'>Admin Approval Cost</th>
+																										
+																										<th class='text-center'>Scheme Name</th>
+																										<th class='text-center'>Component Name</th>
+																										<th class='text-center'>Allocated Amount(in Rs.) General</th>
+																										<th class='text-center'>Allocated Amount(in Rs.) SC</th>
+																										<th class='text-center'>Allocated Amount(in Rs.) ST</th>
+																										<th class='text-center'> Total Allocation Amount(in Rs.)</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><!-- ngRepeat: a in adminSectionData --><tr data-ng-repeat='a in adminSectionData' class='ng-scope'>
+																										<!-- ngIf: a.wrkAdmApprNo!='' --><td class='text-left align-items-center ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmApprNo!='''>1</td><!-- end ngIf: a.wrkAdmApprNo!='' -->
+																										<!-- ngIf: a.wrkAdmApprIssAuthrty!='' --><td class='text-left ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmApprIssAuthrty!='''>GP</td><!-- end ngIf: a.wrkAdmApprIssAuthrty!='' -->
+																										<!-- ngIf: a.wrkAdmApprSnctnOrdrDt!='' --><td class='text-left ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmApprSnctnOrdrDt!='''>2024-03-13</td><!-- end ngIf: a.wrkAdmApprSnctnOrdrDt!='' -->
+																										<!-- ngIf: a.wrkAdmFndSnctnd!='' --><td class='text-right ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmFndSnctnd!='''>27123</td><!-- end ngIf: a.wrkAdmFndSnctnd!='' -->
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='text-right ng-binding'>27123</td>
+																										<td class='text-right ng-binding'></td>
+																										<td class='text-right ng-binding'></td>
+																										<td class='text-right ng-binding'>27123</td>
+																									</tr><!-- end ngRepeat: a in adminSectionData -->
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: adminSectionData!='' -->
+																						<!-- ngIf: adminSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 5 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-0-5'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-0-5' aria-expanded='false' aria-controls='collapse-0-5'>
+															              				Physical Progress Details</button></h5>
+															            		</div>
+															            		<div id='collapse-0-5' class='collapse' data-parent='#accordion-0' aria-labelledby='heading-0-5'>
+															              			<div class='card-body'>
+															                			<!-- ngIf: phyProgressSectionData!='' --><div class='table-responsive ng-scope' data-ng-if='phyProgressSectionData!='''>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<!-- ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 --><tr data-ng-if='activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105' class='ng-scope'>
+																										<th class='text-center'>Asset Name</th>
+																										<th class='text-center'>Location of Asset</th>
+																									    <th class='text-center'>Work Stage</th>
+																									    <th class='text-center'>Work Stage Date</th>
+																										<th class='text-center'>Geo-tagged</th>
+																										<th class='text-center'>Photo Moderate</th>
+																									</tr><!-- end ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 -->
+																									<!-- ngIf: activitySectionData.outputTypCd == 104 -->
+																									 <!-- ngIf: activitySectionData.outputTypCd == 103 --> 
+																									 <!-- ngIf: activitySectionData.outputTypCd == 103 -->
+																									<!-- ngIf: activitySectionData.outputTypCd == 103 -->
+																									<!-- ngIf: activitySectionData.outputTypCd == 102 --> 
+																								</thead>
+																								
+																									 <tbody><!-- ngRepeat: p in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 --><tr data-ng-if='activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105' data-ng-repeat='p in phyProgressSectionData' class='ng-scope'>
+																										<td class='link ng-binding' data-ng-click='showAssetDetailsPopup(p.physclPrgrssAstCd)'>building/nala/nali1</td>
+																							            <td class='text-left ng-binding'>Bohla (150)(59783)</td>
+																									    <!-- ngIf: p.stageId == 221 --><td data-ng-if='p.stageId == 221' class='ng-scope'>Onset of work</td><!-- end ngIf: p.stageId == 221 -->
+																									    <!-- ngIf: p.stageId == 222 -->
+																									    <!-- ngIf: p.stageId == 223 -->
+																									    <!-- ngIf: p.stageId == 321 -->
+																									    <!-- ngIf: p.stageId!=321 && p.stageId!=221 && p.stageId!=222 && p.stageId!=223 -->
+																									    
+																										<td class='text-left ng-binding'>2024-03-26</td>
+																										<td class='text-left ng-binding'>No</td>
+																										<td class='text-left ng-binding'>No</td>
+																									</tr><!-- end ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 --><!-- end ngRepeat: p in phyProgressSectionData -->
+																								 	<!-- ngRepeat: n in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 104 --><!-- end ngRepeat: n in phyProgressSectionData -->
+																									<!-- ngRepeat: n in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 103 --><!-- end ngRepeat: n in phyProgressSectionData -->
+																									<!-- ngRepeat: n in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 102 --><!-- end ngRepeat: n in phyProgressSectionData -->
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: phyProgressSectionData!='' -->
+																						<!-- ngIf: phyProgressSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 6 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-0-5'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-0-6' aria-expanded='false' aria-controls='collapse-0-6'>
+															              				Expenditure Details</button></h5>
+															            		</div>
+															            		<div id='collapse-0-6' class='collapse' data-parent='#accordion-0' aria-labelledby='heading-0-6'>
+															              			<div class='card-body'>
+																						<!-- ngIf: expenditureSectionData!='' -->
+																						<!-- ngIf: expenditureSectionData=='' --><div data-ng-if='expenditureSectionData==''' class='ng-scope'>No Data Found</div><!-- end ngIf: expenditureSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															        	</div><!-- end ngIf: loaderAccordian==false -->      
+															      	</div>
+														    	</div>
+														  	</div>
+													  	</div><!-- end ngRepeat: d in data --><div data-ng-repeat='d in data' class='ng-scope'>
+													    	<div class='card'>
+														    	<div class='card-header p-0 px-2' id='heading-1'>
+														         	<h5 class='mb-0'>
+														         		<button type='button' class='btn btn-link collapsed w-100 text-left ng-binding' data-toggle='collapse' data-target='#collapse-1' aria-expanded='false' aria-controls='collapse-1' data-ng-click='getActivitySectionData(d)'>
+														         		Activity 2 - water harvesting system and save water management and save drinking water (41487704) </button></h5>
+															    </div>
+															    <div id='collapse-1' class='collapse' data-parent='#accordion' aria-labelledby='heading-1'>
+															    	<div class='card-body'>
+															    		 <!-- ngIf: loaderAccordian==true -->
+															        	<!-- ngIf: loaderAccordian==false --><div id='accordion-1' data-ng-if='loaderAccordian==false' class='ng-scope'>
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-1-1'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-1-1' aria-expanded='false' aria-controls='collapse-1-1'>
+															              				Activity Details </button></h5>
+															            		</div>
+															            		<div id='collapse-1-1' class='collapse' data-parent='#accordion-1' aria-labelledby='heading-1-1'>
+															              			<div class='card-body'>
+															                			<div class='table-responsive'>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th width='5%' class='text-center'>Activity Code</th>
+																										<th width='20%' class='text-center'>Activity Name</th>
+																										<th width='20%' class='text-center'>Activity Description</th>
+																										<!-- ngIf: activitySectionData.fnclYr > 2022 -->
+																										<th width='10%' class='text-center'>Activity Type</th>
+																										<th width='10%' class='text-center'>State Name</th>
+																										<th width='10%' class='text-center'>Local Body Name</th>
+																										<th width='10%' class='text-center'>Financial Year</th>
+																									</tr>
+																								</thead>
+																								<tbody>
+																									<tr>
+																										<td class='ng-binding'> 46550380</td>
+																										<td class='ng-binding'>building/nala/nali </td>
+																										<td class='ng-binding'>building/nala/nali</td>
+																										<!-- ngIf: activitySectionData.fnclYr > 2022 -->
+																										<td class='ng-binding'>Community Works</td>
+																										<td class='ng-binding'>Haryana</td>
+																										<td class='ng-binding'>Bohla (33105)</td>
+																										<td class='ng-binding'>2021</td>
+																									</tr>
+																								</tbody>
+																							</table>
+																							<table class='table table-bordered table-striped table-hover'>	
+																								<thead class='bg-dark text-white font10px'>	
+																									<tr>
+																										<th class='text-center'>Focus Area</th>
+																										<th class='text-center'>Activity Status</th>
+																										<th class='text-center'>Activity Cost</th>
+																										<th class='text-center'>Output Type</th>
+																										<th class='text-center'>Work Type</th>
+																										<th class='text-center'>Costless Activity</th>
+																										<th class='text-center'>Delegated Activity</th>
+																										<!-- ngIf: activitySectionData.dlagtdFlag!=null && activitySectionData.dlagtdFlag -->
+																										<th class='text-center'>Sharable Activity</th>
+																									</tr>
+																								</thead>
+																								<tbody>
+																									<tr>
+																										<td class='ng-binding'> Roads</td>
+																										<td class='ng-binding'>WORK ONGOING </td>
+																										<td class='ng-binding'>27123</td>
+																										<td class='ng-binding'>Asset</td>
+																										<td class='ng-binding'>New/Fresh</td>
+																										<!-- ngIf: activitySectionData.activityForCostlessFlag == 1 -->
+																										<!-- ngIf: activitySectionData.activityForCostlessFlag == 0 --><td data-ng-if='activitySectionData.activityForCostlessFlag == 0' class='ng-scope'>No</td><!-- end ngIf: activitySectionData.activityForCostlessFlag == 0 -->
+																										<!-- ngIf: activitySectionData.dlagtdFlag!=null && activitySectionData.dlagtdFlag -->
+																										<!-- ngIf: activitySectionData.dlagtdFlag==null || !activitySectionData.dlagtdFlag --><td data-ng-if='activitySectionData.dlagtdFlag==null || !activitySectionData.dlagtdFlag' class='ng-scope'>No</td><!-- end ngIf: activitySectionData.dlagtdFlag==null || !activitySectionData.dlagtdFlag -->
+																										<!-- ngIf: activitySectionData.dlagtdFlag!=null && activitySectionData.dlagtdFlag -->
+																										<!-- ngIf: activitySectionData.shareable -->
+																										<!-- ngIf: activitySectionData.shareable==null || !activitySectionData.shareable --><td data-ng-if='activitySectionData.shareable==null || !activitySectionData.shareable' class='ng-scope'>No</td><!-- end ngIf: activitySectionData.shareable==null || !activitySectionData.shareable -->
+																									</tr>
+																								</tbody> 
+																							</table>
+																						</div>
+																						<!-- ngIf: activitySectionData.assetDetails --><div class='table-responsive ng-scope' data-ng-if='activitySectionData.assetDetails'>
+																							 Activity Asset Details-
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th class='text-center'>Asset Type</th>
+																									    <th class='text-center'>Asset Category</th>
+																									    <th class='text-center'>Asset Sub Category</th>
+																										<th class='text-center'>Coverage Area</th>
+																										<th class='text-center'>Asset Unit Type</th>
+																										<th class='text-center'>Asset No. Of Unit</th>
+																										<th class='text-center'>Asset Unit Cost</th>
+																										<th class='text-center'>Asset Location</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><tr>
+																										<!-- ngIf: activitySectionData.astTyp==1 -->
+																										<!-- ngIf: activitySectionData.astTyp==2 --><td data-ng-if='activitySectionData.astTyp==2' class='ng-scope'>Immovable</td><!-- end ngIf: activitySectionData.astTyp==2 -->
+																										<td class='ng-binding'>Buildings</td>
+																										<td class='ng-binding'>Chaupal</td>
+																										<!-- ngIf: activitySectionData.astCvrgCd == 'A' --><td data-ng-if='activitySectionData.astCvrgCd == 'A'' class='ng-scope'>Area</td><!-- end ngIf: activitySectionData.astCvrgCd == 'A' -->
+																										<!-- ngIf: activitySectionData.astCvrgCd == 'O' -->
+																										
+																										<!-- ngIf: activitySectionData.astUntTyp==0 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==1 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==2 --><td data-ng-if='activitySectionData.astUntTyp==2' class='ng-scope'>Number</td><!-- end ngIf: activitySectionData.astUntTyp==2 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==3 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==4 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==5 -->
+																										<td class='ng-binding'>1</td>
+																										<td class='ng-binding'></td>
+																										<td class='ng-binding'>Bohla (150) (59783) 
+ </td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: activitySectionData.assetDetails -->
+																						
+																						<!-- ngIf: activitySectionData.outputTypCd == 104 -->           
+																						
+																						<!-- ngIf: activitySectionData.outputTypCd == 102 -->           
+																						
+															              			</div>
+															            		</div>
+															          		</div>
+															          			<!-- 	Section 2 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-1-2'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-1-2' aria-expanded='false' aria-controls='collapse-1-2'>
+															              				Fund Allocation</button></h5>
+															            		</div>
+															            		<div id='collapse-1-2' class='collapse' data-parent='#accordion-1' aria-labelledby='heading-1-2'>
+															              			<div class='card-body'>
+																						<div class='table-responsive'>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																									    <th class='text-center'>Scheme</th>
+																										<th class='text-center'>Scheme/Component</th>
+																										<th class='text-center'>Amount Allocated</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><!-- ngRepeat: f in activitySectionData.fundAllocation --><!-- ngIf: activitySectionData.fundAllocation!=null --><tr data-ng-if='activitySectionData.fundAllocation!=null' data-ng-repeat='f in activitySectionData.fundAllocation' class='ng-scope'>
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='ng-binding'>27123 </td>
+																									</tr><!-- end ngIf: activitySectionData.fundAllocation!=null --><!-- end ngRepeat: f in activitySectionData.fundAllocation -->
+																									<!-- ngIf: activitySectionData.fundAllocation==null -->
+																								</tbody>
+																							</table>
+																						</div>
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 3 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-1-3'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-1-3' aria-expanded='false' aria-controls='collapse-1-3'>
+															              				Technical Approval Details</button></h5>
+															            		</div>
+															            		<div id='collapse-1-3' class='collapse' data-parent='#accordion-1' aria-labelledby='heading-1-3'>
+															              			<div class='card-body'>
+																						<!-- ngIf: technicalSectionData!='' --><div class='table-responsive ng-scope' data-ng-if='technicalSectionData!='''>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th class='text-center'>Technical Approved Cost (In Rs.)</th>
+																									    <th class='text-center'>Order Issuing Authority</th>
+																									    <th class='text-center'>Technical Approval Order Number</th>
+																										<th class='text-center'>Technical Approval Date</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><tr>
+																										<td class='text-right ng-binding'></td>
+																							            <td class='text-left ng-binding'>NR</td>
+																									    <td class='text-left ng-binding'>NR</td>
+																										<td class='text-left ng-binding'>2024-06-13</td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: technicalSectionData!='' -->
+																						<!-- ngIf: technicalSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 4 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-1-4'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-1-4' aria-expanded='false' aria-controls='collapse-1-4'>
+															              				Administrative Approval Details</button></h5>
+															            		</div>
+															            		<div id='collapse-1-4' class='collapse' data-parent='#accordion-1' aria-labelledby='heading-1-4'>
+															              			<div class='card-body'>
+															                			<!-- ngIf: adminSectionData!='' --><div class='table-responsive ng-scope' data-ng-if='adminSectionData!='''>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th class='text-center'>Admin Approval order No.</th>
+																										<th class='text-center'>Admin Approval Order Issuing Authority</th>
+																										<th class='text-center'>Admin Approval order Date</th>
+																										<th class='text-center'>Admin Approval Cost</th>
+																										
+																										<th class='text-center'>Scheme Name</th>
+																										<th class='text-center'>Component Name</th>
+																										<th class='text-center'>Allocated Amount(in Rs.) General</th>
+																										<th class='text-center'>Allocated Amount(in Rs.) SC</th>
+																										<th class='text-center'>Allocated Amount(in Rs.) ST</th>
+																										<th class='text-center'> Total Allocation Amount(in Rs.)</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><!-- ngRepeat: a in adminSectionData --><tr data-ng-repeat='a in adminSectionData' class='ng-scope'>
+																										<!-- ngIf: a.wrkAdmApprNo!='' --><td class='text-left align-items-center ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmApprNo!='''>1</td><!-- end ngIf: a.wrkAdmApprNo!='' -->
+																										<!-- ngIf: a.wrkAdmApprIssAuthrty!='' --><td class='text-left ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmApprIssAuthrty!='''>GP</td><!-- end ngIf: a.wrkAdmApprIssAuthrty!='' -->
+																										<!-- ngIf: a.wrkAdmApprSnctnOrdrDt!='' --><td class='text-left ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmApprSnctnOrdrDt!='''>2024-03-13</td><!-- end ngIf: a.wrkAdmApprSnctnOrdrDt!='' -->
+																										<!-- ngIf: a.wrkAdmFndSnctnd!='' --><td class='text-right ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmFndSnctnd!='''>27123</td><!-- end ngIf: a.wrkAdmFndSnctnd!='' -->
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='text-right ng-binding'>27123</td>
+																										<td class='text-right ng-binding'></td>
+																										<td class='text-right ng-binding'></td>
+																										<td class='text-right ng-binding'>27123</td>
+																									</tr><!-- end ngRepeat: a in adminSectionData -->
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: adminSectionData!='' -->
+																						<!-- ngIf: adminSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 5 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-1-5'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-1-5' aria-expanded='false' aria-controls='collapse-1-5'>
+															              				Physical Progress Details</button></h5>
+															            		</div>
+															            		<div id='collapse-1-5' class='collapse' data-parent='#accordion-1' aria-labelledby='heading-1-5'>
+															              			<div class='card-body'>
+															                			<!-- ngIf: phyProgressSectionData!='' --><div class='table-responsive ng-scope' data-ng-if='phyProgressSectionData!='''>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<!-- ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 --><tr data-ng-if='activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105' class='ng-scope'>
+																										<th class='text-center'>Asset Name</th>
+																										<th class='text-center'>Location of Asset</th>
+																									    <th class='text-center'>Work Stage</th>
+																									    <th class='text-center'>Work Stage Date</th>
+																										<th class='text-center'>Geo-tagged</th>
+																										<th class='text-center'>Photo Moderate</th>
+																									</tr><!-- end ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 -->
+																									<!-- ngIf: activitySectionData.outputTypCd == 104 -->
+																									 <!-- ngIf: activitySectionData.outputTypCd == 103 --> 
+																									 <!-- ngIf: activitySectionData.outputTypCd == 103 -->
+																									<!-- ngIf: activitySectionData.outputTypCd == 103 -->
+																									<!-- ngIf: activitySectionData.outputTypCd == 102 --> 
+																								</thead>
+																								
+																									 <tbody><!-- ngRepeat: p in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 --><tr data-ng-if='activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105' data-ng-repeat='p in phyProgressSectionData' class='ng-scope'>
+																										<td class='link ng-binding' data-ng-click='showAssetDetailsPopup(p.physclPrgrssAstCd)'>building/nala/nali1</td>
+																							            <td class='text-left ng-binding'>Bohla (150)(59783)</td>
+																									    <!-- ngIf: p.stageId == 221 --><td data-ng-if='p.stageId == 221' class='ng-scope'>Onset of work</td><!-- end ngIf: p.stageId == 221 -->
+																									    <!-- ngIf: p.stageId == 222 -->
+																									    <!-- ngIf: p.stageId == 223 -->
+																									    <!-- ngIf: p.stageId == 321 -->
+																									    <!-- ngIf: p.stageId!=321 && p.stageId!=221 && p.stageId!=222 && p.stageId!=223 -->
+																									    
+																										<td class='text-left ng-binding'>2024-03-26</td>
+																										<td class='text-left ng-binding'>No</td>
+																										<td class='text-left ng-binding'>No</td>
+																									</tr><!-- end ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 --><!-- end ngRepeat: p in phyProgressSectionData -->
+																								 	<!-- ngRepeat: n in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 104 --><!-- end ngRepeat: n in phyProgressSectionData -->
+																									<!-- ngRepeat: n in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 103 --><!-- end ngRepeat: n in phyProgressSectionData -->
+																									<!-- ngRepeat: n in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 102 --><!-- end ngRepeat: n in phyProgressSectionData -->
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: phyProgressSectionData!='' -->
+																						<!-- ngIf: phyProgressSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 6 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-1-5'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-1-6' aria-expanded='false' aria-controls='collapse-1-6'>
+															              				Expenditure Details</button></h5>
+															            		</div>
+															            		<div id='collapse-1-6' class='collapse' data-parent='#accordion-1' aria-labelledby='heading-1-6'>
+															              			<div class='card-body'>
+																						<!-- ngIf: expenditureSectionData!='' -->
+																						<!-- ngIf: expenditureSectionData=='' --><div data-ng-if='expenditureSectionData==''' class='ng-scope'>No Data Found</div><!-- end ngIf: expenditureSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															        	</div><!-- end ngIf: loaderAccordian==false -->      
+															      	</div>
+														    	</div>
+														  	</div>
+													  	</div><!-- end ngRepeat: d in data --><div data-ng-repeat='d in data' class='ng-scope'>
+													    	<div class='card'>
+														    	<div class='card-header p-0 px-2' id='heading-2'>
+														         	<h5 class='mb-0'>
+														         		<button type='button' class='btn btn-link collapsed w-100 text-left ng-binding' data-toggle='collapse' data-target='#collapse-2' aria-expanded='false' aria-controls='collapse-2' data-ng-click='getActivitySectionData(d)'>
+														         		Activity 3 - sanitization work and solid waste management in village  (41487549) </button></h5>
+															    </div>
+															    <div id='collapse-2' class='collapse' data-parent='#accordion' aria-labelledby='heading-2'>
+															    	<div class='card-body'>
+															    		 <!-- ngIf: loaderAccordian==true -->
+															        	<!-- ngIf: loaderAccordian==false --><div id='accordion-2' data-ng-if='loaderAccordian==false' class='ng-scope'>
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-2-1'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-2-1' aria-expanded='false' aria-controls='collapse-2-1'>
+															              				Activity Details </button></h5>
+															            		</div>
+															            		<div id='collapse-2-1' class='collapse' data-parent='#accordion-2' aria-labelledby='heading-2-1'>
+															              			<div class='card-body'>
+															                			<div class='table-responsive'>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th width='5%' class='text-center'>Activity Code</th>
+																										<th width='20%' class='text-center'>Activity Name</th>
+																										<th width='20%' class='text-center'>Activity Description</th>
+																										<!-- ngIf: activitySectionData.fnclYr > 2022 -->
+																										<th width='10%' class='text-center'>Activity Type</th>
+																										<th width='10%' class='text-center'>State Name</th>
+																										<th width='10%' class='text-center'>Local Body Name</th>
+																										<th width='10%' class='text-center'>Financial Year</th>
+																									</tr>
+																								</thead>
+																								<tbody>
+																									<tr>
+																										<td class='ng-binding'> 46550380</td>
+																										<td class='ng-binding'>building/nala/nali </td>
+																										<td class='ng-binding'>building/nala/nali</td>
+																										<!-- ngIf: activitySectionData.fnclYr > 2022 -->
+																										<td class='ng-binding'>Community Works</td>
+																										<td class='ng-binding'>Haryana</td>
+																										<td class='ng-binding'>Bohla (33105)</td>
+																										<td class='ng-binding'>2021</td>
+																									</tr>
+																								</tbody>
+																							</table>
+																							<table class='table table-bordered table-striped table-hover'>	
+																								<thead class='bg-dark text-white font10px'>	
+																									<tr>
+																										<th class='text-center'>Focus Area</th>
+																										<th class='text-center'>Activity Status</th>
+																										<th class='text-center'>Activity Cost</th>
+																										<th class='text-center'>Output Type</th>
+																										<th class='text-center'>Work Type</th>
+																										<th class='text-center'>Costless Activity</th>
+																										<th class='text-center'>Delegated Activity</th>
+																										<!-- ngIf: activitySectionData.dlagtdFlag!=null && activitySectionData.dlagtdFlag -->
+																										<th class='text-center'>Sharable Activity</th>
+																									</tr>
+																								</thead>
+																								<tbody>
+																									<tr>
+																										<td class='ng-binding'> Roads</td>
+																										<td class='ng-binding'>WORK ONGOING </td>
+																										<td class='ng-binding'>27123</td>
+																										<td class='ng-binding'>Asset</td>
+																										<td class='ng-binding'>New/Fresh</td>
+																										<!-- ngIf: activitySectionData.activityForCostlessFlag == 1 -->
+																										<!-- ngIf: activitySectionData.activityForCostlessFlag == 0 --><td data-ng-if='activitySectionData.activityForCostlessFlag == 0' class='ng-scope'>No</td><!-- end ngIf: activitySectionData.activityForCostlessFlag == 0 -->
+																										<!-- ngIf: activitySectionData.dlagtdFlag!=null && activitySectionData.dlagtdFlag -->
+																										<!-- ngIf: activitySectionData.dlagtdFlag==null || !activitySectionData.dlagtdFlag --><td data-ng-if='activitySectionData.dlagtdFlag==null || !activitySectionData.dlagtdFlag' class='ng-scope'>No</td><!-- end ngIf: activitySectionData.dlagtdFlag==null || !activitySectionData.dlagtdFlag -->
+																										<!-- ngIf: activitySectionData.dlagtdFlag!=null && activitySectionData.dlagtdFlag -->
+																										<!-- ngIf: activitySectionData.shareable -->
+																										<!-- ngIf: activitySectionData.shareable==null || !activitySectionData.shareable --><td data-ng-if='activitySectionData.shareable==null || !activitySectionData.shareable' class='ng-scope'>No</td><!-- end ngIf: activitySectionData.shareable==null || !activitySectionData.shareable -->
+																									</tr>
+																								</tbody> 
+																							</table>
+																						</div>
+																						<!-- ngIf: activitySectionData.assetDetails --><div class='table-responsive ng-scope' data-ng-if='activitySectionData.assetDetails'>
+																							 Activity Asset Details-
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th class='text-center'>Asset Type</th>
+																									    <th class='text-center'>Asset Category</th>
+																									    <th class='text-center'>Asset Sub Category</th>
+																										<th class='text-center'>Coverage Area</th>
+																										<th class='text-center'>Asset Unit Type</th>
+																										<th class='text-center'>Asset No. Of Unit</th>
+																										<th class='text-center'>Asset Unit Cost</th>
+																										<th class='text-center'>Asset Location</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><tr>
+																										<!-- ngIf: activitySectionData.astTyp==1 -->
+																										<!-- ngIf: activitySectionData.astTyp==2 --><td data-ng-if='activitySectionData.astTyp==2' class='ng-scope'>Immovable</td><!-- end ngIf: activitySectionData.astTyp==2 -->
+																										<td class='ng-binding'>Buildings</td>
+																										<td class='ng-binding'>Chaupal</td>
+																										<!-- ngIf: activitySectionData.astCvrgCd == 'A' --><td data-ng-if='activitySectionData.astCvrgCd == 'A'' class='ng-scope'>Area</td><!-- end ngIf: activitySectionData.astCvrgCd == 'A' -->
+																										<!-- ngIf: activitySectionData.astCvrgCd == 'O' -->
+																										
+																										<!-- ngIf: activitySectionData.astUntTyp==0 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==1 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==2 --><td data-ng-if='activitySectionData.astUntTyp==2' class='ng-scope'>Number</td><!-- end ngIf: activitySectionData.astUntTyp==2 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==3 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==4 -->
+																										<!-- ngIf: activitySectionData.astUntTyp==5 -->
+																										<td class='ng-binding'>1</td>
+																										<td class='ng-binding'></td>
+																										<td class='ng-binding'>Bohla (150) (59783) 
+ </td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: activitySectionData.assetDetails -->
+																						
+																						<!-- ngIf: activitySectionData.outputTypCd == 104 -->           
+																						
+																						<!-- ngIf: activitySectionData.outputTypCd == 102 -->           
+																						
+															              			</div>
+															            		</div>
+															          		</div>
+															          			<!-- 	Section 2 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-2-2'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-2-2' aria-expanded='false' aria-controls='collapse-2-2'>
+															              				Fund Allocation</button></h5>
+															            		</div>
+															            		<div id='collapse-2-2' class='collapse' data-parent='#accordion-2' aria-labelledby='heading-2-2'>
+															              			<div class='card-body'>
+																						<div class='table-responsive'>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																									    <th class='text-center'>Scheme</th>
+																										<th class='text-center'>Scheme/Component</th>
+																										<th class='text-center'>Amount Allocated</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><!-- ngRepeat: f in activitySectionData.fundAllocation --><!-- ngIf: activitySectionData.fundAllocation!=null --><tr data-ng-if='activitySectionData.fundAllocation!=null' data-ng-repeat='f in activitySectionData.fundAllocation' class='ng-scope'>
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='ng-binding'>27123 </td>
+																									</tr><!-- end ngIf: activitySectionData.fundAllocation!=null --><!-- end ngRepeat: f in activitySectionData.fundAllocation -->
+																									<!-- ngIf: activitySectionData.fundAllocation==null -->
+																								</tbody>
+																							</table>
+																						</div>
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 3 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-2-3'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-2-3' aria-expanded='false' aria-controls='collapse-2-3'>
+															              				Technical Approval Details</button></h5>
+															            		</div>
+															            		<div id='collapse-2-3' class='collapse' data-parent='#accordion-2' aria-labelledby='heading-2-3'>
+															              			<div class='card-body'>
+																						<!-- ngIf: technicalSectionData!='' --><div class='table-responsive ng-scope' data-ng-if='technicalSectionData!='''>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th class='text-center'>Technical Approved Cost (In Rs.)</th>
+																									    <th class='text-center'>Order Issuing Authority</th>
+																									    <th class='text-center'>Technical Approval Order Number</th>
+																										<th class='text-center'>Technical Approval Date</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><tr>
+																										<td class='text-right ng-binding'></td>
+																							            <td class='text-left ng-binding'>NR</td>
+																									    <td class='text-left ng-binding'>NR</td>
+																										<td class='text-left ng-binding'>2024-06-13</td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: technicalSectionData!='' -->
+																						<!-- ngIf: technicalSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 4 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-2-4'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-2-4' aria-expanded='false' aria-controls='collapse-2-4'>
+															              				Administrative Approval Details</button></h5>
+															            		</div>
+															            		<div id='collapse-2-4' class='collapse' data-parent='#accordion-2' aria-labelledby='heading-2-4'>
+															              			<div class='card-body'>
+															                			<!-- ngIf: adminSectionData!='' --><div class='table-responsive ng-scope' data-ng-if='adminSectionData!='''>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<tr>
+																										<th class='text-center'>Admin Approval order No.</th>
+																										<th class='text-center'>Admin Approval Order Issuing Authority</th>
+																										<th class='text-center'>Admin Approval order Date</th>
+																										<th class='text-center'>Admin Approval Cost</th>
+																										
+																										<th class='text-center'>Scheme Name</th>
+																										<th class='text-center'>Component Name</th>
+																										<th class='text-center'>Allocated Amount(in Rs.) General</th>
+																										<th class='text-center'>Allocated Amount(in Rs.) SC</th>
+																										<th class='text-center'>Allocated Amount(in Rs.) ST</th>
+																										<th class='text-center'> Total Allocation Amount(in Rs.)</th>
+																									</tr>
+																								</thead>
+																								
+																									<tbody><!-- ngRepeat: a in adminSectionData --><tr data-ng-repeat='a in adminSectionData' class='ng-scope'>
+																										<!-- ngIf: a.wrkAdmApprNo!='' --><td class='text-left align-items-center ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmApprNo!='''>1</td><!-- end ngIf: a.wrkAdmApprNo!='' -->
+																										<!-- ngIf: a.wrkAdmApprIssAuthrty!='' --><td class='text-left ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmApprIssAuthrty!='''>GP</td><!-- end ngIf: a.wrkAdmApprIssAuthrty!='' -->
+																										<!-- ngIf: a.wrkAdmApprSnctnOrdrDt!='' --><td class='text-left ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmApprSnctnOrdrDt!='''>2024-03-13</td><!-- end ngIf: a.wrkAdmApprSnctnOrdrDt!='' -->
+																										<!-- ngIf: a.wrkAdmFndSnctnd!='' --><td class='text-right ng-binding ng-scope' rowspan='1' data-ng-if='a.wrkAdmFndSnctnd!='''>27123</td><!-- end ngIf: a.wrkAdmFndSnctnd!='' -->
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='ng-binding'>Own Funds</td>
+																										<td class='text-right ng-binding'>27123</td>
+																										<td class='text-right ng-binding'></td>
+																										<td class='text-right ng-binding'></td>
+																										<td class='text-right ng-binding'>27123</td>
+																									</tr><!-- end ngRepeat: a in adminSectionData -->
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: adminSectionData!='' -->
+																						<!-- ngIf: adminSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 5 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-2-5'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-2-5' aria-expanded='false' aria-controls='collapse-2-5'>
+															              				Physical Progress Details</button></h5>
+															            		</div>
+															            		<div id='collapse-2-5' class='collapse' data-parent='#accordion-2' aria-labelledby='heading-2-5'>
+															              			<div class='card-body'>
+															                			<!-- ngIf: phyProgressSectionData!='' --><div class='table-responsive ng-scope' data-ng-if='phyProgressSectionData!='''>
+																							<table class='table table-bordered table-striped table-hover'>
+																								<thead class='bg-dark text-white font10px'>
+																									<!-- ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 --><tr data-ng-if='activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105' class='ng-scope'>
+																										<th class='text-center'>Asset Name</th>
+																										<th class='text-center'>Location of Asset</th>
+																									    <th class='text-center'>Work Stage</th>
+																									    <th class='text-center'>Work Stage Date</th>
+																										<th class='text-center'>Geo-tagged</th>
+																										<th class='text-center'>Photo Moderate</th>
+																									</tr><!-- end ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 -->
+																									<!-- ngIf: activitySectionData.outputTypCd == 104 -->
+																									 <!-- ngIf: activitySectionData.outputTypCd == 103 --> 
+																									 <!-- ngIf: activitySectionData.outputTypCd == 103 -->
+																									<!-- ngIf: activitySectionData.outputTypCd == 103 -->
+																									<!-- ngIf: activitySectionData.outputTypCd == 102 --> 
+																								</thead>
+																								
+																									 <tbody><!-- ngRepeat: p in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 --><tr data-ng-if='activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105' data-ng-repeat='p in phyProgressSectionData' class='ng-scope'>
+																										<td class='link ng-binding' data-ng-click='showAssetDetailsPopup(p.physclPrgrssAstCd)'>building/nala/nali1</td>
+																							            <td class='text-left ng-binding'>Bohla (150)(59783)</td>
+																									    <!-- ngIf: p.stageId == 221 --><td data-ng-if='p.stageId == 221' class='ng-scope'>Onset of work</td><!-- end ngIf: p.stageId == 221 -->
+																									    <!-- ngIf: p.stageId == 222 -->
+																									    <!-- ngIf: p.stageId == 223 -->
+																									    <!-- ngIf: p.stageId == 321 -->
+																									    <!-- ngIf: p.stageId!=321 && p.stageId!=221 && p.stageId!=222 && p.stageId!=223 -->
+																									    
+																										<td class='text-left ng-binding'>2024-03-26</td>
+																										<td class='text-left ng-binding'>No</td>
+																										<td class='text-left ng-binding'>No</td>
+																									</tr><!-- end ngIf: activitySectionData.outputTypCd == 101 || activitySectionData.outputTypCd == 106 || activitySectionData.outputTypCd == 105 --><!-- end ngRepeat: p in phyProgressSectionData -->
+																								 	<!-- ngRepeat: n in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 104 --><!-- end ngRepeat: n in phyProgressSectionData -->
+																									<!-- ngRepeat: n in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 103 --><!-- end ngRepeat: n in phyProgressSectionData -->
+																									<!-- ngRepeat: n in phyProgressSectionData --><!-- ngIf: activitySectionData.outputTypCd == 102 --><!-- end ngRepeat: n in phyProgressSectionData -->
+																								</tbody>
+																							</table>
+																						</div><!-- end ngIf: phyProgressSectionData!='' -->
+																						<!-- ngIf: phyProgressSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															          		
+															          		<!-- 	Section 6 -->
+															          		<div class='card'>
+															            		<div class='card-header p-0 px-2' id='heading-2-5'>
+															              			<h5 class='mb-0'>
+															              				<button type='button' class='btn btn-link collapsed  w-100 text-left' data-toggle='collapse' data-target='#collapse-2-6' aria-expanded='false' aria-controls='collapse-2-6'>
+															              				Expenditure Details</button></h5>
+															            		</div>
+															            		<div id='collapse-2-6' class='collapse' data-parent='#accordion-2' aria-labelledby='heading-2-6'>
+															              			<div class='card-body'>
+																						<!-- ngIf: expenditureSectionData!='' -->
+																						<!-- ngIf: expenditureSectionData=='' --><div data-ng-if='expenditureSectionData==''' class='ng-scope'>No Data Found</div><!-- end ngIf: expenditureSectionData=='' -->
+															              			</div>
+															            		</div>
+															          		</div>
+															        	</div><!-- end ngIf: loaderAccordian==false -->      
+															      	</div>
+														    	</div>
+														  	</div>
+													  	</div><!-- end ngRepeat: d in data -->
+													</div>
+												</div><!-- end ngIf: data.length > 0 --> 
+												<!-- ngIf: data.length==0 && activityStts == 176 -->
+												<!-- ngIf: data.length==0 && activityStts == 178 -->
+											</div> 
+										</div></body></html>
