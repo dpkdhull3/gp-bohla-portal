@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { VoucherDetailPanel } from './VoucherDetailPanel'
+import { VoucherNoLink } from './VoucherNoLink'
 import { formatInr } from '../lib/format'
 import type { Voucher } from '../lib/types'
 
@@ -44,14 +45,11 @@ export function VoucherMiniTable({
                   title={unlinked ? t('vouchers.unlinkedTitle') : undefined}
                 >
                   <td>
-                    <button
-                      type="button"
-                      className="text-link voucher-no-toggle"
-                      aria-expanded={open}
-                      onClick={() => setOpenId(open ? null : v.vId)}
-                    >
-                      {v.voucherNo}
-                    </button>
+                    <VoucherNoLink
+                      voucherNo={v.voucherNo}
+                      open={open}
+                      onToggle={() => setOpenId(open ? null : v.vId)}
+                    />
                   </td>
                   <td>{v.voucherDate}</td>
                   <td className="cell-strong">{formatInr(v.amountInr, locale)}</td>

@@ -311,8 +311,11 @@
     "detailTxnType": "लेनदेन प्रकार",
     "detailAccountHeads": "लेखांकन मदें",
     "detailAttachment": "संलग्नक",
-    "detailNotImported": "पूरा विवरण अभी आयात नहीं हुआ — वाउचर रसीद ईग्रामस्वराज पर देखें।",
-    "openOnEgram": "वाउचर रसीद देखें"
+    "detailNotImported": "पूरा विवरण अभी आयात नहीं हुआ — फिर भी वाउचर रसीद खोल सकते हैं।",
+    "openOnEgram": "वाउचर रसीद देखें",
+    "showMore": "और जानकारी",
+    "hideMore": "छिपाएँ",
+    "toggleDetailsAria": "वाउचर {{no}} की और जानकारी दिखाएँ"
   },
   "schemes": {
     "title": "स्कीमवार भुगतान वाउचर",
@@ -430,6 +433,8 @@
   "lang": {
     "hi": "हिन्दी",
     "en": "English",
-    "switch": "भाषा बदलें"
+    "hiShort": "हिन्दी",
+    "enShort": "EN",
+    "switch": "भाषा"
   }
 }

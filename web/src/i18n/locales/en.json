@@ -311,8 +311,11 @@
     "detailTxnType": "Transaction type",
     "detailAccountHeads": "Account heads",
     "detailAttachment": "Attachment",
-    "detailNotImported": "Full detail not imported yet — view the voucher receipt on eGramSwaraj.",
-    "openOnEgram": "View voucher receipt"
+    "detailNotImported": "Full detail not imported yet — you can still open the voucher receipt.",
+    "openOnEgram": "View voucher receipt",
+    "showMore": "More info",
+    "hideMore": "Hide",
+    "toggleDetailsAria": "Show more info for voucher {{no}}"
   },
   "schemes": {
     "title": "Payment vouchers by scheme",
@@ -430,6 +433,8 @@
   "lang": {
     "hi": "हिन्दी",
     "en": "English",
-    "switch": "Switch language"
+    "hiShort": "हिन्दी",
+    "enShort": "EN",
+    "switch": "Language"
   }
 }

@@ -26,8 +26,8 @@
 }
 
 .site-header-compact .header-inner {
-  padding: 0.4rem 0.75rem;
-  gap: 0.5rem;
+  padding: 0.55rem 0.85rem 0.4rem;
+  gap: 0.75rem;
 }
 
 .header-inner {
@@ -49,20 +49,28 @@
 .brand-name {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-brand);
   line-height: 1.15;
 }
 
 .brand-place {
-  margin: 0.1rem 0 0;
+  margin: 0.15rem 0 0;
   color: var(--color-ink-muted);
-  font-size: 0.72rem;
-  line-height: 1.3;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.brand-place-desktop {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.brand-place-mobile,
+.brand-loc-mobile {
+  display: none;
 }
 
 .header-actions {
@@ -70,44 +78,7 @@
   flex-wrap: nowrap;
   gap: 0.35rem;
   align-items: center;
-  flex: 0 1 auto;
-}
-
-.year-selector {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  font-size: 0.85rem;
-  color: var(--color-ink-muted);
-}
-
-.year-selector-compact {
-  min-width: 0;
-}
-
-.year-selector-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  align-items: center;
-}
-
-.year-selector-compact select {
-  min-height: 36px;
-  font-size: 0.8rem;
-  padding: 0.25rem 0.45rem;
-}
-
-.range-inputs {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0.25rem;
-  align-items: center;
-}
-
-.range-sep {
-  color: var(--color-ink-muted);
-  font-size: 0.85rem;
+  flex: 0 0 auto;
 }
 
 .period-banner {
@@ -136,10 +107,8 @@
   font-size: 0.82rem;
 }
 
-.year-selector select,
 .filters select,
 .filters input,
-.lang-btn,
 .nav-toggle,
 .btn-primary,
 .btn-secondary,
@@ -149,6 +118,43 @@
   border: 1px solid var(--color-border);
   background: #fff;
   padding: 0.4rem 0.75rem;
+  color: var(--color-ink);
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #fff;
+}
+
+.lang-btn {
+  min-height: 34px;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 650;
+  white-space: nowrap;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-ink-muted);
+  cursor: pointer;
+}
+
+.lang-btn + .lang-btn {
+  border-left: 1px solid var(--color-border);
+}
+
+.lang-btn.active {
+  background: var(--color-brand);
+  color: #fff;
+}
+
+.lang-btn:not(.active):hover,
+.lang-btn:not(.active):focus-visible {
+  background: var(--color-bg-muted);
   color: var(--color-ink);
 }
 
@@ -177,14 +183,21 @@
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 0.75rem 0.45rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.3rem;
 }
 
 .site-nav-compact {
   padding-bottom: 0.35rem;
+}
+
+.year-period-nav {
+  padding-top: 0.1rem;
+}
+
+.year-period-scroll {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.3rem;
 }
 
 .nav-link {
@@ -737,9 +750,13 @@
   color: #5c5420;
 }
 
-.voucher-no-toggle {
+.voucher-no-link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.55rem;
+  max-width: 100%;
   font: inherit;
-  font-weight: 650;
   text-align: left;
   padding: 0;
   border: 0;
@@ -748,10 +765,38 @@
   color: var(--color-brand-soft);
 }
 
-.voucher-no-toggle:hover,
-.voucher-no-toggle:focus-visible {
-  color: var(--color-brand);
+.voucher-no-link-id {
+  font-weight: 700;
   text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+  overflow-wrap: anywhere;
+}
+
+.voucher-no-link-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.voucher-no-link-chevron {
+  font-size: 0.65rem;
+  line-height: 1;
+}
+
+.voucher-no-link:hover .voucher-no-link-id,
+.voucher-no-link:focus-visible .voucher-no-link-id {
+  color: var(--color-brand);
+}
+
+.voucher-no-link.is-open .voucher-no-link-hint {
+  color: var(--color-brand-soft);
 }
 
 .voucher-detail-row > td {
@@ -772,6 +817,32 @@
   margin: 0;
   font-size: 0.85rem;
   color: var(--color-ink-muted);
+}
+
+.voucher-receipt-actions {
+  margin: 0.15rem 0 0;
+}
+
+.voucher-receipt-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.voucher-receipt-link:hover,
+.voucher-receipt-link:focus-visible {
+  color: var(--color-brand-soft);
+}
+
+.voucher-receipt-ext {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .voucher-detail-grid {
@@ -1074,11 +1145,73 @@
 }
 
 @media (max-width: 720px) {
-  .header-inner {
-    flex-wrap: wrap;
+  .site-header-compact .header-inner {
+    padding: 0.65rem 0.85rem 0.45rem;
+    align-items: flex-start;
   }
-  .brand-place {
+
+  .brand-name {
+    font-size: 1.35rem;
+    letter-spacing: -0.01em;
+  }
+
+  .brand-place-desktop {
+    display: none;
+  }
+
+  .brand-place-mobile {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    font-weight: 650;
+    color: var(--color-ink);
     white-space: normal;
+  }
+
+  .brand-loc-mobile {
+    display: block;
+    margin: 0.1rem 0 0;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    color: var(--color-ink-muted);
+    white-space: normal;
+  }
+
+  .year-period-nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .year-period-scroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding: 0 0.85rem 0.15rem;
+    gap: 0.35rem;
+  }
+
+  .year-period-scroll .nav-link {
+    flex: 0 0 auto;
+  }
+
+  .header-section-nav {
+    padding-bottom: 0.65rem;
+  }
+
+  .header-section-nav .section-subnav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    gap: 0.35rem;
+    padding-bottom: 0.1rem;
+  }
+
+  .header-section-nav .section-subnav-link {
+    flex: 0 0 auto;
+    min-height: 36px;
+    font-size: 0.85rem;
   }
 }
 

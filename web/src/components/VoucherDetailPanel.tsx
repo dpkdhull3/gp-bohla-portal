@@ -113,9 +113,14 @@ export function VoucherDetailPanel({
       {!loading && !detail ? (
         <p className="voucher-detail-missing">{t('vouchers.detailNotImported')}</p>
       ) : null}
-      <a className="btn-secondary btn-compact" href={egUrl} target="_blank" rel="noreferrer">
-        {t('vouchers.openOnEgram')}
-      </a>
+      <p className="voucher-receipt-actions">
+        <a className="voucher-receipt-link" href={egUrl} target="_blank" rel="noreferrer">
+          {t('vouchers.openOnEgram')}
+          <span className="voucher-receipt-ext" aria-hidden>
+            ↗
+          </span>
+        </a>
+      </p>
     </div>
   )
 }
