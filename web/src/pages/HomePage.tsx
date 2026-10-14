@@ -492,8 +492,10 @@ export function HomePage() {
           </Link>
         </div>
         <p className="panel-help">{t('home.yearTableHelp')}</p>
-        <div className="table-scroll">
-          <table className="data-table-dense">
+
+        {/* Desktop / wide: table */}
+        <div className="table-scroll year-stats-table-wrap">
+          <table className="data-table-dense year-stats-table">
             <thead>
               <tr>
                 <th>{t('common.financialYear')}</th>
@@ -506,74 +508,158 @@ export function HomePage() {
             </thead>
             <tbody>
               {yearCompare
-                .filter((row) =>
-                  isRangeView ? true : row.financialYear === year,
-                )
+                .filter((row) => (isRangeView ? true : row.financialYear === year))
                 .map((row) => {
                   const docs = planDocsForYear(row.financialYear)
                   return (
-                  <tr key={row.financialYear}>
-                    <td className="cell-strong">{row.financialYear}</td>
-                    <td className="cell-strong">
-                      {row.approvedInr > 0 ? formatInr(row.approvedInr, locale) : '—'}
-                    </td>
-                    <td className="cell-strong">
-                      {row.voucherCount > 0 || row.spentInr > 0
-                        ? formatInr(row.spentInr, locale)
-                        : '—'}
-                    </td>
-                    <td className="cell-strong">
-                      {formatNumber(row.completedWorksCount, locale)}
-                    </td>
-                    <td className="cell-strong">{formatNumber(row.voucherCount, locale)}</td>
-                    <td>
-                      <div className="row-actions">
-                        {docs.pdf ? (
-                          <a
+                    <tr key={row.financialYear}>
+                      <td className="cell-strong">{row.financialYear}</td>
+                      <td className="cell-strong">
+                        {row.approvedInr > 0 ? formatInr(row.approvedInr, locale) : '—'}
+                      </td>
+                      <td className="cell-strong">
+                        {row.voucherCount > 0 || row.spentInr > 0
+                          ? formatInr(row.spentInr, locale)
+                          : '—'}
+                      </td>
+                      <td className="cell-strong">
+                        {formatNumber(row.completedWorksCount, locale)}
+                      </td>
+                      <td className="cell-strong">
+                        {formatNumber(row.voucherCount, locale)}
+                      </td>
+                      <td>
+                        <div className="row-actions">
+                          {docs.pdf ? (
+                            <a
+                              className="btn-secondary btn-compact"
+                              href={docs.pdf}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {t('home.planPdfShort', { year: row.financialYear })}
+                            </a>
+                          ) : null}
+                          {docs.xls ? (
+                            <a className="btn-secondary btn-compact" href={docs.xls} download>
+                              {t('home.planSheetShort', { year: row.financialYear })}
+                            </a>
+                          ) : docs.sheet ? (
+                            <a
+                              className="btn-secondary btn-compact"
+                              href={docs.sheet}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {t('home.planSheetShort', { year: row.financialYear })}
+                            </a>
+                          ) : null}
+                          <button
+                            type="button"
                             className="btn-secondary btn-compact"
-                            href={docs.pdf}
-                            target="_blank"
-                            rel="noreferrer"
+                            onClick={() => openYearWorks(row.financialYear)}
                           >
-                            {t('home.planPdfShort')}
-                          </a>
-                        ) : null}
-                        {docs.xls ? (
-                          <a className="btn-secondary btn-compact" href={docs.xls} download>
-                            {t('home.planSheetShort')}
-                          </a>
-                        ) : docs.sheet ? (
-                          <a
+                            {t('home.openYearGrants', { year: row.financialYear })}
+                          </button>
+                          <button
+                            type="button"
                             className="btn-secondary btn-compact"
-                            href={docs.sheet}
-                            target="_blank"
-                            rel="noreferrer"
+                            onClick={() => openYearPayments(row.financialYear)}
                           >
-                            {t('home.planSheetShort')}
-                          </a>
-                        ) : null}
-                        <button
-                          type="button"
-                          className="btn-secondary btn-compact"
-                          onClick={() => openYearWorks(row.financialYear)}
-                        >
-                          {t('home.openYearGrants')}
-                        </button>
-                        <button
-                          type="button"
-                          className="btn-secondary btn-compact"
-                          onClick={() => openYearPayments(row.financialYear)}
-                        >
-                          {t('home.openYearVouchers')}
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
+                            {t('home.openYearVouchers', { year: row.financialYear })}
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
                   )
                 })}
             </tbody>
           </table>
         </div>
+
+        {/* Mobile: stacked year cards so actions stay visible */}
+        <ul className="year-stat-list" aria-label={t('home.yearTableTitleShort')}>
+          {yearCompare
+            .filter((row) => (isRangeView ? true : row.financialYear === year))
+            .map((row) => {
+              const docs = planDocsForYear(row.financialYear)
+              return (
+                <li key={row.financialYear} className="year-stat-card">
+                  <div className="year-stat-card-top">
+                    <p className="year-stat-fy">{row.financialYear}</p>
+                    <div className="year-stat-metrics">
+                      <div>
+                        <span className="year-stat-label">{t('home.colApproved')}</span>
+                        <span className="year-stat-value">
+                          {row.approvedInr > 0 ? formatInr(row.approvedInr, locale) : '—'}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="year-stat-label">{t('home.colMoneyUsed')}</span>
+                        <span className="year-stat-value">
+                          {row.voucherCount > 0 || row.spentInr > 0
+                            ? formatInr(row.spentInr, locale)
+                            : '—'}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="year-stat-label">{t('home.colWorks')}</span>
+                        <span className="year-stat-value">
+                          {formatNumber(row.completedWorksCount, locale)}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="year-stat-label">{t('home.colVouchers')}</span>
+                        <span className="year-stat-value">
+                          {formatNumber(row.voucherCount, locale)}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="year-stat-actions" role="group" aria-label={t('home.colPlanDocs')}>
+                    {docs.pdf ? (
+                      <a
+                        className="btn-secondary btn-compact"
+                        href={docs.pdf}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {t('home.planPdfShort', { year: row.financialYear })}
+                      </a>
+                    ) : null}
+                    {docs.xls ? (
+                      <a className="btn-secondary btn-compact" href={docs.xls} download>
+                        {t('home.planSheetShort', { year: row.financialYear })}
+                      </a>
+                    ) : docs.sheet ? (
+                      <a
+                        className="btn-secondary btn-compact"
+                        href={docs.sheet}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {t('home.planSheetShort', { year: row.financialYear })}
+                      </a>
+                    ) : null}
+                    <button
+                      type="button"
+                      className="btn-secondary btn-compact"
+                      onClick={() => openYearWorks(row.financialYear)}
+                    >
+                      {t('home.openYearGrants', { year: row.financialYear })}
+                    </button>
+                    <button
+                      type="button"
+                      className="btn-secondary btn-compact"
+                      onClick={() => openYearPayments(row.financialYear)}
+                    >
+                      {t('home.openYearVouchers', { year: row.financialYear })}
+                    </button>
+                  </div>
+                </li>
+              )
+            })}
+        </ul>
       </section>
     </div>
   )
