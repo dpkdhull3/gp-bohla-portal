@@ -82,15 +82,32 @@ export interface PlannedActivity {
   scFundInr?: number | null
   stFundInr?: number | null
   planYear: string
+  linkedVoucherSumInr?: number
+  linkedVoucherCount?: number
+  spendStatus?: 'linked' | 'no_linked_payment' | string
   flags: string[]
+}
+
+export interface PlanSectorBreakdown {
+  sector: string
+  plannedInr: number
 }
 
 export interface PlanYearFile {
   planYear: string
   count: number
   totalEstimatedCostInr: number
+  /** Fixed-purpose grants (from plan PDF summary). */
+  tiedInr?: number | null
+  /** Flexible grants (from plan PDF summary). */
+  untiedInr?: number | null
+  linkedPaymentInr?: number
+  linkedActivityCount?: number
+  unlinkedActivityCount?: number
+  sectorBreakdown?: PlanSectorBreakdown[]
   pdfPath?: string | null
   xlsPath?: string | null
+  htmlPath?: string | null
   records: PlannedActivity[]
 }
 
@@ -100,9 +117,23 @@ export interface PlanIndex {
     planYear: string
     count: number
     totalEstimatedCostInr: number
+    tiedInr?: number | null
+    untiedInr?: number | null
+    linkedPaymentInr?: number
+    linkedActivityCount?: number
+    unlinkedActivityCount?: number
     pdfPath?: string | null
     xlsPath?: string | null
+    htmlPath?: string | null
   }>
+  totals?: {
+    approvedInr: number
+    tiedInr?: number
+    untiedInr?: number
+    linkedPaymentInr: number
+    activityCount: number
+    linkedActivityCount: number
+  }
   noteEn?: string
   noteHi?: string
 }

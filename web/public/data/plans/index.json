@@ -11,38 +11,76 @@
       "planYear": "2026-27",
       "count": 11,
       "totalEstimatedCostInr": 1305002.0,
+      "tiedInr": 310000.0,
+      "untiedInr": 995002.0,
+      "linkedPaymentInr": 0,
+      "linkedActivityCount": 0,
+      "unlinkedActivityCount": 11,
       "pdfPath": "/reports/approved-action-plans/2026-27.pdf",
-      "xlsPath": "/reports/approved-action-plans/2026-27.xls"
+      "xlsPath": "/reports/approved-action-plans/2026-27.xls",
+      "htmlPath": "/reports/approved-action-plans/2026-27.html"
     },
     {
       "planYear": "2025-26",
       "count": 25,
       "totalEstimatedCostInr": 887760.0,
+      "tiedInr": 412660.0,
+      "untiedInr": 475100.0,
+      "linkedPaymentInr": 306481.0,
+      "linkedActivityCount": 2,
+      "unlinkedActivityCount": 23,
       "pdfPath": "/reports/approved-action-plans/2025-26.pdf",
-      "xlsPath": "/reports/approved-action-plans/2025-26.xls"
+      "xlsPath": "/reports/approved-action-plans/2025-26.xls",
+      "htmlPath": "/reports/approved-action-plans/2025-26.html"
     },
     {
       "planYear": "2024-25",
       "count": 12,
       "totalEstimatedCostInr": 1087760.0,
+      "tiedInr": 412660.0,
+      "untiedInr": 675100.0,
+      "linkedPaymentInr": 0,
+      "linkedActivityCount": 0,
+      "unlinkedActivityCount": 12,
       "pdfPath": "/reports/approved-action-plans/2024-25.pdf",
-      "xlsPath": "/reports/approved-action-plans/2024-25.xls"
+      "xlsPath": "/reports/approved-action-plans/2024-25.xls",
+      "htmlPath": "/reports/approved-action-plans/2024-25.html"
     },
     {
       "planYear": "2023-24",
       "count": 31,
       "totalEstimatedCostInr": 887760.0,
+      "tiedInr": 412660.0,
+      "untiedInr": 475100.0,
+      "linkedPaymentInr": 307347.0,
+      "linkedActivityCount": 2,
+      "unlinkedActivityCount": 29,
       "pdfPath": "/reports/approved-action-plans/2023-24.pdf",
-      "xlsPath": "/reports/approved-action-plans/2023-24.xls"
+      "xlsPath": "/reports/approved-action-plans/2023-24.xls",
+      "htmlPath": "/reports/approved-action-plans/2023-24.html"
     },
     {
       "planYear": "2022-23",
       "count": 4,
       "totalEstimatedCostInr": 887760.0,
+      "tiedInr": 412660.0,
+      "untiedInr": 475100.0,
+      "linkedPaymentInr": 364407.0,
+      "linkedActivityCount": 1,
+      "unlinkedActivityCount": 3,
       "pdfPath": "/reports/approved-action-plans/2022-23.pdf",
-      "xlsPath": "/reports/approved-action-plans/2022-23.xls"
+      "xlsPath": "/reports/approved-action-plans/2022-23.xls",
+      "htmlPath": "/reports/approved-action-plans/2022-23.html"
     }
   ],
-  "noteEn": "Approved action plans imported from eGramSwaraj spreadsheets + PDFs.",
-  "noteHi": "स्वीकृत कार्य योजनाएँ ईग्रामस्वराज स्प्रेडशीट और PDF से आयात हुईं।"
+  "totals": {
+    "approvedInr": 5056042.0,
+    "tiedInr": 1960640.0,
+    "untiedInr": 3095402.0,
+    "linkedPaymentInr": 978235.0,
+    "activityCount": 83,
+    "linkedActivityCount": 5
+  },
+  "noteEn": "Approved amounts come from Approved Action Plans. Fixed-purpose (tied) and flexible (untied) splits come from the plan PDF summary. “Actually spent (linked)” sums payment vouchers whose workCode matches the plan activity code. Items with no matching voucher are not treated as ₹0 spent.",
+  "noteHi": "स्वीकृत राशि स्वीकृत कार्य योजना से है। निर्धारित (tied) और लचीली (untied) राशि योजना PDF सारांश से है। “वास्तविक खर्च (जुड़ा)” उन भुगतान वाउचरों का योग है जिनका workCode योजना गतिविधि कोड से मिलता है। जिनका वाउचर नहीं मिला, उन्हें ₹0 खर्च नहीं माना गया।"
 }

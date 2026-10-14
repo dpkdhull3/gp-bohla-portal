@@ -112,6 +112,9 @@ class PlannedActivity(BaseModel):
     scFundInr: Optional[float] = None
     stFundInr: Optional[float] = None
     planYear: str
+    linkedVoucherSumInr: float = 0.0
+    linkedVoucherCount: int = 0
+    spendStatus: str = "no_linked_payment"  # linked | no_linked_payment
     source: SourceRef
     flags: list[DataQualityFlag] = Field(default_factory=list)
 

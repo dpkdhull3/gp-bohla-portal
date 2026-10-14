@@ -2,8 +2,48 @@
   "planYear": "2024-25",
   "count": 12,
   "totalEstimatedCostInr": 1087760.0,
+  "tiedInr": 412660.0,
+  "untiedInr": 675100.0,
+  "linkedPaymentInr": 0,
+  "linkedActivityCount": 0,
+  "unlinkedActivityCount": 12,
+  "sectorBreakdown": [
+    {
+      "sector": "Land improvement",
+      "plannedInr": 400000.0
+    },
+    {
+      "sector": "Drinking water",
+      "plannedInr": 206330.0
+    },
+    {
+      "sector": "Sanitation",
+      "plannedInr": 206330.0
+    },
+    {
+      "sector": "Health",
+      "plannedInr": 206325.0
+    },
+    {
+      "sector": "Rural housing",
+      "plannedInr": 68705.0
+    },
+    {
+      "sector": "Technical training and vocational education",
+      "plannedInr": 40.0
+    },
+    {
+      "sector": "Agriculture",
+      "plannedInr": 20.0
+    },
+    {
+      "sector": "Public distribution system",
+      "plannedInr": 10.0
+    }
+  ],
   "pdfPath": "/reports/approved-action-plans/2024-25.pdf",
   "xlsPath": "/reports/approved-action-plans/2024-25.xls",
+  "htmlPath": "/reports/approved-action-plans/2024-25.html",
   "records": [
     {
       "activityCode": "98414412",
@@ -20,6 +60,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -30,7 +73,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -48,6 +92,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -58,7 +105,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -76,6 +124,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -86,7 +137,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -104,6 +156,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -114,7 +169,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -132,6 +188,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -142,7 +201,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -160,6 +220,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -170,7 +233,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -188,6 +252,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -198,7 +265,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -216,6 +284,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -226,7 +297,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -244,6 +316,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -254,7 +329,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -272,6 +348,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -282,7 +361,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -300,6 +380,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -310,7 +393,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -328,6 +412,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2024-25",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2024-25/approved_action_plan_report.xls",
@@ -338,7 +425,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     }
   ]

@@ -44,6 +44,11 @@ export function VouchersPage() {
   const periodLabel = isRangeView ? `${rangeStart} – ${rangeEnd}` : year
   const filePeriod = isRangeView ? `${rangeStart}_${rangeEnd}` : year
 
+  const filteredTotal = useMemo(
+    () => filtered.reduce((sum, v) => sum + (v.amountInr || 0), 0),
+    [filtered],
+  )
+
   const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize))
   const pageRows = filtered.slice(page * pageSize, page * pageSize + pageSize)
 
@@ -100,8 +105,14 @@ export function VouchersPage() {
         <EmptyState title={t('common.empty')} />
       ) : (
         <>
+          <p className="vouchers-total" role="status">
+            {t('vouchers.totalSummary', {
+              count: filtered.length,
+              amount: formatInr(filteredTotal, locale),
+            })}
+          </p>
           <div className="table-scroll">
-            <table>
+            <table className="data-table-dense">
               <thead>
                 <tr>
                   <th>{t('vouchers.voucherNo')}</th>
@@ -118,7 +129,7 @@ export function VouchersPage() {
                   <tr key={v.vId}>
                     <td>{v.voucherNo}</td>
                     <td>{v.voucherDate}</td>
-                    <td>{formatInr(v.amountInr, locale)}</td>
+                    <td className="cell-strong">{formatInr(v.amountInr, locale)}</td>
                     <td>{v.workCode ?? '—'}</td>
                     <td>{v.majorHead?.label || v.majorHead?.raw || '—'}</td>
                     <td>{v.objectHead?.label || v.objectHead?.raw || '—'}</td>
@@ -126,6 +137,15 @@ export function VouchersPage() {
                   </tr>
                 ))}
               </tbody>
+              <tfoot>
+                <tr>
+                  <td className="cell-strong" colSpan={2}>
+                    {t('vouchers.totalRow')}
+                  </td>
+                  <td className="cell-strong">{formatInr(filteredTotal, locale)}</td>
+                  <td colSpan={4} />
+                </tr>
+              </tfoot>
             </table>
           </div>
           <div className="pager">

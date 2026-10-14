@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import json
+import re
+import subprocess
 from collections import defaultdict
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -19,6 +21,7 @@ from .models.schemas import (
 )
 from .parsers.approved_plan import parse_approved_plan_xls
 from .parsers.physical_progress import parse_physical_progress_file
+from .parsers.plan_pdf_summary import parse_plan_summary_tied_untied
 from .parsers.vouchers import parse_voucher_file
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -50,6 +53,60 @@ def _write_json(path: Path, payload: Any) -> None:
         json.dumps(payload, indent=2, ensure_ascii=False, default=_json_default) + "\n",
         encoding="utf-8",
     )
+
+
+_PLAN_HTML_PREVIEW_CSS = """
+<style id="portal-plan-preview">
+  html, body { margin: 0; padding: 0.75rem; background: #fff; }
+  body { overflow-x: auto; font-family: system-ui, -apple-system, sans-serif; font-size: 13px; color: #15262f; }
+  .table-responsive { overflow-x: auto; width: 100%; }
+  table, table.table {
+    border-collapse: collapse !important;
+    width: max-content !important;
+    min-width: 100% !important;
+    table-layout: auto !important;
+  }
+  table th, table td, th, td {
+    white-space: nowrap !important;
+    word-wrap: normal !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    vertical-align: top !important;
+    padding: 0.45rem 0.7rem !important;
+    border: 1px solid #cfd9d4 !important;
+    max-width: none !important;
+    width: auto !important;
+    min-width: 4.5rem;
+  }
+  th { background: #eef3f1 !important; font-weight: 700; position: sticky; top: 0; z-index: 1; }
+  col, colgroup col { width: auto !important; }
+</style>
+"""
+
+
+def _write_plan_html_preview(source_xls: Path, dest_html: Path) -> None:
+    """Publish eGramSwaraj HTML-as-XLS with CSS so tables stay readable in an iframe."""
+    raw = source_xls.read_text(encoding="utf-8", errors="replace")
+    # Drop Excel's fixed/narrow column CSS that forces letter-by-letter wrapping.
+    cleaned = re.sub(
+        r"<style\b[^>]*>.*?</style>",
+        "",
+        raw,
+        count=1,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    inject = _PLAN_HTML_PREVIEW_CSS
+    lower = cleaned.lower()
+    if "</head>" in lower:
+        idx = lower.index("</head>")
+        html = cleaned[:idx] + inject + cleaned[idx:]
+    elif "<body" in lower:
+        idx = lower.index("<body")
+        html = cleaned[:idx] + inject + cleaned[idx:]
+    else:
+        html = inject + cleaned
+    dest_html.parent.mkdir(parents=True, exist_ok=True)
+    dest_html.write_text(html, encoding="utf-8")
 
 
 def run_import(out_dir: Path | None = None) -> ImportSummary:
@@ -203,7 +260,7 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
     plans_public.mkdir(parents=True, exist_ok=True)
     planned = []
     plan_years_imported: list[str] = []
-    plan_index_rows: list[dict[str, Any]] = []
+    plan_assets: dict[str, dict[str, Any]] = {}
 
     year_dirs = sorted(
         d for d in plans_src_root.iterdir() if d.is_dir() and not d.name.startswith(".")
@@ -224,32 +281,30 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
             plan_years_imported.append(fy)
             pdf_public_path = f"/reports/approved-action-plans/{fy}.pdf"
             xls_public_path = f"/reports/approved-action-plans/{fy}.xls"
+            # eGramSwaraj "xls" is HTML — publish a readable .html for in-browser viewing
+            html_public_path = f"/reports/approved-action-plans/{fy}.html"
             shutil.copy2(xls, plans_public / f"{fy}.xls")
+            _write_plan_html_preview(xls, plans_public / f"{fy}.html")
             if pdf.exists():
                 shutil.copy2(pdf, plans_public / f"{fy}.pdf")
                 files_processed.append(str(pdf.relative_to(ROOT)))
             else:
-                pdf_public_path = ""
+                pdf_public_path = None
                 all_warnings.append(f"{fy}: PDF missing beside spreadsheet")
-            total = sum(a.estimatedCostInr or 0 for a in rows)
-            payload = {
-                "planYear": fy,
-                "count": len(rows),
-                "totalEstimatedCostInr": total,
-                "pdfPath": pdf_public_path or None,
+            tied_inr: float | None = None
+            untied_inr: float | None = None
+            if pdf.exists():
+                try:
+                    tied_inr, untied_inr = parse_plan_summary_tied_untied(pdf)
+                except (ValueError, OSError, subprocess.CalledProcessError) as exc:
+                    all_warnings.append(f"{fy}: could not parse tied/untied from PDF ({exc})")
+            plan_assets[fy] = {
+                "pdfPath": pdf_public_path,
                 "xlsPath": xls_public_path,
-                "records": [a.model_dump(mode="json") for a in rows],
+                "htmlPath": html_public_path,
+                "tiedInr": tied_inr,
+                "untiedInr": untied_inr,
             }
-            _write_json(out / "plans" / f"{fy}.json", payload)
-            plan_index_rows.append(
-                {
-                    "planYear": fy,
-                    "count": len(rows),
-                    "totalEstimatedCostInr": total,
-                    "pdfPath": pdf_public_path or None,
-                    "xlsPath": xls_public_path,
-                }
-            )
         except ValueError as exc:
             files_rejected.append(f"{xls}: {exc}")
 
@@ -262,42 +317,109 @@ def run_import(out_dir: Path | None = None) -> ImportSummary:
                 all_warnings.extend(warnings)
                 files_processed.append(str(plan_path.relative_to(ROOT)))
                 plan_years_imported.append("2026-27")
-                _write_json(
-                    out / "plans" / "2026-27.json",
-                    {
-                        "planYear": "2026-27",
-                        "count": len(planned),
-                        "totalEstimatedCostInr": sum(
-                            a.estimatedCostInr or 0 for a in planned
-                        ),
-                        "pdfPath": "/reports/raw/approved-action-plan/2026-27-ApprovedAction.pdf",
-                        "records": [a.model_dump(mode="json") for a in planned],
-                    },
-                )
-                plan_index_rows.append(
-                    {
-                        "planYear": "2026-27",
-                        "count": len(planned),
-                        "totalEstimatedCostInr": sum(
-                            a.estimatedCostInr or 0 for a in planned
-                        ),
-                        "pdfPath": "/reports/raw/approved-action-plan/2026-27-ApprovedAction.pdf",
-                    }
-                )
+                plan_assets["2026-27"] = {
+                    "pdfPath": "/reports/raw/approved-action-plan/2026-27-ApprovedAction.pdf",
+                    "xlsPath": None,
+                    "htmlPath": None,
+                }
             except ValueError as exc:
                 files_rejected.append(f"{plan_path}: {exc}")
         else:
             files_rejected.append(str(plan_path))
 
+    # Link plan activity codes ↔ voucher workCodes (same key as works linkage)
+    for a in planned:
+        linked = payments_by_work.get(a.activityCode, [])
+        a.linkedVoucherCount = len(linked)
+        a.linkedVoucherSumInr = sum(v.amountInr for v in linked) if linked else 0.0
+        if linked:
+            a.spendStatus = "linked"
+        else:
+            a.spendStatus = "no_linked_payment"
+            if DataQualityFlag.NO_LINKED_VOUCHERS not in a.flags:
+                a.flags.append(DataQualityFlag.NO_LINKED_VOUCHERS)
+
+    # Write year plan files + index with approved vs linked spend
+    planned_by_fy: dict[str, list] = defaultdict(list)
+    for a in planned:
+        planned_by_fy[a.planYear].append(a)
+
+    plan_index_rows: list[dict[str, Any]] = []
+    for fy in sorted(planned_by_fy.keys(), reverse=True):
+        rows = planned_by_fy[fy]
+        assets = plan_assets.get(fy, {})
+        approved = sum(a.estimatedCostInr or 0 for a in rows)
+        linked_spend = sum(a.linkedVoucherSumInr for a in rows if a.spendStatus == "linked")
+        linked_count = sum(1 for a in rows if a.spendStatus == "linked")
+        tied_inr = assets.get("tiedInr")
+        untied_inr = assets.get("untiedInr")
+        # Sector rollup for overview charts
+        by_sector: dict[str, float] = defaultdict(float)
+        for a in rows:
+            key = (a.sector or "").strip() or "—"
+            by_sector[key] += float(a.estimatedCostInr or 0)
+        sector_breakdown = [
+            {"sector": name, "plannedInr": amount}
+            for name, amount in sorted(by_sector.items(), key=lambda x: -x[1])
+        ]
+        payload = {
+            "planYear": fy,
+            "count": len(rows),
+            "totalEstimatedCostInr": approved,
+            "tiedInr": tied_inr,
+            "untiedInr": untied_inr,
+            "linkedPaymentInr": linked_spend,
+            "linkedActivityCount": linked_count,
+            "unlinkedActivityCount": len(rows) - linked_count,
+            "sectorBreakdown": sector_breakdown,
+            "pdfPath": assets.get("pdfPath"),
+            "xlsPath": assets.get("xlsPath"),
+            "htmlPath": assets.get("htmlPath"),
+            "records": [a.model_dump(mode="json") for a in rows],
+        }
+        _write_json(out / "plans" / f"{fy}.json", payload)
+        plan_index_rows.append(
+            {
+                "planYear": fy,
+                "count": len(rows),
+                "totalEstimatedCostInr": approved,
+                "tiedInr": tied_inr,
+                "untiedInr": untied_inr,
+                "linkedPaymentInr": linked_spend,
+                "linkedActivityCount": linked_count,
+                "unlinkedActivityCount": len(rows) - linked_count,
+                "pdfPath": assets.get("pdfPath"),
+                "xlsPath": assets.get("xlsPath"),
+                "htmlPath": assets.get("htmlPath"),
+            }
+        )
+
     rows_imported["plannedActivities"] = len(planned)
-    plan_index_rows.sort(key=lambda r: r["planYear"], reverse=True)
     _write_json(
         out / "plans" / "index.json",
         {
             "years": [r["planYear"] for r in plan_index_rows],
             "plans": plan_index_rows,
-            "noteEn": "Approved action plans imported from eGramSwaraj spreadsheets + PDFs.",
-            "noteHi": "स्वीकृत कार्य योजनाएँ ईग्रामस्वराज स्प्रेडशीट और PDF से आयात हुईं।",
+            "totals": {
+                "approvedInr": sum(r["totalEstimatedCostInr"] for r in plan_index_rows),
+                "tiedInr": sum(r.get("tiedInr") or 0 for r in plan_index_rows),
+                "untiedInr": sum(r.get("untiedInr") or 0 for r in plan_index_rows),
+                "linkedPaymentInr": sum(r["linkedPaymentInr"] for r in plan_index_rows),
+                "activityCount": sum(r["count"] for r in plan_index_rows),
+                "linkedActivityCount": sum(r["linkedActivityCount"] for r in plan_index_rows),
+            },
+            "noteEn": (
+                "Approved amounts come from Approved Action Plans. "
+                "Fixed-purpose (tied) and flexible (untied) splits come from the plan PDF summary. "
+                "“Actually spent (linked)” sums payment vouchers whose workCode matches the plan activity code. "
+                "Items with no matching voucher are not treated as ₹0 spent."
+            ),
+            "noteHi": (
+                "स्वीकृत राशि स्वीकृत कार्य योजना से है। "
+                "निर्धारित (tied) और लचीली (untied) राशि योजना PDF सारांश से है। "
+                "“वास्तविक खर्च (जुड़ा)” उन भुगतान वाउचरों का योग है जिनका workCode योजना गतिविधि कोड से मिलता है। "
+                "जिनका वाउचर नहीं मिला, उन्हें ₹0 खर्च नहीं माना गया।"
+            ),
         },
     )
 

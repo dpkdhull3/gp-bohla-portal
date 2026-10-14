@@ -2,8 +2,60 @@
   "planYear": "2025-26",
   "count": 25,
   "totalEstimatedCostInr": 887760.0,
+  "tiedInr": 412660.0,
+  "untiedInr": 475100.0,
+  "linkedPaymentInr": 306481.0,
+  "linkedActivityCount": 2,
+  "unlinkedActivityCount": 23,
+  "sectorBreakdown": [
+    {
+      "sector": "Drinking water",
+      "plannedInr": 206331.0
+    },
+    {
+      "sector": "Sanitation",
+      "plannedInr": 206330.0
+    },
+    {
+      "sector": "Roads",
+      "plannedInr": 206325.0
+    },
+    {
+      "sector": "Maintenance of community system",
+      "plannedInr": 200009.0
+    },
+    {
+      "sector": "Land improvement",
+      "plannedInr": 68756.0
+    },
+    {
+      "sector": "Health",
+      "plannedInr": 3.0
+    },
+    {
+      "sector": "Administrative & Technical Support",
+      "plannedInr": 2.0
+    },
+    {
+      "sector": "Water Conservation",
+      "plannedInr": 1.0
+    },
+    {
+      "sector": "Libraries",
+      "plannedInr": 1.0
+    },
+    {
+      "sector": "Rural electrification",
+      "plannedInr": 1.0
+    },
+    {
+      "sector": "Education",
+      "plannedInr": 1.0
+    }
+  ],
   "pdfPath": "/reports/approved-action-plans/2025-26.pdf",
   "xlsPath": "/reports/approved-action-plans/2025-26.xls",
+  "htmlPath": "/reports/approved-action-plans/2025-26.html",
   "records": [
     {
       "activityCode": "118462046",
@@ -20,6 +72,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -30,7 +85,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -48,6 +104,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -58,7 +117,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -76,6 +136,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 120789.0,
+      "linkedVoucherCount": 1,
+      "spendStatus": "linked",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -104,6 +167,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 185692.0,
+      "linkedVoucherCount": 1,
+      "spendStatus": "linked",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -132,6 +198,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -142,7 +211,8 @@
         "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
       },
       "flags": [
-        "official_reported"
+        "official_reported",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -160,6 +230,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -171,7 +244,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -189,6 +263,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -200,7 +277,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -218,6 +296,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -229,7 +310,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -247,6 +329,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -258,7 +343,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -276,6 +362,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -287,7 +376,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -305,6 +395,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -316,7 +409,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -334,6 +428,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -345,7 +442,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -363,6 +461,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -374,7 +475,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -392,6 +494,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -403,7 +508,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -421,6 +527,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -432,7 +541,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -450,6 +560,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -461,7 +574,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -479,6 +593,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -490,7 +607,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -508,6 +626,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -519,7 +640,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -537,6 +659,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -548,7 +673,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -566,6 +692,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -577,7 +706,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -595,6 +725,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -606,7 +739,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -624,6 +758,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -635,7 +772,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -653,6 +791,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -664,7 +805,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -682,6 +824,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -693,7 +838,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     },
     {
@@ -711,6 +857,9 @@
       "scFundInr": 0.0,
       "stFundInr": 0.0,
       "planYear": "2025-26",
+      "linkedVoucherSumInr": 0.0,
+      "linkedVoucherCount": 0,
+      "spendStatus": "no_linked_payment",
       "source": {
         "reportName": "Approved Action Plan Report",
         "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
@@ -722,7 +871,8 @@
       },
       "flags": [
         "official_reported",
-        "symbolic_amount"
+        "symbolic_amount",
+        "no_linked_vouchers"
       ]
     }
   ]

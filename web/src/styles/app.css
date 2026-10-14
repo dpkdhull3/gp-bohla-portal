@@ -505,12 +505,124 @@
   color: var(--color-ink-muted);
 }
 
+.home-topbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
 .page-home .panel {
   padding: 0.85rem 1rem;
 }
 
+.panel-help {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  line-height: 1.4;
+}
+
 .panel-chart {
   margin-bottom: 0.85rem;
+}
+
+.home-split-panel {
+  margin-bottom: 1rem;
+}
+
+.home-muted-total {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-ink-muted);
+}
+
+.home-split-bar {
+  display: flex;
+  height: 0.85rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--color-bg-muted);
+  margin: 0.65rem 0 0.85rem;
+}
+
+.home-split-tied {
+  background: #1b3a4b;
+  min-width: 0;
+}
+
+.home-split-untied {
+  background: #2f6b4f;
+  min-width: 0;
+}
+
+.home-split-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.85rem;
+}
+
+.home-split-legend strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--color-ink);
+}
+
+.home-split-legend p {
+  margin: 0.2rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.home-split-note {
+  font-size: 0.78rem;
+  color: var(--color-ink-muted);
+  line-height: 1.35;
+}
+
+.home-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+@media (min-width: 900px) {
+  .home-charts-grid {
+    grid-template-columns: 1.15fr 1fr;
+  }
+
+  .home-charts-grid > .panel {
+    margin-bottom: 0;
+  }
+}
+
+.home-link-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.home-link-stat {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 0.85rem;
+  background: var(--color-bg-elevated);
+}
+
+.home-link-stat-ok {
+  border-color: #b7d0c3;
+  background: linear-gradient(180deg, #fff 0%, #f3f8f5 100%);
+}
+
+.home-link-stat-warn {
+  border-color: #e2cbb8;
+  background: linear-gradient(180deg, #fff 0%, #faf5f1 100%);
+}
+
+.home-link-stat .kpi-value {
+  font-size: 1.35rem;
 }
 
 .data-table-dense th,
@@ -526,11 +638,108 @@
   padding-bottom: 0.65rem;
 }
 
+.vouchers-total {
+  margin: 0 0 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
 .plans-view-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.5rem 0.75rem;
+  align-items: center;
+  justify-content: space-between;
   margin: 0 0 1rem;
+}
+
+.plans-view-tabs-main,
+.plans-view-tabs-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.plan-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin: 0 0 0.85rem;
+}
+
+.plan-kpi {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+}
+
+.plan-kpi-approved {
+  background: linear-gradient(180deg, #fff 0%, #f3f7f5 100%);
+  border-color: #c5d6cc;
+}
+
+.plan-kpi-spent {
+  background: linear-gradient(180deg, #fff 0%, #fbf4ef 100%);
+  border-color: #e0b89f;
+}
+
+.plan-kpi-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.75rem;
+  color: var(--color-ink-muted);
+}
+
+.plan-linkage-note {
+  margin: 0 0 1rem;
+}
+
+.plan-compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.plan-compare-value {
+  margin: 0.15rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-ink);
+}
+
+.spend-bar {
+  height: 0.45rem;
+  background: #e8eeeb;
+  border-radius: 999px;
+  overflow: hidden;
+  min-width: 4.5rem;
+}
+
+.spend-bar-lg {
+  height: 0.55rem;
+  margin-top: 0.15rem;
+}
+
+.spend-bar-fill {
+  display: block;
+  height: 100%;
+  background: #2f6b4f;
+  border-radius: 999px;
+}
+
+.spend-bar-fill.muted {
+  background: transparent;
+}
+
+.spend-bar-label {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--color-ink-muted);
+  font-weight: 600;
 }
 
 .plan-summary-bar {
@@ -606,12 +815,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-}
-
-.plan-pdf-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+  min-width: 0;
 }
 
 .plan-pdf-frame {
@@ -620,6 +824,10 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: #fff;
+}
+
+.plan-sheet-frame {
+  background: #f7f9f8;
 }
 
 .cell-strong {
