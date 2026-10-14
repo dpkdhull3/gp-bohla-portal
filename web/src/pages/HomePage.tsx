@@ -193,11 +193,6 @@ export function HomePage() {
     void navigate('/works')
   }
 
-  const openYearPlans = (fy: string) => {
-    selectSingleYear(fy)
-    void navigate('/works/plans')
-  }
-
   return (
     <div className="page page-home">
       <div className="home-topbar">
@@ -208,10 +203,10 @@ export function HomePage() {
           </p>
         </div>
         <div className="home-topbar-links">
-          <Link className="text-link" to="/works/plans">
+          <Link className="text-link" to="/works">
             {t('home.openPlans')}
           </Link>
-          <Link className="text-link" to="/works">
+          <Link className="text-link" to="/funds/schemes">
             {t('home.openFunds')}
           </Link>
         </div>
@@ -231,7 +226,7 @@ export function HomePage() {
                 : undefined
           }
           tone="accent"
-          to="/works/plans"
+          to="/works"
         />
         <KpiCard
           label={t('home.moneyUsed')}
@@ -487,13 +482,6 @@ export function HomePage() {
                     <td className="cell-strong">{formatNumber(row.voucherCount, locale)}</td>
                     <td>
                       <div className="row-actions">
-                        <button
-                          type="button"
-                          className="btn-secondary btn-compact"
-                          onClick={() => openYearPlans(row.financialYear)}
-                        >
-                          {t('home.openYearPlans')}
-                        </button>
                         <button
                           type="button"
                           className="btn-secondary btn-compact"

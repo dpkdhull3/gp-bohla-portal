@@ -13,13 +13,12 @@ import {
 const SECTION_LINKS = [
   { to: '/', labelKey: 'nav.overviewShort', end: true },
   { to: '/funds', labelKey: 'nav.fundsShort' },
-  { to: '/works', labelKey: 'nav.completedWorksShort', end: true },
-  { to: '/works/plans', labelKey: 'nav.plansShort' },
+  { to: '/works', labelKey: 'nav.planWorksShort', end: true },
 ] as const
 
 function isSectionActive(pathname: string, to: string, end?: boolean): boolean {
   if (to === '/') return pathname === '/'
-  if (to === '/works') return pathname === '/works'
+  if (to === '/works') return pathname === '/works' || pathname.startsWith('/works/')
   if (end) return pathname === to
   return pathname === to || pathname.startsWith(`${to}/`)
 }
@@ -35,13 +34,6 @@ export function Layout() {
       : [DEFAULT_RANGE_START, '2024-25', '2025-26', DEFAULT_RANGE_END]
     return lastNFinancialYears(available, 5)
   }, [meta])
-
-  const planYears = useMemo(() => {
-    const cov = meta?.coverage?.find((c) => c.metric === 'approved_action_plan')
-    return new Set(cov?.financialYears ?? ['2026-27'])
-  }, [meta])
-
-  const onPlansPage = pathname.startsWith('/works/plans')
 
   const toggleLang = () => {
     const next = i18n.language === 'hi' ? 'en' : 'hi'
@@ -85,24 +77,13 @@ export function Layout() {
           </button>
           {yearTabs.map((fy) => {
             const active = !isRangeView && year === fy
-            const noPlan = onPlansPage && !planYears.has(fy)
             return (
               <button
                 key={fy}
                 type="button"
-                className={[
-                  'nav-link',
-                  active ? 'active' : '',
-                  noPlan ? 'nav-link-muted' : '',
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
+                className={active ? 'nav-link active' : 'nav-link'}
                 onClick={() => selectSingleYear(fy)}
-                title={
-                  noPlan
-                    ? t('works.noPlanForPeriod')
-                    : t('nav.periodYearNamed', { year: fy })
-                }
+                title={t('nav.periodYearNamed', { year: fy })}
                 aria-pressed={active}
               >
                 <span className="nav-link-label">{fy}</span>

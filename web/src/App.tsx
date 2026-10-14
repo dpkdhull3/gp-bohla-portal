@@ -5,7 +5,6 @@ import { YearProvider } from './context/YearContext'
 
 const HomePage = lazy(() => import('./pages/HomePage').then((m) => ({ default: m.HomePage })))
 const WorksPage = lazy(() => import('./pages/WorksPage').then((m) => ({ default: m.WorksPage })))
-const PlansPage = lazy(() => import('./pages/PlansPage').then((m) => ({ default: m.PlansPage })))
 const SchemesPage = lazy(() =>
   import('./pages/SchemesPage').then((m) => ({ default: m.SchemesPage })),
 )
@@ -36,7 +35,10 @@ export default function App() {
               <Route path="funds/schemes" element={<SchemesPage />} />
 
               <Route path="works" element={<WorksPage />} />
-              <Route path="works/plans" element={<PlansPage />} />
+              <Route
+                path="works/plans"
+                element={<Navigate to={{ pathname: '/works', search: '?view=docs' }} replace />}
+              />
 
               <Route path="reports" element={<ReportsPage />} />
               <Route path="reports/downloads" element={<DownloadsPage />} />

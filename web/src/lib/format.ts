@@ -5,7 +5,8 @@ export function formatInr(value: number | null | undefined, locale = 'hi-IN'): s
   return new Intl.NumberFormat(locale, {
     style: 'currency',
     currency: 'INR',
-    maximumFractionDigits: 0,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
   }).format(value)
 }
 
@@ -15,9 +16,9 @@ export function formatInrCompact(value: number | null | undefined): string {
     return '—'
   }
   if (value >= 10000000) return `₹${(value / 10000000).toFixed(2)}Cr`
-  if (value >= 100000) return `₹${(value / 100000).toFixed(1)}L`
-  if (value >= 1000) return `₹${(value / 1000).toFixed(value >= 10000 ? 0 : 1)}k`
-  return `₹${Math.round(value)}`
+  if (value >= 100000) return `₹${(value / 100000).toFixed(2)}L`
+  if (value >= 1000) return `₹${(value / 1000).toFixed(2)}k`
+  return `₹${value.toFixed(2)}`
 }
 
 export function formatNumber(value: number | null | undefined, locale = 'hi-IN'): string {

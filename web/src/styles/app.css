@@ -1113,6 +1113,174 @@ th {
   color: #7a1f1f;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.activity-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 0.65rem;
+}
+
+.activity-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.activity-search input {
+  min-width: min(100%, 220px);
+  min-height: 40px;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font: inherit;
+}
+
+.activity-card-list {
+  margin-top: 0.5rem;
+}
+
+.activity-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.activity-card-title-row {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  min-width: 0;
+  flex: 1;
+}
+
+.activity-card-title-row h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.activity-card-meta {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: var(--color-ink-muted);
+}
+
+.activity-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.activity-status-done {
+  background: #e5f3ea;
+  color: #1f6b3a;
+}
+
+.activity-status-unpaid {
+  background: #f8efd8;
+  color: #8a5a12;
+}
+
+.activity-status-not_done {
+  background: #fcecea;
+  color: #9b1c1c;
+}
+
+.activity-status-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.activity-status-pill-done {
+  background: #e5f3ea;
+  color: #1f6b3a;
+}
+
+.activity-status-pill-unpaid {
+  background: #f8efd8;
+  color: #8a5a12;
+}
+
+.activity-status-pill-not_done {
+  background: #fcecea;
+  color: #9b1c1c;
+}
+
+.activity-figures {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 0.85rem 0 0;
+}
+
+.activity-figures dt {
+  font-size: 0.72rem;
+  color: var(--color-ink-muted);
+}
+
+.activity-figures dd {
+  margin: 0.15rem 0 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+}
+
+.activity-expand-btn {
+  margin-top: 0.75rem;
+}
+
+.activity-card-not_done {
+  border-color: #e8c4c4;
+}
+
+.activity-card-unpaid {
+  border-color: #e6d4a8;
+}
+
+.activity-card-done {
+  border-color: #b9d6c4;
+}
+
+.work-docs-panel {
+  margin-bottom: 1rem;
+}
+
+.work-docs-actions {
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 560px) {
+  .activity-figures {
+    grid-template-columns: 1fr;
+  }
+}
+
 .detail-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));

@@ -1,20 +1,55 @@
 import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { EmptyState } from '../components/EmptyState'
 import { useYear } from '../context/YearContext'
-import { loadAllVouchers, loadAllWorks } from '../lib/data'
-import { formatInr, formatNumber } from '../lib/format'
-import type { Voucher, WorkActivity } from '../lib/types'
+import { loadAllPlans, loadAllVouchers, loadAllWorks, publicAssetUrl } from '../lib/data'
+import { formatInr, formatInrCompact, formatNumber } from '../lib/format'
+import type { PlanYearFile, PlannedActivity, Voucher, WorkActivity } from '../lib/types'
 
-type WorkWithVouchers = {
-  work: WorkActivity
+type ActivityStatus = 'done' | 'unpaid' | 'not_done'
+
+type UnifiedActivity = {
+  code: string
+  title: string
+  scheme: string
+  sector: string
+  planYear?: string
+  workYear?: string
+  plan?: PlannedActivity
+  work?: WorkActivity
   vouchers: Voucher[]
-  voucherSum: number
+  approvedInr: number | null
+  spentInr: number
+  status: ActivityStatus
+  outsidePlan: boolean
 }
 
-function isUnlinkedVoucher(v: Voucher, workCodes: Set<string>): boolean {
-  if (!v.workCode) return true
-  return !workCodes.has(v.workCode)
+type FilterChip = 'all' | 'not_done' | 'done' | 'unpaid' | 'unlinked'
+type ViewMode = 'activities' | 'pdf' | 'sheet'
+
+function viewFromSearch(raw: string | null): ViewMode {
+  if (raw === 'pdf' || raw === 'docs') return 'pdf'
+  if (raw === 'sheet') return 'sheet'
+  return 'activities'
+}
+
+function spendRatio(approved: number | null, spent: number): number | null {
+  if (approved === null || approved <= 0) return null
+  return Math.min(100, Math.round((spent / approved) * 100))
+}
+
+function StatusGlyph({ status, label }: { status: ActivityStatus; label: string }) {
+  const symbol = status === 'done' ? '✓' : status === 'unpaid' ? '●' : '✕'
+  return (
+    <span
+      className={`activity-status activity-status-${status}`}
+      title={label}
+      aria-label={label}
+    >
+      {symbol}
+    </span>
+  )
 }
 
 function VoucherMiniTable({
@@ -31,7 +66,9 @@ function VoucherMiniTable({
 
   return (
     <div className="table-scroll work-voucher-table-wrap">
-      <table className={`data-table-dense work-voucher-table${unlinked ? ' work-voucher-table-unlinked' : ''}`}>
+      <table
+        className={`data-table-dense work-voucher-table${unlinked ? ' work-voucher-table-unlinked' : ''}`}
+      >
         <thead>
           <tr>
             <th>{t('vouchers.voucherNo')}</th>
@@ -77,19 +114,31 @@ function VoucherMiniTable({
 export function WorksPage() {
   const { t, i18n } = useTranslation()
   const { meta, year, isRangeView, activeYears, rangeStart, rangeEnd } = useYear()
+  const [searchParams, setSearchParams] = useSearchParams()
   const [works, setWorks] = useState<WorkActivity[]>([])
+  const [plans, setPlans] = useState<PlanYearFile[]>([])
   const [vouchers, setVouchers] = useState<Voucher[]>([])
   const [loading, setLoading] = useState(true)
+  const [filter, setFilter] = useState<FilterChip>('all')
+  const [q, setQ] = useState('')
+  const [expanded, setExpanded] = useState<Set<string>>(new Set())
+  const [viewMode, setViewMode] = useState<ViewMode>(() => viewFromSearch(searchParams.get('view')))
+  const [docYear, setDocYear] = useState<string | null>(null)
   const locale = i18n.language === 'hi' ? 'hi-IN' : 'en-IN'
+
+  useEffect(() => {
+    setViewMode(viewFromSearch(searchParams.get('view')))
+  }, [searchParams])
 
   useEffect(() => {
     let cancelled = false
     const fys = meta?.availableFinancialYears ?? []
     setLoading(true)
-    Promise.all([loadAllWorks(fys), loadAllVouchers(fys)])
-      .then(([w, v]) => {
+    Promise.all([loadAllWorks(fys), loadAllPlans(fys), loadAllVouchers(fys)])
+      .then(([w, p, v]) => {
         if (cancelled) return
         setWorks(w)
+        setPlans(p)
         setVouchers(v)
       })
       .finally(() => {
@@ -100,81 +149,215 @@ export function WorksPage() {
     }
   }, [meta])
 
-  const allWorkCodes = useMemo(
-    () => new Set(works.map((w) => w.activityCode)),
-    [works],
-  )
-
-  const worksByCode = useMemo(() => {
+  const workByCode = useMemo(() => {
     const map = new Map<string, WorkActivity>()
     for (const w of works) {
-      // Prefer keeping first; works are unique per code in practice
       if (!map.has(w.activityCode)) map.set(w.activityCode, w)
     }
     return map
   }, [works])
 
-  const vouchersInPeriod = useMemo(
-    () => vouchers.filter((v) => activeYears.includes(v.financialYear)),
-    [vouchers, activeYears],
+  const planByCode = useMemo(() => {
+    const map = new Map<string, PlannedActivity>()
+    for (const file of plans) {
+      for (const a of file.records || []) {
+        if (!map.has(a.activityCode)) map.set(a.activityCode, a)
+      }
+    }
+    return map
+  }, [plans])
+
+  const allWorkCodes = useMemo(() => new Set(workByCode.keys()), [workByCode])
+
+  const vouchersByCode = useMemo(() => {
+    const map = new Map<string, Voucher[]>()
+    for (const v of vouchers) {
+      if (!v.workCode || !allWorkCodes.has(v.workCode)) continue
+      const list = map.get(v.workCode) ?? []
+      list.push(v)
+      map.set(v.workCode, list)
+    }
+    return map
+  }, [vouchers, allWorkCodes])
+
+  const activities = useMemo(() => {
+    const codes = new Set<string>([...planByCode.keys(), ...workByCode.keys()])
+    const rows: UnifiedActivity[] = []
+
+    for (const code of codes) {
+      const plan = planByCode.get(code)
+      const work = workByCode.get(code)
+      const allVouchers = vouchersByCode.get(code) ?? []
+      const periodVouchers = allVouchers.filter((v) => activeYears.includes(v.financialYear))
+
+      const inPeriod =
+        (plan && activeYears.includes(plan.planYear)) ||
+        (work && activeYears.includes(work.financialYear)) ||
+        periodVouchers.length > 0
+
+      if (!inPeriod) continue
+
+      // Prefer vouchers in period for spend display; fall back to all linked if work/plan in period
+      const displayVouchers =
+        periodVouchers.length > 0
+          ? periodVouchers
+          : plan && activeYears.includes(plan.planYear)
+            ? allVouchers
+            : work && activeYears.includes(work.financialYear)
+              ? allVouchers
+              : periodVouchers
+
+      const spentInr = displayVouchers.reduce((s, v) => s + (v.amountInr || 0), 0)
+      const approvedInr =
+        plan?.estimatedCostInr != null
+          ? plan.estimatedCostInr
+          : work?.adminApprovedCostInr != null
+            ? work.adminApprovedCostInr
+            : null
+
+      let status: ActivityStatus
+      if (work) {
+        status = displayVouchers.length > 0 ? 'done' : 'unpaid'
+      } else {
+        status = 'not_done'
+      }
+
+      rows.push({
+        code,
+        title: plan?.activityName || work?.activityName || code,
+        scheme: plan?.schemeName || work?.schemeName || '—',
+        sector: plan?.sector || work?.focusArea || '—',
+        planYear: plan?.planYear,
+        workYear: work?.financialYear,
+        plan,
+        work,
+        vouchers: [...displayVouchers].sort((a, b) => b.voucherDate.localeCompare(a.voucherDate)),
+        approvedInr,
+        spentInr,
+        status,
+        outsidePlan: !plan && Boolean(work),
+      })
+    }
+
+    const statusOrder: Record<ActivityStatus, number> = {
+      not_done: 0,
+      unpaid: 1,
+      done: 2,
+    }
+    rows.sort((a, b) => {
+      if (statusOrder[a.status] !== statusOrder[b.status]) {
+        return statusOrder[a.status] - statusOrder[b.status]
+      }
+      return (b.approvedInr || 0) - (a.approvedInr || 0)
+    })
+    return rows
+  }, [planByCode, workByCode, vouchersByCode, activeYears])
+
+  const unlinked = useMemo(() => {
+    return vouchers
+      .filter((v) => activeYears.includes(v.financialYear))
+      .filter((v) => !v.workCode || !allWorkCodes.has(v.workCode))
+      .sort((a, b) => b.voucherDate.localeCompare(a.voucherDate))
+  }, [vouchers, activeYears, allWorkCodes])
+
+  const filteredActivities = useMemo(() => {
+    if (filter === 'unlinked') return []
+    let rows = activities
+    if (filter === 'not_done') rows = rows.filter((a) => a.status === 'not_done')
+    if (filter === 'done') rows = rows.filter((a) => a.status === 'done')
+    if (filter === 'unpaid') rows = rows.filter((a) => a.status === 'unpaid')
+    if (q.trim()) {
+      const needle = q.trim().toLowerCase()
+      rows = rows.filter((a) =>
+        `${a.title} ${a.code} ${a.scheme} ${a.sector}`.toLowerCase().includes(needle),
+      )
+    }
+    return rows
+  }, [activities, filter, q])
+
+  // Period-scoped KPIs (same basis as Overview) — do not inflate with other years'
+  // plan rows that only appear because a payment fell in this year.
+  const kpis = useMemo(() => {
+    const planInPeriod = [...planByCode.values()].filter((p) =>
+      activeYears.includes(p.planYear),
+    )
+    const workInPeriod = [...workByCode.values()].filter((w) =>
+      activeYears.includes(w.financialYear),
+    )
+    const workCodes = new Set(workByCode.keys())
+    const linkedSpend = vouchers
+      .filter((v) => activeYears.includes(v.financialYear))
+      .filter((v) => v.workCode && workCodes.has(v.workCode))
+      .reduce((s, v) => s + (v.amountInr || 0), 0)
+
+    const completedCodes = new Set(workInPeriod.map((w) => w.activityCode))
+    const notDone = planInPeriod.filter((p) => !workByCode.has(p.activityCode)).length
+
+    return {
+      approved: planInPeriod.reduce((s, p) => s + (p.estimatedCostInr || 0), 0),
+      spent: linkedSpend,
+      completed: completedCodes.size,
+      notDone,
+      count: planInPeriod.length,
+    }
+  }, [planByCode, workByCode, vouchers, activeYears])
+
+  const planFilesInPeriod = useMemo(
+    () =>
+      plans
+        .filter((f) => activeYears.includes(f.planYear))
+        .sort((a, b) => b.planYear.localeCompare(a.planYear)),
+    [plans, activeYears],
   )
 
-  const { grouped, unlinked } = useMemo(() => {
-    const byCode = new Map<string, Voucher[]>()
-    const loose: Voucher[] = []
-
-    for (const v of vouchersInPeriod) {
-      if (isUnlinkedVoucher(v, allWorkCodes)) {
-        loose.push(v)
-        continue
+  useEffect(() => {
+    if (planFilesInPeriod.length === 0) {
+      setDocYear(null)
+      return
+    }
+    setDocYear((prev) => {
+      if (prev && planFilesInPeriod.some((f) => f.planYear === prev)) return prev
+      if (!isRangeView) {
+        return planFilesInPeriod.find((f) => f.planYear === year)?.planYear ?? planFilesInPeriod[0].planYear
       }
-      const code = v.workCode as string
-      const list = byCode.get(code) ?? []
-      list.push(v)
-      byCode.set(code, list)
-    }
-
-    const groups: WorkWithVouchers[] = []
-    const seen = new Set<string>()
-
-    // Works in selected period (with or without vouchers)
-    for (const w of works) {
-      if (!activeYears.includes(w.financialYear)) continue
-      const rows = byCode.get(w.activityCode) ?? []
-      groups.push({
-        work: w,
-        vouchers: [...rows].sort((a, b) => b.voucherDate.localeCompare(a.voucherDate)),
-        voucherSum: rows.reduce((s, x) => s + (x.amountInr || 0), 0),
-      })
-      seen.add(w.activityCode)
-    }
-
-    // Vouchers linked to a work outside the selected years — still show the work
-    for (const [code, rows] of byCode) {
-      if (seen.has(code)) continue
-      const work = worksByCode.get(code)
-      if (!work) continue
-      groups.push({
-        work,
-        vouchers: [...rows].sort((a, b) => b.voucherDate.localeCompare(a.voucherDate)),
-        voucherSum: rows.reduce((s, x) => s + (x.amountInr || 0), 0),
-      })
-    }
-
-    groups.sort((a, b) => {
-      if (b.voucherSum !== a.voucherSum) return b.voucherSum - a.voucherSum
-      return a.work.activityName.localeCompare(b.work.activityName)
+      return planFilesInPeriod[0].planYear
     })
+  }, [planFilesInPeriod, isRangeView, year])
 
-    loose.sort((a, b) => b.voucherDate.localeCompare(a.voucherDate))
+  const activeDoc =
+    planFilesInPeriod.find((f) => f.planYear === docYear) ?? planFilesInPeriod[0] ?? null
 
-    return { grouped: groups, unlinked: loose }
-  }, [works, vouchersInPeriod, activeYears, allWorkCodes, worksByCode])
+  const pdfUrl = activeDoc?.pdfPath ? publicAssetUrl(activeDoc.pdfPath) : null
+  const sheetViewUrl = activeDoc?.htmlPath
+    ? publicAssetUrl(activeDoc.htmlPath)
+    : activeDoc?.xlsPath
+      ? publicAssetUrl(activeDoc.xlsPath)
+      : null
+  const sheetDownloadUrl = activeDoc?.xlsPath ? publicAssetUrl(activeDoc.xlsPath) : null
 
   const periodLabel = isRangeView ? `${rangeStart} – ${rangeEnd}` : year
-  const linkedVoucherCount = grouped.reduce((s, g) => s + g.vouchers.length, 0)
-  const linkedVoucherSum = grouped.reduce((s, g) => s + g.voucherSum, 0)
   const unlinkedSum = unlinked.reduce((s, v) => s + (v.amountInr || 0), 0)
+
+  const toggleExpand = (code: string) => {
+    setExpanded((prev) => {
+      const next = new Set(prev)
+      if (next.has(code)) next.delete(code)
+      else next.add(code)
+      return next
+    })
+  }
+
+  const setView = (mode: ViewMode) => {
+    setViewMode(mode)
+    if (mode === 'activities') setSearchParams({}, { replace: true })
+    else setSearchParams({ view: mode }, { replace: true })
+  }
+
+  const statusLabel = (status: ActivityStatus) => {
+    if (status === 'done') return t('works.statusDone')
+    if (status === 'unpaid') return t('works.statusUnpaid')
+    return t('works.statusNotDone')
+  }
 
   if (loading) {
     return (
@@ -184,87 +367,189 @@ export function WorksPage() {
     )
   }
 
-  if (grouped.length === 0 && unlinked.length === 0) {
-    return (
-      <div className="page">
-        <EmptyState title={t('common.empty')} />
-      </div>
-    )
-  }
-
   return (
-    <div className="page">
-      <h1>{t('works.mergedTitle')}</h1>
-      <p className="lede">{t('works.mergedIntro')}</p>
+    <div className="page page-unified-works">
+      <div className="home-topbar">
+        <div>
+          <h1 className="home-title">{t('works.unifiedTitle')}</h1>
+          <p className="home-meta">{t('works.unifiedIntro')}</p>
+        </div>
+      </div>
+
+      <div className="plans-view-tabs" aria-label={t('works.unifiedTitle')}>
+        <div className="plans-view-tabs-main" role="tablist">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={viewMode === 'activities'}
+            className={
+              viewMode === 'activities' ? 'section-subnav-link active' : 'section-subnav-link'
+            }
+            onClick={() => setView('activities')}
+          >
+            {t('works.tabActivities')}
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={viewMode === 'pdf'}
+            className={viewMode === 'pdf' ? 'section-subnav-link active' : 'section-subnav-link'}
+            onClick={() => setView('pdf')}
+          >
+            {t('works.tabPlanPdf')}
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={viewMode === 'sheet'}
+            className={viewMode === 'sheet' ? 'section-subnav-link active' : 'section-subnav-link'}
+            onClick={() => setView('sheet')}
+          >
+            {t('works.tabPlanSheet')}
+          </button>
+        </div>
+        {(viewMode === 'pdf' || viewMode === 'sheet') && activeDoc ? (
+          <div className="plans-view-tabs-actions">
+            {viewMode === 'pdf' && pdfUrl ? (
+              <a className="btn-secondary btn-compact" href={pdfUrl} target="_blank" rel="noreferrer">
+                {t('works.openPdfNewTab')}
+              </a>
+            ) : null}
+            {viewMode === 'sheet' && sheetViewUrl ? (
+              <a
+                className="btn-secondary btn-compact"
+                href={sheetViewUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t('works.openSheetNewTab')}
+              </a>
+            ) : null}
+            {viewMode === 'sheet' && sheetDownloadUrl ? (
+              <a className="btn-secondary btn-compact" href={sheetDownloadUrl} download>
+                {t('works.downloadXls')}
+              </a>
+            ) : null}
+          </div>
+        ) : null}
+      </div>
+
+      {viewMode === 'pdf' || viewMode === 'sheet' ? (
+        <section className="plan-pdf-panel" aria-label={t('works.officialDocs')}>
+          {planFilesInPeriod.length > 1 ? (
+            <div className="year-chip-row" role="list" aria-label={t('works.officialDocs')}>
+              {planFilesInPeriod.map((f) => (
+                <button
+                  key={f.planYear}
+                  type="button"
+                  role="listitem"
+                  className={f.planYear === activeDoc?.planYear ? 'year-chip active' : 'year-chip'}
+                  onClick={() => setDocYear(f.planYear)}
+                >
+                  {f.planYear}
+                </button>
+              ))}
+            </div>
+          ) : activeDoc ? (
+            <p className="panel-help">
+              {t('works.officialDocsYear', { year: activeDoc.planYear })}
+            </p>
+          ) : null}
+
+          {!activeDoc ? (
+            <EmptyState title={t('works.noPlanForPeriod')} />
+          ) : viewMode === 'pdf' ? (
+            pdfUrl ? (
+              <iframe
+                className="plan-pdf-frame"
+                title={t('works.planPdfTitle', { year: activeDoc.planYear })}
+                src={pdfUrl}
+              />
+            ) : (
+              <EmptyState title={t('works.noPdfForPeriod')} />
+            )
+          ) : sheetViewUrl ? (
+            <iframe
+              className="plan-pdf-frame plan-sheet-frame"
+              title={t('works.planSheetTitle', { year: activeDoc.planYear })}
+              src={sheetViewUrl}
+            />
+          ) : (
+            <EmptyState title={t('works.noSheetForPeriod')} />
+          )}
+        </section>
+      ) : (
+        <>
+      <section className="kpi-grid kpi-grid-four" aria-label={t('works.unifiedKpiAria')}>
+        <article className="kpi-card kpi-accent">
+          <p className="kpi-label">{t('works.kpiApproved')}</p>
+          <p className="kpi-value">{formatInrCompact(kpis.approved)}</p>
+          <p className="kpi-hint">
+            {t('works.kpiApprovedHint', { count: formatNumber(kpis.count, locale) })}
+          </p>
+        </article>
+        <article className="kpi-card">
+          <p className="kpi-label">{t('works.kpiSpent')}</p>
+          <p className="kpi-value">{formatInrCompact(kpis.spent)}</p>
+          <p className="kpi-hint">{t('works.kpiSpentHint')}</p>
+        </article>
+        <article className="kpi-card">
+          <p className="kpi-label">{t('works.kpiCompleted')}</p>
+          <p className="kpi-value">{formatNumber(kpis.completed, locale)}</p>
+          <p className="kpi-hint">{t('works.completedWorksHint')}</p>
+        </article>
+        <article className="kpi-card kpi-muted">
+          <p className="kpi-label">{t('works.kpiNotDone')}</p>
+          <p className="kpi-value">{formatNumber(kpis.notDone, locale)}</p>
+          <p className="kpi-hint">{t('works.kpiNotDoneHint')}</p>
+        </article>
+      </section>
+
+      <div className="activity-toolbar">
+        <div className="activity-filter-chips" role="group" aria-label={t('works.filterAria')}>
+          {(
+            [
+              ['all', t('works.filterAll')],
+              ['not_done', t('works.filterNotDone')],
+              ['unpaid', t('works.filterUnpaid')],
+              ['done', t('works.filterDone')],
+              ['unlinked', t('works.filterUnlinked')],
+            ] as const
+          ).map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              className={filter === id ? 'year-chip active' : 'year-chip'}
+              onClick={() => setFilter(id)}
+            >
+              {label}
+              {id === 'unlinked' ? ` (${unlinked.length})` : null}
+            </button>
+          ))}
+        </div>
+        {filter !== 'unlinked' ? (
+          <label className="activity-search">
+            <span className="visually-hidden">{t('common.search')}</span>
+            <input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder={t('works.searchPlaceholder')}
+            />
+          </label>
+        ) : null}
+      </div>
+
       <p className="works-period-summary" role="status">
-        {t('works.mergedSummary', {
+        {t('works.unifiedSummary', {
           period: periodLabel,
-          works: formatNumber(grouped.length, locale),
-          linked: formatNumber(linkedVoucherCount, locale),
-          linkedAmount: formatInr(linkedVoucherSum, locale),
-          unlinked: formatNumber(unlinked.length, locale),
-          unlinkedAmount: formatInr(unlinkedSum, locale),
+          shown: formatNumber(
+            filter === 'unlinked' ? unlinked.length : filteredActivities.length,
+            locale,
+          ),
         })}
       </p>
 
-      {grouped.length > 0 ? (
-        <section className="card-list" aria-label={t('works.byWorkSection')}>
-          <h2 className="works-section-title">{t('works.byWorkSection')}</h2>
-          {grouped.map(({ work: w, vouchers: rows, voucherSum }) => (
-            <article key={`${w.financialYear}-${w.activityCode}`} className="work-card">
-              <header>
-                <h3>{w.activityName}</h3>
-                <span className="pill pill-official">{t('works.statusCompleted')}</span>
-              </header>
-              <dl className="detail-grid">
-                <div>
-                  <dt>{t('works.activityCode')}</dt>
-                  <dd>{w.activityCode}</dd>
-                </div>
-                <div>
-                  <dt>{t('common.financialYear')}</dt>
-                  <dd>{w.financialYear}</dd>
-                </div>
-                <div>
-                  <dt>{t('works.scheme')}</dt>
-                  <dd>{w.schemeName ?? '—'}</dd>
-                </div>
-                <div>
-                  <dt>{t('works.focusArea')}</dt>
-                  <dd>{w.focusArea ?? '—'}</dd>
-                </div>
-                <div>
-                  <dt>{t('works.approvedCost')}</dt>
-                  <dd>{formatInr(w.adminApprovedCostInr, locale)}</dd>
-                </div>
-                <div>
-                  <dt>{t('works.linkedPayments')}</dt>
-                  <dd>
-                    {rows.length
-                      ? `${formatInr(voucherSum, locale)} · ${formatNumber(rows.length, locale)}`
-                      : t('works.noLink')}
-                  </dd>
-                </div>
-                <div>
-                  <dt>{t('works.completionDate')}</dt>
-                  <dd>{w.completionDate ?? '—'}</dd>
-                </div>
-              </dl>
-
-              {rows.length > 0 ? (
-                <>
-                  <h4 className="work-vouchers-heading">{t('works.vouchersForWork')}</h4>
-                  <VoucherMiniTable rows={rows} locale={locale} />
-                </>
-              ) : (
-                <p className="help work-no-vouchers">{t('works.noLink')}</p>
-              )}
-            </article>
-          ))}
-        </section>
-      ) : null}
-
-      {unlinked.length > 0 ? (
+      {filter === 'unlinked' ? (
         <section className="panel work-unlinked-panel" aria-label={t('works.unlinkedSection')}>
           <div className="panel-header-row">
             <h2>{t('works.unlinkedSection')}</h2>
@@ -273,9 +558,107 @@ export function WorksPage() {
             </span>
           </div>
           <p className="panel-help">{t('works.unlinkedHelp')}</p>
-          <VoucherMiniTable rows={unlinked} locale={locale} unlinked />
+          {unlinked.length === 0 ? (
+            <EmptyState title={t('common.empty')} />
+          ) : (
+            <VoucherMiniTable rows={unlinked} locale={locale} unlinked />
+          )}
+        </section>
+      ) : filteredActivities.length === 0 ? (
+        <EmptyState title={t('common.empty')} />
+      ) : (
+        <section className="card-list activity-card-list" aria-label={t('works.activityListAria')}>
+          {filteredActivities.map((a) => {
+            const open = expanded.has(a.code)
+            const pct = spendRatio(a.approvedInr, a.spentInr)
+            return (
+              <article
+                key={a.code}
+                className={`work-card activity-card activity-card-${a.status}`}
+              >
+                <header className="activity-card-header">
+                  <div className="activity-card-title-row">
+                    <StatusGlyph status={a.status} label={statusLabel(a.status)} />
+                    <div>
+                      <h3>{a.title}</h3>
+                      <p className="activity-card-meta">
+                        {a.code}
+                        {a.scheme !== '—' ? ` · ${a.scheme}` : ''}
+                        {a.sector !== '—' ? ` · ${a.sector}` : ''}
+                        {a.outsidePlan ? ` · ${t('works.outsidePlanNote')}` : ''}
+                      </p>
+                    </div>
+                  </div>
+                  <span className={`activity-status-pill activity-status-pill-${a.status}`}>
+                    {statusLabel(a.status)}
+                  </span>
+                </header>
+
+                <dl className="activity-figures">
+                  <div>
+                    <dt>{t('works.figApproved')}</dt>
+                    <dd>
+                      {a.approvedInr != null ? formatInr(a.approvedInr, locale) : '—'}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>{t('works.figSpent')}</dt>
+                    <dd>
+                      {a.vouchers.length > 0 ? formatInr(a.spentInr, locale) : '—'}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>{t('works.figShare')}</dt>
+                    <dd>{pct != null && a.vouchers.length > 0 ? `${pct}%` : '—'}</dd>
+                  </div>
+                </dl>
+
+                {a.vouchers.length > 0 ? (
+                  <>
+                    <button
+                      type="button"
+                      className="btn-secondary btn-compact activity-expand-btn"
+                      aria-expanded={open}
+                      onClick={() => toggleExpand(a.code)}
+                    >
+                      {open
+                        ? t('works.hideVouchers')
+                        : t('works.showVouchers', {
+                            count: formatNumber(a.vouchers.length, locale),
+                          })}
+                    </button>
+                    {open ? <VoucherMiniTable rows={a.vouchers} locale={locale} /> : null}
+                  </>
+                ) : a.status === 'unpaid' ? (
+                  <p className="help work-no-vouchers">{t('works.noLink')}</p>
+                ) : a.status === 'not_done' ? (
+                  <p className="help work-no-vouchers">{t('works.notCompletedHelp')}</p>
+                ) : null}
+              </article>
+            )
+          })}
+        </section>
+      )}
+
+      {filter !== 'unlinked' && unlinked.length > 0 ? (
+        <section className="panel work-unlinked-panel" aria-label={t('works.unlinkedSection')}>
+          <div className="panel-header-row">
+            <h2>{t('works.unlinkedSection')}</h2>
+            <button
+              type="button"
+              className="text-link"
+              onClick={() => setFilter('unlinked')}
+            >
+              {t('works.viewUnlinked', {
+                count: formatNumber(unlinked.length, locale),
+              })}
+            </button>
+          </div>
+          <p className="panel-help">{t('works.unlinkedHelp')}</p>
         </section>
       ) : null}
+        </>
+      )}
     </div>
   )
 }
