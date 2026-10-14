@@ -1,0 +1,729 @@
+{
+  "planYear": "2025-26",
+  "count": 25,
+  "totalEstimatedCostInr": 887760.0,
+  "pdfPath": "/reports/approved-action-plans/2025-26.pdf",
+  "xlsPath": "/reports/approved-action-plans/2025-26.xls",
+  "records": [
+    {
+      "activityCode": "118462046",
+      "activityName": "Stay arrangement in common assets of GPs",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 1 - Poverty Free and Enhanced Livelihoods Village",
+      "sector": "Maintenance of community system",
+      "activityLocation": "N/A",
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 200000.0,
+      "activityType": "Community Service",
+      "schemeName": "Own Funds",
+      "generalFundInr": 200000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "118458370",
+      "activityName": "Creation of a new source of drinking water",
+      "activityDescription": "Repair Pipe Line Boosting Station To Govt School",
+      "themeName": "Theme 4 - Water Sufficient Village",
+      "sector": "Drinking water",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 206330.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 206330.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "118458878",
+      "activityName": "Drainage Construction",
+      "activityDescription": "Reparing of Main Nala",
+      "themeName": "Theme 5 - Clean and Green Village",
+      "sector": "Sanitation",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 206330.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 206330.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "118460385",
+      "activityName": "Construction of roads",
+      "activityDescription": "Construction of Street Umed S/O Bharat Singh To GANESHI S/o Thambu",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Roads",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 206325.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 206325.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "118461550",
+      "activityName": "Construction of Retaining Walls/ Fencing Work",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Land improvement",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 68755.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 68755.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "118462386",
+      "activityName": "Annual Expenses - Water Charges Postal, Electricity Bills, Internet Bill, Printing Charges",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Administrative & Technical Support",
+      "activityLocation": "N/A",
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1.0,
+      "activityType": "Operational",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118462815",
+      "activityName": "BharatNet Wifi Facility/ Internet / Telephone",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Maintenance of community system",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118463269",
+      "activityName": "Co-Location of CSC",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Administrative & Technical Support",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118463597",
+      "activityName": "Construction of Child Friendly toilets with urinal for Boys and Girls",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Maintenance of community system",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118463875",
+      "activityName": "Construction of Paver Block",
+      "activityDescription": "gram panchaayt",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Land improvement",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118464122",
+      "activityName": "Construction of RAMPS",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Health",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118464330",
+      "activityName": "Construction of Store Room in GP Bhawan",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Maintenance of community system",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118464573",
+      "activityName": "Construction of Toilets",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Health",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118464873",
+      "activityName": "Construction of Water treatment plant",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Water Conservation",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118465111",
+      "activityName": "Construction of overhead Tank",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Maintenance of community system",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118465355",
+      "activityName": "Construction/ Establishment of Libraray (Books Journals and Periodicals)/ Installation Audio Visual aid",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Libraries",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118465669",
+      "activityName": "Construction/ Maintenance/ Upgradation of Bus Stand Shed Ghats Graveyard/ Cemetery",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Maintenance of community system",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118465895",
+      "activityName": "Construction/ Maintenance/ Upgradation of Gym Youth Club, Child friendly Park etc.",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Maintenance of community system",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118466178",
+      "activityName": "Construction/ Maintenance/ Upgradation of repairing of Play Ground/ Child friendly Park etc.",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Maintenance of community system",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118466440",
+      "activityName": "Construction/ Upgradation/ Maintenance of Child Friendly toilets with urinal for Boys and Girls",
+      "activityDescription": "grampanchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Maintenance of community system",
+      "activityLocation": "N/A",
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1.0,
+      "activityType": "Upgradation",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118466707",
+      "activityName": "Construction/Maintenance/Upgradation of Building Hall, Community Centre, Boundary wall, Flooring, doors, window, fixtures etc of Community Assets",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Maintenance of community system",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118467018",
+      "activityName": "Disposal of waste products/ Waste Disposal units",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Health",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118467476",
+      "activityName": "Drinking water facilities/ Installation of RO/ Water Filter",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Drinking water",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118467737",
+      "activityName": "Electric connection",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Rural electrification",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "118468016",
+      "activityName": "Establishment Hygienic Kitchen facilities and Sheds",
+      "activityDescription": "gram panchayat",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Education",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1.0,
+      "activityType": "Asset",
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2025-26",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2025-26/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "e2f22d8ef143de965ec1e9cf23a0d8eccd4de3ca53656bf088cc8f14f3fef14d",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    }
+  ]
+}

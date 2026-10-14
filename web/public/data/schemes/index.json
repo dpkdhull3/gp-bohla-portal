@@ -1,0 +1,119 @@
+{
+  "count": 8,
+  "records": [
+    {
+      "schemeName": "Mid-Day Meal Scheme",
+      "financialYears": [
+        "2026-27"
+      ],
+      "recordedPaymentInr": 0.0,
+      "plannedOutlayInr": 10000.0,
+      "completedWorksCount": 0,
+      "plannedActivitiesCount": 1,
+      "flags": [
+        "derived"
+      ]
+    },
+    {
+      "schemeName": "Own Funds",
+      "financialYears": [
+        "2021-22",
+        "2022-23",
+        "2023-24",
+        "2024-25",
+        "2025-26",
+        "2026-27"
+      ],
+      "recordedPaymentInr": 0.0,
+      "plannedOutlayInr": 1500000.0,
+      "completedWorksCount": 1,
+      "plannedActivitiesCount": 6,
+      "flags": [
+        "derived"
+      ]
+    },
+    {
+      "schemeName": "Pradhan Mantri Krishi Sinchayi Yojna",
+      "financialYears": [
+        "2026-27"
+      ],
+      "recordedPaymentInr": 0.0,
+      "plannedOutlayInr": 5000.0,
+      "completedWorksCount": 0,
+      "plannedActivitiesCount": 1,
+      "flags": [
+        "derived"
+      ]
+    },
+    {
+      "schemeName": "Prime Minister Gramin Awaas Yojana",
+      "financialYears": [
+        "2026-27"
+      ],
+      "recordedPaymentInr": 0.0,
+      "plannedOutlayInr": 150000.0,
+      "completedWorksCount": 0,
+      "plannedActivitiesCount": 1,
+      "flags": [
+        "derived"
+      ]
+    },
+    {
+      "schemeName": "Swachh Bharat Mission",
+      "financialYears": [
+        "2026-27"
+      ],
+      "recordedPaymentInr": 0.0,
+      "plannedOutlayInr": 30000.0,
+      "completedWorksCount": 0,
+      "plannedActivitiesCount": 1,
+      "flags": [
+        "derived"
+      ]
+    },
+    {
+      "schemeName": "Viksit Bharat-Guarantee for Rozgar and Ajeevika Mission (Gramin)",
+      "financialYears": [
+        "2026-27"
+      ],
+      "recordedPaymentInr": 0.0,
+      "plannedOutlayInr": 50000.0,
+      "completedWorksCount": 0,
+      "plannedActivitiesCount": 1,
+      "flags": [
+        "derived"
+      ]
+    },
+    {
+      "schemeName": "XV Finance Commission",
+      "financialYears": [
+        "2021-22",
+        "2022-23",
+        "2023-24",
+        "2024-25",
+        "2025-26",
+        "2026-27"
+      ],
+      "recordedPaymentInr": 2325854.0,
+      "plannedOutlayInr": 2751040.0,
+      "completedWorksCount": 10,
+      "plannedActivitiesCount": 68,
+      "flags": [
+        "derived"
+      ]
+    },
+    {
+      "schemeName": "XVI Finance Commission",
+      "financialYears": [
+        "2026-27"
+      ],
+      "recordedPaymentInr": 0.0,
+      "plannedOutlayInr": 560002.0,
+      "completedWorksCount": 0,
+      "plannedActivitiesCount": 4,
+      "flags": [
+        "derived"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "financialYear": "2022-23",
+  "statusFilter": "wrkstts=176",
+  "statusLabel": "completed_as_recorded",
+  "count": 1,
+  "records": [
+    {
+      "activityCode": "62396658",
+      "activityName": "sanitation",
+      "focusArea": "Sanitation",
+      "adminApprovedCostInr": 400000.0,
+      "schemeName": "XV Finance Commission",
+      "componentName": "Tied Grant",
+      "completionDate": "2023-04-26",
+      "financialYear": "2022-23",
+      "statusLabel": "completed_as_recorded",
+      "statusSource": "eGramSwaraj Physical Progress wrkstts=176",
+      "linkedVoucherSumInr": 364407.0,
+      "linkedVoucherCount": 9,
+      "source": {
+        "reportName": "Physical Progress Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/physical-progress/fyear-2022-wrkstts-176.html",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "511c253bec4ec86ae0dc105c26da851aa3eb1a42663e87f0ecba319e7f72e9a7",
+        "financialYear": "2022-23",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    }
+  ]
+}

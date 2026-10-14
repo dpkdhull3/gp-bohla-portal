@@ -1,0 +1,16 @@
+{
+  "reportName": "Physical Progress Report",
+  "sourceUrl": "https://egramswaraj.gov.in/physicalprogressReport.do?statecd=6&fyear=2023&gpcd=33105&wrkstts=176",
+  "parameters": {
+    "statecd": 6,
+    "fyear": 2023,
+    "gpcd": 33105,
+    "wrkstts": 176
+  },
+  "statusInterpretation": "wrkstts=176 returns rows with Date of Completion; treat as completed-as-recorded-in-eGramSwaraj",
+  "downloadedAt": "2026-10-14T05:10:21.833998+00:00",
+  "sha256": "db2469123cabe63135ce710d484af555d7472f250311c0d19c23d45c80b21525",
+  "byteSize": 36239,
+  "geographicScope": "Gram Panchayat Bohla (LGD 33105)",
+  "format": "text/html"
+}

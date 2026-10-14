@@ -1,0 +1,319 @@
+{
+  "planYear": "2026-27",
+  "count": 11,
+  "totalEstimatedCostInr": 1305002.0,
+  "pdfPath": "/reports/approved-action-plans/2026-27.pdf",
+  "xlsPath": "/reports/approved-action-plans/2026-27.xls",
+  "records": [
+    {
+      "activityCode": "135064893",
+      "activityName": "Oraginizing awareness camp/ program on significance of health & nutrition",
+      "activityDescription": "Oraginizing awareness camp/ program on significance of health & nutrition",
+      "themeName": "Theme 2 - Healthy Village",
+      "sector": "Health",
+      "activityLocation": "N/A",
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 5000.0,
+      "activityType": "Training/Capacity Building",
+      "schemeName": "Pradhan Mantri Krishi Sinchayi Yojna",
+      "generalFundInr": 5000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2026-27",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2026-27/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "62c58fdc3bff502fea86b8dedf49fd7dd34efd0991bf22bd4810efc22e8db833",
+        "financialYear": "2026-27",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "135065584",
+      "activityName": "Mid day meal provisions",
+      "activityDescription": "Mid day meal provisions",
+      "themeName": "Theme 3 - Child Friendly Village",
+      "sector": "Health",
+      "activityLocation": "N/A",
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 10000.0,
+      "activityType": "Community Service",
+      "schemeName": "Mid-Day Meal Scheme",
+      "generalFundInr": 10000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2026-27",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2026-27/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "62c58fdc3bff502fea86b8dedf49fd7dd34efd0991bf22bd4810efc22e8db833",
+        "financialYear": "2026-27",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "135066128",
+      "activityName": "Construction of Individual Hosehold Latrines (IHHL) for eligible Households",
+      "activityDescription": "Construction of Individual Hosehold Latrines (IHHL) for eligible Households",
+      "themeName": "Theme 5 - Clean and Green Village",
+      "sector": "Sanitation",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 30000.0,
+      "activityType": "Asset",
+      "schemeName": "Swachh Bharat Mission",
+      "generalFundInr": 30000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2026-27",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2026-27/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "62c58fdc3bff502fea86b8dedf49fd7dd34efd0991bf22bd4810efc22e8db833",
+        "financialYear": "2026-27",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "135070699",
+      "activityName": "Creation repair and maintenance of Drainage line for grey water",
+      "activityDescription": "Creation, repair and maintenance of Drainage line for grey water",
+      "themeName": "Theme 5 - Clean and Green Village",
+      "sector": "Sanitation",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 280000.0,
+      "activityType": "Asset",
+      "schemeName": "XVI Finance Commission",
+      "generalFundInr": 280000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2026-27",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2026-27/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "62c58fdc3bff502fea86b8dedf49fd7dd34efd0991bf22bd4810efc22e8db833",
+        "financialYear": "2026-27",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "135066737",
+      "activityName": "Construction of building/Facilitation / common centres for CBOs",
+      "activityDescription": "Construction of building/Facilitation / common centres for CBOs",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Maintenance of community system",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 150000.0,
+      "activityType": "Asset",
+      "schemeName": "Prime Minister Gramin Awaas Yojana",
+      "generalFundInr": 150000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2026-27",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2026-27/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "62c58fdc3bff502fea86b8dedf49fd7dd34efd0991bf22bd4810efc22e8db833",
+        "financialYear": "2026-27",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "135067329",
+      "activityName": "Maintenance/Repair/Upgradation of Grain storage building./ facilities / Warehouse/cold storages under VB-G RAM G",
+      "activityDescription": "Maintenance/Repair/Upgradation of Grain storage building./ facilities / Warehouse/cold storages under VB-G RAM G",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Agriculture",
+      "activityLocation": "N/A",
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 50000.0,
+      "activityType": "Maintenance",
+      "schemeName": "Viksit Bharat-Guarantee for Rozgar and Ajeevika Mission (Gramin)",
+      "generalFundInr": 50000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2026-27",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2026-27/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "62c58fdc3bff502fea86b8dedf49fd7dd34efd0991bf22bd4810efc22e8db833",
+        "financialYear": "2026-27",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "135068025",
+      "activityName": "Providing educational support for School-going Children (books uniforms, scholarships etc)",
+      "activityDescription": "Providing educational support for School-going Children (books, uniforms, scholarships etc)",
+      "themeName": "Theme 9 - Women Friendly Village",
+      "sector": "Education",
+      "activityLocation": "N/A",
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 250000.0,
+      "activityType": "Community Service",
+      "schemeName": "Own Funds",
+      "generalFundInr": 250000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2026-27",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2026-27/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "62c58fdc3bff502fea86b8dedf49fd7dd34efd0991bf22bd4810efc22e8db833",
+        "financialYear": "2026-27",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "135068360",
+      "activityName": "Instalation of CCTV for safety & security of women & girl children",
+      "activityDescription": "Instalation of CCTV for safety & security of women & girl children",
+      "themeName": "Theme 9 - Women Friendly Village",
+      "sector": "Women and child development",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 250000.0,
+      "activityType": "Asset",
+      "schemeName": "Own Funds",
+      "generalFundInr": 250000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2026-27",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2026-27/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "62c58fdc3bff502fea86b8dedf49fd7dd34efd0991bf22bd4810efc22e8db833",
+        "financialYear": "2026-27",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "135073028",
+      "activityName": "Construction of Working women hostels/crèche",
+      "activityDescription": "Construction of Building/Chaupal",
+      "themeName": "Theme 9 - Women Friendly Village",
+      "sector": "Women and child development",
+      "activityLocation": "Bohla (150) (59783)",
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 280000.0,
+      "activityType": "Asset",
+      "schemeName": "XVI Finance Commission",
+      "generalFundInr": 280000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2026-27",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2026-27/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "62c58fdc3bff502fea86b8dedf49fd7dd34efd0991bf22bd4810efc22e8db833",
+        "financialYear": "2026-27",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "135073472",
+      "activityName": "Organizing camp for enrolment of destitutes marginalised, survivors of trafficking in shelter/remand homes",
+      "activityDescription": "Organizing camp for enrolment of destitutes, marginalised, survivors of trafficking in shelter/remand homes",
+      "themeName": "Theme 9 - Women Friendly Village",
+      "sector": "Social welfare",
+      "activityLocation": "N/A",
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1.0,
+      "activityType": "Training/Capacity Building",
+      "schemeName": "XVI Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2026-27",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2026-27/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "62c58fdc3bff502fea86b8dedf49fd7dd34efd0991bf22bd4810efc22e8db833",
+        "financialYear": "2026-27",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    },
+    {
+      "activityCode": "135073773",
+      "activityName": "Oranizing Awareness campaign/ Developing IEC material for conducting Mahila Sabha",
+      "activityDescription": "Oranizing Awareness campaign/ Developing IEC material for conducting Mahila Sabha",
+      "themeName": "Theme 9 - Women Friendly Village",
+      "sector": "Women and child development",
+      "activityLocation": "N/A",
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1.0,
+      "activityType": "Training/Capacity Building",
+      "schemeName": "XVI Finance Commission",
+      "generalFundInr": 1.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2026-27",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2026-27/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "62c58fdc3bff502fea86b8dedf49fd7dd34efd0991bf22bd4810efc22e8db833",
+        "financialYear": "2026-27",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported",
+        "symbolic_amount"
+      ]
+    }
+  ]
+}

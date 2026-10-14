@@ -1,0 +1,398 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:x='urn:schemas-microsoft-com:office:excel' xmlns='http://www.w3.org/TR/REC-html40'><head><meta http-equiv="Content-type" content="text/html;charset=utf-8" /><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Voucher Details</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><div class='table-responsive' id='StateTable'>
+								<table class='table table-bordered'>
+									<thead>
+										
+										<tr>
+											<th tabindex='0'>S.No.</th>
+											<th tabindex='0'>State Name</th>
+											<th tabindex='0'>ZP Count with Vouchers</th>
+											<th tabindex='0'>ZP Voucher Count</th>
+											<th tabindex='0'>BP Count with Vouchers</th>
+											<th tabindex='0'>BP Voucher Count</th>
+											<th tabindex='0'>GP Count with Vouchers</th>
+											<th tabindex='0'>GP Voucher Count</th>
+										</tr>
+									</thead>
+									<tbody>
+									<!-- ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>1  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Andhra Pradesh</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>13</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>4701</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>650</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>17252</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>13047</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>131026</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>2  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Arunachal Pradesh</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>22</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>1283</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>0</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 --><td class='text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount == 0' data-ng-bind='s.bpVoucherCount'>0</td><!-- end ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>1447</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>7662</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>3  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Assam</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>27</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>9826</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>191</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>18913</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>2191</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>153731</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>4  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Bihar</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>38</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>22917</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>528</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>64976</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>8034</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>385938</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>5  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Chhattisgarh</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>27</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>10444</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>145</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>19797</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>11258</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>259958</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>6  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Goa</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>2</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>43</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>0</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 --><td class='text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount == 0' data-ng-bind='s.bpVoucherCount'>0</td><!-- end ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>93</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>366</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>7  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Gujarat</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>32</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>5766</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>225</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>32448</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>12831</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>207287</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>8  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Haryana</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>22</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>1708</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>128</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>5350</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>5644</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>90950</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>9  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Himachal Pradesh</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>12</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>6191</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>80</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>8573</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>3545</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>131575</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>10  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Jharkhand</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>24</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>5092</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>264</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>22139</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>4340</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>130975</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>11  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Karnataka</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>29</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>1406</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>185</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>2242</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>5934</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>362674</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>12  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Kerala</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>14</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>4138</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>152</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>12822</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>940</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>69003</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>13  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Madhya Pradesh</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>52</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>2938</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>308</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>8901</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>22639</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>629183</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>14  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Maharashtra</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>34</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>7559</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>348</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>15943</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>26793</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>517373</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>15  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Manipur</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>3</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>116</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>0</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 --><td class='text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount == 0' data-ng-bind='s.bpVoucherCount'>0</td><!-- end ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>14</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>24</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>16  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Mizoram</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>0</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 --><td class='text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount == 0'>0</td><!-- end ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>0</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 --><td class='text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount == 0' data-ng-bind='s.bpVoucherCount'>0</td><!-- end ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>784</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier == 'GP'  ' data-ng-click='getGPVoucherCount(s.stateCode)'>7561</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>17  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Odisha</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>30</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>2335</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>314</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>14193</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>6786</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>132781</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>18  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Punjab</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>20</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>2390</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>136</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>8917</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>11607</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>170825</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>19  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Rajasthan</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>33</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>4898</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>352</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>25357</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>11007</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>215178</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>20  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Sikkim</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>4</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>877</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>0</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 --><td class='text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount == 0' data-ng-bind='s.bpVoucherCount'>0</td><!-- end ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>179</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>3990</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>21  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Tamil Nadu</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>36</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>3962</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>386</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>39435</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>12447</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>215931</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>22  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Telangana</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>32</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>2401</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>490</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>7851</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>12757</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>449091</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>23  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Tripura</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>9</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>533</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>75</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>6875</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>1176</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>45663</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>24  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Uttarakhand</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>13</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>3846</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>94</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>7841</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>7773</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>105325</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>25  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>Uttar Pradesh</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>75</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>21471</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>817</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>37757</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>57608</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>1227089</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList --><tr data-ng-repeat='s in stateCountList' class='ng-scope'>
+                                       <td class='ng-binding'>26  </td>
+                                      <!--  <td class='link' data-ng-if='s.schmeUid != '' && s.totalCount != 0' data-ng-click='getDistrictData(s.stateId, s.name, s.stateTier, s.schmeUid)'>{{s.stateName}}</td> --> 
+                                       <td class='text-left ng-binding' data-ng-bind='s.stateName'>West Bengal</td>
+                                       <td class='text-right ng-binding' data-ng-bind='s.zpCount'>21</td>
+                                       <!-- ngIf: s.zpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.zpVoucherCount &gt; 0' data-ng-click='getDistrictVoucherCount(s.stateCode)'>28823</td><!-- end ngIf: s.zpVoucherCount > 0 -->
+                                       <!-- ngIf: s.zpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.bpCount'>339</td>
+                                       <!-- ngIf: s.bpVoucherCount > 0 --><td class='link text-right ng-binding ng-scope' data-ng-if='s.bpVoucherCount &gt; 0' data-ng-click='getBlockVoucherCount(s.stateCode)'>139024</td><!-- end ngIf: s.bpVoucherCount > 0 -->
+                                       <!-- ngIf: s.bpVoucherCount == 0 -->
+                                       <td class='text-right ng-binding' data-ng-bind='s.gpCount'>3261</td>
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  --><td class='link text-right ng-binding ng-scope' data-ng-if='s.gpVoucherCount &gt; 0 &amp;&amp; s.stateTier != 'GP' ' data-ng-click='getZPWiseGPVoucherCount(s.stateCode)'>820737</td><!-- end ngIf: s.gpVoucherCount > 0 && s.stateTier != 'GP'  -->
+                                       <!-- ngIf: s.gpVoucherCount > 0 && s.stateTier == 'GP'   -->
+                                       <!-- ngIf: s.gpVoucherCount == 0 -->
+                                    </tr><!-- end ngRepeat: s in stateCountList -->
+                                    <!-- ngIf: loader == true -->
+                                    
+								</tbody>
+								<!-- ngIf: loader == false --><tfoot data-ng-if='loader == false' class='ng-scope'>
+									<tr>
+										<th colspan='8' class='text-center' style='border: none;'>
+											Report generated through eGramSwaraj () on 
+										</th>
+									</tr>
+									<tr>
+										<th colspan='8' class='text-center' style='display: none;'>
+											Designed &amp; Developed by Panchayat Informatics Division, National Informatics Centre
+										</th>
+									</tr>
+								</tfoot><!-- end ngIf: loader == false -->
+							</table>
+							</div></body></html>

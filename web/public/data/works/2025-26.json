@@ -1,0 +1,60 @@
+{
+  "financialYear": "2025-26",
+  "statusFilter": "wrkstts=176",
+  "statusLabel": "completed_as_recorded",
+  "count": 2,
+  "records": [
+    {
+      "activityCode": "118458878",
+      "activityName": "Drainage Construction",
+      "focusArea": "Sanitation",
+      "adminApprovedCostInr": 206330.0,
+      "schemeName": "XV Finance Commission",
+      "componentName": "Tied Grant",
+      "completionDate": "2026-03-18",
+      "financialYear": "2025-26",
+      "statusLabel": "completed_as_recorded",
+      "statusSource": "eGramSwaraj Physical Progress wrkstts=176",
+      "linkedVoucherSumInr": 120789.0,
+      "linkedVoucherCount": 1,
+      "source": {
+        "reportName": "Physical Progress Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/physical-progress/fyear-2025-wrkstts-176.html",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "2ef140d2b4498b7f0a605517017cbdf6a3f184aa945565bdeded53a032dce699",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "118460385",
+      "activityName": "Construction of roads",
+      "focusArea": "Roads",
+      "adminApprovedCostInr": 206325.0,
+      "schemeName": "XV Finance Commission",
+      "componentName": "Basic Grant (untied)",
+      "completionDate": "2025-05-15",
+      "financialYear": "2025-26",
+      "statusLabel": "completed_as_recorded",
+      "statusSource": "eGramSwaraj Physical Progress wrkstts=176",
+      "linkedVoucherSumInr": 185692.0,
+      "linkedVoucherCount": 1,
+      "source": {
+        "reportName": "Physical Progress Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/raw/physical-progress/fyear-2025-wrkstts-176.html",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "2ef140d2b4498b7f0a605517017cbdf6a3f184aa945565bdeded53a032dce699",
+        "financialYear": "2025-26",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    }
+  ]
+}

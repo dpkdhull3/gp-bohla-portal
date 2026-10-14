@@ -1,0 +1,48 @@
+{
+  "years": [
+    "2026-27",
+    "2025-26",
+    "2024-25",
+    "2023-24",
+    "2022-23"
+  ],
+  "plans": [
+    {
+      "planYear": "2026-27",
+      "count": 11,
+      "totalEstimatedCostInr": 1305002.0,
+      "pdfPath": "/reports/approved-action-plans/2026-27.pdf",
+      "xlsPath": "/reports/approved-action-plans/2026-27.xls"
+    },
+    {
+      "planYear": "2025-26",
+      "count": 25,
+      "totalEstimatedCostInr": 887760.0,
+      "pdfPath": "/reports/approved-action-plans/2025-26.pdf",
+      "xlsPath": "/reports/approved-action-plans/2025-26.xls"
+    },
+    {
+      "planYear": "2024-25",
+      "count": 12,
+      "totalEstimatedCostInr": 1087760.0,
+      "pdfPath": "/reports/approved-action-plans/2024-25.pdf",
+      "xlsPath": "/reports/approved-action-plans/2024-25.xls"
+    },
+    {
+      "planYear": "2023-24",
+      "count": 31,
+      "totalEstimatedCostInr": 887760.0,
+      "pdfPath": "/reports/approved-action-plans/2023-24.pdf",
+      "xlsPath": "/reports/approved-action-plans/2023-24.xls"
+    },
+    {
+      "planYear": "2022-23",
+      "count": 4,
+      "totalEstimatedCostInr": 887760.0,
+      "pdfPath": "/reports/approved-action-plans/2022-23.pdf",
+      "xlsPath": "/reports/approved-action-plans/2022-23.xls"
+    }
+  ],
+  "noteEn": "Approved action plans imported from eGramSwaraj spreadsheets + PDFs.",
+  "noteHi": "स्वीकृत कार्य योजनाएँ ईग्रामस्वराज स्प्रेडशीट और PDF से आयात हुईं।"
+}

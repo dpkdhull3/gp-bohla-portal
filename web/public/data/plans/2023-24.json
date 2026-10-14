@@ -1,0 +1,877 @@
+{
+  "planYear": "2023-24",
+  "count": 31,
+  "totalEstimatedCostInr": 887760.0,
+  "pdfPath": "/reports/approved-action-plans/2023-24.pdf",
+  "xlsPath": "/reports/approved-action-plans/2023-24.xls",
+  "records": [
+    {
+      "activityCode": "80162413",
+      "activityName": "Creation of a new source of drinking water",
+      "activityDescription": "public awareness",
+      "themeName": "Theme 4 - Water Sufficient Village",
+      "sector": "Drinking water",
+      "activityLocation": null,
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 206330.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 206330.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80162917",
+      "activityName": "Drainage Construction",
+      "activityDescription": "public awareness",
+      "themeName": "Theme 5 - Clean and Green Village",
+      "sector": "Sanitation",
+      "activityLocation": null,
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 206330.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 206330.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80160952",
+      "activityName": "Annual Expenses - Water Charges Postal, Electricity Bills, Internet Bill, Printing Charges",
+      "activityDescription": "public awareness",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Administrative & Technical Support",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 200000.0,
+      "activityType": null,
+      "schemeName": "Own Funds",
+      "generalFundInr": 200000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80161696",
+      "activityName": "Construction of Paver Block",
+      "activityDescription": "public awareness",
+      "themeName": "Theme 6 - Self-sufficient Infrastructure in Village",
+      "sector": "Land improvement",
+      "activityLocation": null,
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 206325.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 206325.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "79923569",
+      "activityName": "Announcements through loudspeakers",
+      "activityDescription": "social awareness",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Poverty allevation programme",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 10000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 10000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80097334",
+      "activityName": "Awareness campaign on SHG-PRI Convergence",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Poverty allevation programme",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80097867",
+      "activityName": "Awareness camps on women participation",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Women and child development",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80098575",
+      "activityName": "Awareness for active participation in Gram Sabha Ward Sabha, Mahila Sabha",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Social welfare",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80099025",
+      "activityName": "Awareness on Public Services",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Social welfare",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80099489",
+      "activityName": "Awareness on RTI Application",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Poverty allevation programme",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80099872",
+      "activityName": "Awareness on inclusion of beneficiaries under different scheme",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Social welfare",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80100245",
+      "activityName": "Capacity Building & Training of Elected Representatives & Functionaries",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Social welfare",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80100652",
+      "activityName": "Computer in GP Bhawan",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Maintenance of community system",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 20000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 20000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80101140",
+      "activityName": "Conducting Gram Sabhas to approve GPDP",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Poverty allevation programme",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80102203",
+      "activityName": "Formation of SHGs",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Women and child development",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80102560",
+      "activityName": "Identification of beneficiaries",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Social welfare",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80103106",
+      "activityName": "Installation of Information Board",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Maintenance of community system",
+      "activityLocation": null,
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 10000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 10000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80103589",
+      "activityName": "Installation of Public Information Board (PIB)",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Social welfare",
+      "activityLocation": null,
+      "locationOfAsset": "Bohla (150)",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80103983",
+      "activityName": "Installation/Painting of Public Information Board",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Social welfare",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80104408",
+      "activityName": "Internet in GP Bhawan",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Maintenance of community system",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 500.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 500.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80105120",
+      "activityName": "Issues discussed at Ward Sabha Gram Sabha, Mahila Sabha",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Maintenance of community system",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80106338",
+      "activityName": "Joint training of ERs Functionaries and SHGs",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Poverty allevation programme",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 2000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 2000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80107312",
+      "activityName": "Maintain RTI Registration book",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Poverty allevation programme",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80107861",
+      "activityName": "Maintenance database of RTI application and replies",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Poverty allevation programme",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80108234",
+      "activityName": "Maintenance of Panchayat Bhawan",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "GP Office Infrastructure",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80108640",
+      "activityName": "Monitor Gram Sabha",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Women and child development",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80109022",
+      "activityName": "Organising of Gram Sabha Ward Sabha, Mahila Sabha as mandated",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Social welfare",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80109370",
+      "activityName": "Preparation of Beneficiary list",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Poverty allevation programme",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80109869",
+      "activityName": "Sharing of GP Accounts Details in Gram Sabha",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Poverty allevation programme",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80110274",
+      "activityName": "Wage/Honorarium/Remuneration to Staff",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Administrative & Technical Support",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 1275.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 1275.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    },
+    {
+      "activityCode": "80110636",
+      "activityName": "Wall Paintings on SHG-PRI Convergence",
+      "activityDescription": "awareness camping",
+      "themeName": "Theme 8 - Village with Good Governance",
+      "sector": "Poverty allevation programme",
+      "activityLocation": null,
+      "locationOfAsset": "N/A",
+      "estimatedCostInr": 5000.0,
+      "activityType": null,
+      "schemeName": "XV Finance Commission",
+      "generalFundInr": 5000.0,
+      "scFundInr": 0.0,
+      "stFundInr": 0.0,
+      "planYear": "2023-24",
+      "source": {
+        "reportName": "Approved Action Plan Report",
+        "sourcePath": "/Users/deepakdhull/dev/GP-Bohla/gp-bohla-portal/reports/Approved action plans/2023-24/approved_action_plan_report.xls",
+        "sourceUrl": null,
+        "downloadedAt": null,
+        "sha256": "8ee4b4d422e12d3895e9c1a5cf3d55c19da3e6840a80dd93f9ab64604e4b6ea2",
+        "financialYear": "2023-24",
+        "geographicScope": "Gram Panchayat Bohla (LGD 33105)"
+      },
+      "flags": [
+        "official_reported"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2587 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><style>@page { size: A4; mso-page-orientation: landscape; margin: 1cm; mso-header-margin: .5in; mso-footer-margin: .5in; }table, th, td { border: 1px  black; border-collapse: collapse; width: 50%; table-layout: fixed; font-family: Times New Roman;}th, td { word-wrap: break-word; max-width: 100px; }</style><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet 1</x:Name><x:WorksheetOptions><x:Panes></x:Panes></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><div class="table-responsive" id="nonFundedList">
+															<table class="table table-bordered table-striped table-hover">
+																<thead class="bg-dark text-white font10px">
+																	<tr>
+																		<th class="text-center" tabindex="0">S.No.</th>
+																		
+																		
+																			<th class="text-center" tabindex="0">Theme Name</th>
+																		
+																		<th class="text-center" tabindex="0">Activity Code</th>
+																		<th class="text-center" tabindex="0">Activity Name</th>
+																		<th class="text-center" tabindex="0">Activity Description</th>
+																		
+																			<th class="text-center" tabindex="0">Location</th>
+																		
+																		<th class="text-center" tabindex="0">Activity For</th>
+																		<th class="text-center" tabindex="0">Sector</th>
+																		<th class="text-center" tabindex="0">Total Indicative Cost</th>
+																		
+																		
+																				<th class="text-center" tabindex="0">Activity Type</th>
+																		
+																		<th class="text-center" tabindex="0">Scheme Name</th>
+																		<th class="text-center" tabindex="0">Total No. of Beneficiarries</th>
+																	</tr>
+																</thead>
+																<tbody>
+																
+																	
+																	
+																	
+																	
+																	
+																	
+		
+										
+																	
+																	
+																	
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">1</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">134998048</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Conduct IEC/awareness and  inclusion camps for social protection and beneficiary-oriented schemes</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Conduct IEC/awareness and  inclusion camps for social protection and beneficiary-oriented schemes</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Social welfare</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Antodaya Anna Yojana</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">2</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">134998537</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Create awareness on FPOs and support formation/strngthening of FPOs through farmer mobilisation</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Create awareness on FPOs and support formation/strngthening of FPOs through farmer mobilisation</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Agriculture</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Deendayal Upadhyaya Grameen Kaushalya Yojana(DDUGKY) </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">3</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135000054</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Create awareness on volunteering and community support initiatices including animal welfare activities</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Create awareness on volunteering and community support initiatices, including animal welfare activities</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Animal husbandry</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS) </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">4</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135001009</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Organise career counselling camps to promote self-employment opportunities at the GP level</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Organise career counselling camps to promote self-employment opportunities at the GP level</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Technical training and vocational education</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> National Rural Livelihood Mission (NRLM)</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 160</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">5</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135001667</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Cultivation of organic products and provide marketing support such as labeling of products promotion in different forums etc</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Cultivation of organic products and provide marketing support such as labeling of products, promotion in different forums etc</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Agriculture</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Beneficiaries </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Matsaya Yojna</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 140</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">6</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135002339</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Facilitate access to housing related benefits for eligible households</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Facilitate access to housing related beenfits for eligible households</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Rural housing</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Beneficiaries </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Pradhan Mantri AwasYojana Gramin PMAY (G) </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">7</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 2 - Healthy Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135003169</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0"> Organizing awareness Progarm &amp; IEC campaign on symptoms of Vector Borne Diseases (VBD)</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Organizing awareness Progarm &amp; IEC campaign on symptoms of Vector Borne Diseases (VBD)</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Health</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Ayushman Bharat</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">8</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 2 - Healthy Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135003777</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Oraginizing awareness camp/ program on significance of health &amp; nutrition </td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Oraginizing awareness camp/ program on significance of health &amp; nutrition</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Family welfare</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Janani Surakha Yojna</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">9</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 2 - Healthy Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135004261</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Organizing awareness generation program/camp to include millets in diets through Anganwadi Mid-Day meal and PD scheme</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Organizing awareness generation program/camp to include millets in diets through Anganwadi, Mid-Day meal and PD scheme</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Health</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Mid-Day Meal Scheme (MDM) </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">10</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 2 - Healthy Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135005054</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0"> Organizing awareness Progarm &amp; IEC campaign on symptoms of Vector Borne Diseases (VBD)</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Organizing awareness Progarm &amp; IEC campaign on symptoms of Vector Borne Diseases (VBD)</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Health</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> National Health Mission (NHM) </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">11</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 2 - Healthy Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135006417</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0"> Organizing awareness Progarm &amp; IEC campaign on symptoms of anaemia; vicious cycle of anaemia</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Organizing awareness Progarm &amp; IEC campaign on symptoms of anaemia; vicious cycle of anaemia</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Health</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Pradhan Mantri Krishi Sichayee Yojana(PMKSY) </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">12</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 3 - Child Friendly Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135007373</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness Campaign on services of ICDS: Child rights &amp; protection</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness Campaign on services of ICDS: Child rights &amp; protection</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Women and child development</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Beti Bachao Beti Padao</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">13</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 3 - Child Friendly Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135007909</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness Program/Campaign - Health Nutrion &amp; Hygiene  practices</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness Program/Campaign - Health, Nutrion &amp; Hygiene  practices</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Education</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Poshan Abhiyan/ICDS</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">14</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 3 - Child Friendly Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135008902</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness camp on different schemes related to special children</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness camp on different schemes related to special children</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Women and child development</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Samagara Shikha Abhiyan</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">15</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 4 - Water Sufficient Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135010710</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Orientation for water user and community groups (Water Budgeting/Jal Chaupal presentation of Jal Seva Ankalan Report every year), awareness generation for use of water-efficient fixtures for taps and showerheads, judicious use of drinking water, and celebration of Lok Jal Utsav/IEC activities.</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Orientation for water user and community groups (Water Budgeting/Jal Chaupal, presentation of Jal Seva Ankalan Report every year), awareness generation for use of water-efficient fixtures for taps and showerheads, judicious use of drinking water, and celebration of Lok Jal Utsav/IEC activities.</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Drinking water</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Jal Jeevan Mission (JJM) </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">16</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 5 - Clean and Green Village </td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135011275</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Agroforestry/Crop Diversification/ Mulching/ Direct Seeded Rice (DSR)/Poly House/Net House/Shednet/Happy Seeder/Hydrogel/Land Leveling</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Agroforestry/Crop Diversification/ Mulching/ Direct Seeded Rice (DSR)/Poly House/Net House/Shednet/Happy Seeder/Hydrogel/Land Leveling</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Agriculture</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Community Service </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Pradhan Mantri Krishi Sinchayee Yojana (PMKSY) </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">17</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 5 - Clean and Green Village </td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135012455</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness generation on use of agriculture residue animal waste for composting, manuring and mulching</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness generation on use of agriculture residue, animal waste for composting, manuring and mulching</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Agriculture</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> National Biogas and Manure Management Programme</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">18</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 5 - Clean and Green Village </td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135012871</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness generation to feed unused and uncooked vegetables leftovers to cattle</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness generation to feed unused and uncooked vegetables leftovers to cattle</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Animal husbandry</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Pashudhan Scheme</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">19</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 5 - Clean and Green Village </td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135014009</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness generation for use of natural products in daily life</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness generation for use of natural products in daily life</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Non-conventional energy sources</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Pradhan Mantri Ujjwala Yojana</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">20</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 5 - Clean and Green Village </td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135014753</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness generation for segregation of waste at source and Household level composting and feeding organic waste to cattle</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness generation for segregation of waste at source and Household level composting and feeding organic waste to cattle</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Sanitation</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Pradhan Mantri AwasYojana Gramin PMAY (G) </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">21</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 5 - Clean and Green Village </td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135016532</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness generation for segregation of waste at source and Household level composting and feeding organic waste to cattle</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness generation for segregation of waste at source and Household level composting and feeding organic waste to cattle</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Sanitation</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Swachh Bharat Mission (Gramin) (SBM (G)] </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">22</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 7 - Socially Just and Socially Secured Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135017240</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness Campaign on different social protection scheme</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness Campaign on different social protection scheme</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Social welfare</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> National Social Assistance Programme (NSAP)  </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">23</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 8 - Village with Good Governance</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135018461</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">IEC &amp; Awareness campaign on SHG-PRI Convergence /Public Services/ Service Delivery Provisions/ RTI/Grivences </td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">IEC &amp; Awareness campaign on SHG-PRI Convergence /Public Services/ Service Delivery Provisions/ RTI/Grivences</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Poverty allevation programme</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Deendayal Upadhyaya Gram Jyoti Yojana (DDUGJY) </td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">24</td>
+										                      						
+																					
+																					
+																						
+										                      								<td align="left" border="1" rowspan="1" style="background-color:lightGreen" tabindex="0">Theme 9 - Women Friendly Village</td>
+										                      							
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">135019534</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Oraganizing Awareness Camp/Program on  Maternal Health Program </td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Oraganizing Awareness Camp/Program on  Maternal Health Program</td>
+										                      						
+																						
+																							
+																							
+																								
+																									
+																									
+																									
+																										<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																									
+																								
+																							
+																						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Health</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">0</td>
+																					
+																					
+																						<td align="left" border="1" tabindex="0">Training/Capacity Building </td>
+																					
+																					<td align="left" border="1" rowspan="1" tabindex="0"> Pradhan Mantri Matru Vandana Yojna</td>
+																					<td align="left" border="1" rowspan="1" tabindex="0"> 200</td>
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				
+																			</tr>
+																		
+																	
+																</tbody>
+															</table>
+														</div></body></html>

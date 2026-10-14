@@ -1,0 +1,257 @@
+{
+  "records": [
+    {
+      "id": "voucher-2021-2022",
+      "titleEn": "GP Voucher Details 2021-22",
+      "titleHi": "ग्राम पंचायत वाउचर विवरण 2021-22",
+      "category": "vouchers",
+      "financialYear": "2021-22",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/vouchers/2021-2022.json",
+      "source": "eGramSwaraj getGPVoucherDetailsData.do"
+    },
+    {
+      "id": "voucher-2022-2023",
+      "titleEn": "GP Voucher Details 2022-23",
+      "titleHi": "ग्राम पंचायत वाउचर विवरण 2022-23",
+      "category": "vouchers",
+      "financialYear": "2022-23",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/vouchers/2022-2023.json",
+      "source": "eGramSwaraj getGPVoucherDetailsData.do"
+    },
+    {
+      "id": "voucher-2023-2024",
+      "titleEn": "GP Voucher Details 2023-24",
+      "titleHi": "ग्राम पंचायत वाउचर विवरण 2023-24",
+      "category": "vouchers",
+      "financialYear": "2023-24",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/vouchers/2023-2024.json",
+      "source": "eGramSwaraj getGPVoucherDetailsData.do"
+    },
+    {
+      "id": "voucher-2024-2025",
+      "titleEn": "GP Voucher Details 2024-25",
+      "titleHi": "ग्राम पंचायत वाउचर विवरण 2024-25",
+      "category": "vouchers",
+      "financialYear": "2024-25",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/vouchers/2024-2025.json",
+      "source": "eGramSwaraj getGPVoucherDetailsData.do"
+    },
+    {
+      "id": "voucher-2025-2026",
+      "titleEn": "GP Voucher Details 2025-26",
+      "titleHi": "ग्राम पंचायत वाउचर विवरण 2025-26",
+      "category": "vouchers",
+      "financialYear": "2025-26",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/vouchers/2025-2026.json",
+      "source": "eGramSwaraj getGPVoucherDetailsData.do"
+    },
+    {
+      "id": "voucher-2026-2027",
+      "titleEn": "GP Voucher Details 2026-27",
+      "titleHi": "ग्राम पंचायत वाउचर विवरण 2026-27",
+      "category": "vouchers",
+      "financialYear": "2026-27",
+      "kind": "original",
+      "format": "json",
+      "path": "/reports/raw/vouchers/2026-2027.json",
+      "source": "eGramSwaraj getGPVoucherDetailsData.do"
+    },
+    {
+      "id": "phys-2021-22",
+      "titleEn": "Physical Progress (completed filter) 2021-22",
+      "titleHi": "भौतिक प्रगति (पूर्ण) 2021-22",
+      "category": "physical-progress",
+      "financialYear": "2021-22",
+      "kind": "original",
+      "format": "html",
+      "path": "/reports/raw/physical-progress/fyear-2021-wrkstts-176.html",
+      "source": "eGramSwaraj physicalprogressReport.do wrkstts=176"
+    },
+    {
+      "id": "phys-2022-23",
+      "titleEn": "Physical Progress (completed filter) 2022-23",
+      "titleHi": "भौतिक प्रगति (पूर्ण) 2022-23",
+      "category": "physical-progress",
+      "financialYear": "2022-23",
+      "kind": "original",
+      "format": "html",
+      "path": "/reports/raw/physical-progress/fyear-2022-wrkstts-176.html",
+      "source": "eGramSwaraj physicalprogressReport.do wrkstts=176"
+    },
+    {
+      "id": "phys-2023-24",
+      "titleEn": "Physical Progress (completed filter) 2023-24",
+      "titleHi": "भौतिक प्रगति (पूर्ण) 2023-24",
+      "category": "physical-progress",
+      "financialYear": "2023-24",
+      "kind": "original",
+      "format": "html",
+      "path": "/reports/raw/physical-progress/fyear-2023-wrkstts-176.html",
+      "source": "eGramSwaraj physicalprogressReport.do wrkstts=176"
+    },
+    {
+      "id": "phys-2024-25",
+      "titleEn": "Physical Progress (completed filter) 2024-25",
+      "titleHi": "भौतिक प्रगति (पूर्ण) 2024-25",
+      "category": "physical-progress",
+      "financialYear": "2024-25",
+      "kind": "original",
+      "format": "html",
+      "path": "/reports/raw/physical-progress/fyear-2024-wrkstts-176.html",
+      "source": "eGramSwaraj physicalprogressReport.do wrkstts=176"
+    },
+    {
+      "id": "phys-2025-26",
+      "titleEn": "Physical Progress (completed filter) 2025-26",
+      "titleHi": "भौतिक प्रगति (पूर्ण) 2025-26",
+      "category": "physical-progress",
+      "financialYear": "2025-26",
+      "kind": "original",
+      "format": "html",
+      "path": "/reports/raw/physical-progress/fyear-2025-wrkstts-176.html",
+      "source": "eGramSwaraj physicalprogressReport.do wrkstts=176"
+    },
+    {
+      "id": "phys-2026-27",
+      "titleEn": "Physical Progress (completed filter) 2026-27",
+      "titleHi": "भौतिक प्रगति (पूर्ण) 2026-27",
+      "category": "physical-progress",
+      "financialYear": "2026-27",
+      "kind": "original",
+      "format": "html",
+      "path": "/reports/raw/physical-progress/fyear-2026-wrkstts-176.html",
+      "source": "eGramSwaraj physicalprogressReport.do wrkstts=176"
+    },
+    {
+      "id": "plan-2026-27-pdf",
+      "titleEn": "Approved Action Plan 2026-27 (PDF)",
+      "titleHi": "स्वीकृत कार्य योजना 2026-27 (PDF)",
+      "category": "approved-action-plan",
+      "financialYear": "2026-27",
+      "kind": "original",
+      "format": "pdf",
+      "path": "/reports/approved-action-plans/2026-27.pdf",
+      "source": "eGramSwaraj Approved Action Plan"
+    },
+    {
+      "id": "plan-2026-27-xls",
+      "titleEn": "Approved Action Plan 2026-27 (XLS/HTML)",
+      "titleHi": "स्वीकृत कार्य योजना 2026-27 (XLS)",
+      "category": "approved-action-plan",
+      "financialYear": "2026-27",
+      "kind": "original",
+      "format": "xls",
+      "path": "/reports/approved-action-plans/2026-27.xls",
+      "source": "eGramSwaraj Approved Action Plan"
+    },
+    {
+      "id": "plan-2025-26-pdf",
+      "titleEn": "Approved Action Plan 2025-26 (PDF)",
+      "titleHi": "स्वीकृत कार्य योजना 2025-26 (PDF)",
+      "category": "approved-action-plan",
+      "financialYear": "2025-26",
+      "kind": "original",
+      "format": "pdf",
+      "path": "/reports/approved-action-plans/2025-26.pdf",
+      "source": "eGramSwaraj Approved Action Plan"
+    },
+    {
+      "id": "plan-2025-26-xls",
+      "titleEn": "Approved Action Plan 2025-26 (XLS/HTML)",
+      "titleHi": "स्वीकृत कार्य योजना 2025-26 (XLS)",
+      "category": "approved-action-plan",
+      "financialYear": "2025-26",
+      "kind": "original",
+      "format": "xls",
+      "path": "/reports/approved-action-plans/2025-26.xls",
+      "source": "eGramSwaraj Approved Action Plan"
+    },
+    {
+      "id": "plan-2024-25-pdf",
+      "titleEn": "Approved Action Plan 2024-25 (PDF)",
+      "titleHi": "स्वीकृत कार्य योजना 2024-25 (PDF)",
+      "category": "approved-action-plan",
+      "financialYear": "2024-25",
+      "kind": "original",
+      "format": "pdf",
+      "path": "/reports/approved-action-plans/2024-25.pdf",
+      "source": "eGramSwaraj Approved Action Plan"
+    },
+    {
+      "id": "plan-2024-25-xls",
+      "titleEn": "Approved Action Plan 2024-25 (XLS/HTML)",
+      "titleHi": "स्वीकृत कार्य योजना 2024-25 (XLS)",
+      "category": "approved-action-plan",
+      "financialYear": "2024-25",
+      "kind": "original",
+      "format": "xls",
+      "path": "/reports/approved-action-plans/2024-25.xls",
+      "source": "eGramSwaraj Approved Action Plan"
+    },
+    {
+      "id": "plan-2023-24-pdf",
+      "titleEn": "Approved Action Plan 2023-24 (PDF)",
+      "titleHi": "स्वीकृत कार्य योजना 2023-24 (PDF)",
+      "category": "approved-action-plan",
+      "financialYear": "2023-24",
+      "kind": "original",
+      "format": "pdf",
+      "path": "/reports/approved-action-plans/2023-24.pdf",
+      "source": "eGramSwaraj Approved Action Plan"
+    },
+    {
+      "id": "plan-2023-24-xls",
+      "titleEn": "Approved Action Plan 2023-24 (XLS/HTML)",
+      "titleHi": "स्वीकृत कार्य योजना 2023-24 (XLS)",
+      "category": "approved-action-plan",
+      "financialYear": "2023-24",
+      "kind": "original",
+      "format": "xls",
+      "path": "/reports/approved-action-plans/2023-24.xls",
+      "source": "eGramSwaraj Approved Action Plan"
+    },
+    {
+      "id": "plan-2022-23-pdf",
+      "titleEn": "Approved Action Plan 2022-23 (PDF)",
+      "titleHi": "स्वीकृत कार्य योजना 2022-23 (PDF)",
+      "category": "approved-action-plan",
+      "financialYear": "2022-23",
+      "kind": "original",
+      "format": "pdf",
+      "path": "/reports/approved-action-plans/2022-23.pdf",
+      "source": "eGramSwaraj Approved Action Plan"
+    },
+    {
+      "id": "plan-2022-23-xls",
+      "titleEn": "Approved Action Plan 2022-23 (XLS/HTML)",
+      "titleHi": "स्वीकृत कार्य योजना 2022-23 (XLS)",
+      "category": "approved-action-plan",
+      "financialYear": "2022-23",
+      "kind": "original",
+      "format": "xls",
+      "path": "/reports/approved-action-plans/2022-23.xls",
+      "source": "eGramSwaraj Approved Action Plan"
+    },
+    {
+      "id": "generated-year-summaries",
+      "titleEn": "Derived year-wise financial summaries (JSON)",
+      "titleHi": "वर्षवार वित्तीय सारांश (व्युत्पन्न JSON)",
+      "category": "generated",
+      "financialYear": null,
+      "kind": "derived",
+      "format": "json",
+      "path": "/data/finance/year-summaries.json",
+      "source": "Portal import pipeline"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "panchayat": {
+    "lgdCode": 33105,
+    "nameEn": "Bohla",
+    "nameHi": "बोहला",
+    "blockEn": "Sonipat",
+    "blockHi": "सोनीपत",
+    "districtEn": "Sonipat",
+    "districtHi": "सोनीपत",
+    "stateEn": "Haryana",
+    "stateHi": "हरियाणा",
+    "stateId": 6,
+    "zpCode": 75,
+    "villageCensusCode": "150"
+  },
+  "lastDataUpdate": "2026-10-14",
+  "availableFinancialYears": [
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26",
+    "2026-27"
+  ],
+  "defaultFinancialYear": "2025-26",
+  "coverage": [
+    {
+      "metric": "recorded_payments",
+      "status": "available",
+      "noteEn": "Payment vouchers from eGramSwaraj GP Voucher Details for Bohla (LGD 33105).",
+      "noteHi": "ईग्रामस्वराज ग्राम पंचायत वाउचर विवरण से बोहला के भुगतान वाउचर।",
+      "financialYears": [
+        "2023-24",
+        "2024-25",
+        "2025-26",
+        "2026-27"
+      ]
+    },
+    {
+      "metric": "funds_received",
+      "status": "missing",
+      "noteEn": "No receipt vouchers or cash-book statement imported yet. Do not infer receipts from payments.",
+      "noteHi": "अभी कोई प्राप्ति वाउचर या कैश बुक आयात नहीं हुई। भुगतानों से प्राप्तियाँ न मानें।",
+      "financialYears": []
+    },
+    {
+      "metric": "opening_closing_balance",
+      "status": "missing",
+      "noteEn": "Official opening/closing balances require Cash Book or Receipt & Expenditure reports.",
+      "noteHi": "आधिकारिक प्रारंभिक/अंतिम शेष के लिए कैश बुक या प्राप्ति-व्यय रिपोर्ट आवश्यक है।",
+      "financialYears": []
+    },
+    {
+      "metric": "completed_works",
+      "status": "available",
+      "noteEn": "Works listed under Physical Progress filter wrkstts=176 (completed as recorded).",
+      "noteHi": "भौतिक प्रगति फ़िल्टर wrkstts=176 में सूचीबद्ध कार्य (रिकॉर्ड के अनुसार पूर्ण)।",
+      "financialYears": [
+        "2021-22",
+        "2022-23",
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ]
+    },
+    {
+      "metric": "ongoing_pending_works",
+      "status": "missing",
+      "noteEn": "Other wrkstts codes returned empty tables for Bohla in the investigation pass; not claimed here.",
+      "noteHi": "अन्य स्थिति कोड बोहला के लिए खाली मिले; यहाँ दावा नहीं किया गया।",
+      "financialYears": []
+    },
+    {
+      "metric": "approved_action_plan",
+      "status": "available",
+      "noteEn": "Approved Action Plans imported for: 2026-27, 2025-26, 2024-25, 2023-24, 2022-23.",
+      "noteHi": "स्वीकृत कार्य योजना आयात: 2026-27, 2025-26, 2024-25, 2023-24, 2022-23।",
+      "financialYears": [
+        "2022-23",
+        "2023-24",
+        "2024-25",
+        "2025-26",
+        "2026-27"
+      ]
+    },
+    {
+      "metric": "audit_reports",
+      "status": "missing",
+      "noteEn": "No Bohla AuditOnline reports in the reviewed local sources.",
+      "noteHi": "समीक्षित स्रोतों में बोहला की ऑडिट रिपोर्ट उपलब्ध नहीं।",
+      "financialYears": []
+    },
+    {
+      "metric": "assets_geotag",
+      "status": "missing",
+      "noteEn": "No geo-tagged asset extract imported yet.",
+      "noteHi": "अभी कोई भू-टैग संपत्ति डेटा आयात नहीं हुआ।",
+      "financialYears": []
+    }
+  ],
+  "disclaimerEn": "This is an independent public-information portal. It is not an official government website. Figures come from eGramSwaraj and related public records. Missing data is not proof of wrongdoing or of a clean record.",
+  "disclaimerHi": "यह एक स्वतंत्र जन-सूचना पोर्टल है। यह सरकारी वेबसाइट नहीं है। आँकड़े ईग्रामस्वराज और संबंधित सार्वजनिक अभिलेखों से हैं। अनुपलब्ध डेटा गलत आचरण या स्वच्छ रिकॉर्ड का प्रमाण नहीं है।",
+  "sources": [
+    {
+      "name": "eGramSwaraj GP Voucher Details",
+      "url": "https://egramswaraj.gov.in/getGPVoucherDetailsData.do"
+    },
+    {
+      "name": "eGramSwaraj Physical Progress Report",
+      "url": "https://egramswaraj.gov.in/physicalprogressReport.do"
+    },
+    {
+      "name": "eGramSwaraj Approved Action Plan",
+      "url": "https://egramswaraj.gov.in/planningDashBoard.do"
+    }
+  ]
+}

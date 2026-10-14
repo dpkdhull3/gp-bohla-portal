@@ -1,0 +1,981 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><style>@page { size: A4; mso-page-orientation: landscape; margin: 1cm; mso-header-margin: .5in; mso-footer-margin: .5in; }table, th, td { border: 1px  black; border-collapse: collapse; width: 50%; table-layout: fixed; font-family: Times New Roman;}th, td { word-wrap: break-word; max-width: 100px; }</style><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet 1</x:Name><x:WorksheetOptions><x:Panes></x:Panes></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><div class="table-responsive" id="dataList">
+															<table class="table table-bordered table-striped table-hover dataClass ">
+																<thead class="bg-dark text-white font10px">
+																	<tr>
+																		<th class="text-center" tabindex="0">S.No.</th>
+																		
+																		
+																			<th class="text-center" tabindex="0">Theme Name</th>
+																		
+																		<th class="text-center" tabindex="0">Activity Code</th>
+																		<th class="text-center" tabindex="0">Activity Name</th>
+																		<th class="text-center" tabindex="0">Activity Description</th>
+																		
+																		<th class="text-center" tabindex="0">Activity For</th>
+																		<th class="text-center" tabindex="0">Sector</th>
+																		
+																		<th class="text-center" tabindex="0">Location of Asset</th>
+																		<th class="text-center" tabindex="0">Estimated Cost</th>
+																		
+																		
+																		<th class="text-center" tabindex="0">Scheme Name</th>
+																		<th class="text-center" tabindex="0">General Fund</th>
+																		<th class="text-center" tabindex="0">SC Fund</th>
+																		<th class="text-center" tabindex="0">ST Fund</th>
+																	</tr>
+																</thead>
+																<tbody>
+																
+																	
+																	
+																	
+																	
+																	
+																	
+		
+																	
+																		
+																		
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">1</td>
+										                      						
+																					
+																					
+																						
+										                      								<td align="left" border="1" rowspan="1" style="background-color:lightGreen" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98414412</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Stay arrangement in common assets of GPs</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">gram panchayt</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Rural housing</td>
+										                      					
+																					
+																						
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">68705</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">68705</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">2</td>
+										                      						
+																					
+																					
+																						
+										                      								<td align="left" border="1" rowspan="1" style="background-color:lightGreen" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98415114</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Establishment of Agricultural produce procurement unit under MGNREGA</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">camping</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Agriculture</td>
+										                      					
+																					
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">Bohla (150)</td>
+																						
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">10</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">10</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">3</td>
+										                      						
+																					
+																					
+																						
+										                      								<td align="left" border="1" rowspan="1" style="background-color:lightGreen" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98415289</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awareness creation for self employment schemes in GP through Career Counselling Camps</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">camping</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Technical training and vocational education</td>
+										                      					
+																					
+																						
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">10</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">10</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">4</td>
+										                      						
+																					
+																					
+																						
+										                      								<td align="left" border="1" rowspan="1" style="background-color:lightGreen" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98415441</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Benefits to PDS beneficiaries</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">camping</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Public distribution system</td>
+										                      					
+																					
+																						
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">10</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">10</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">5</td>
+										                      						
+																					
+																					
+																						
+										                      								<td align="left" border="1" rowspan="1" style="background-color:lightGreen" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98422262</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Awarness creation on behavioural issues under LiFE Mission</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">camping</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Technical training and vocational education</td>
+										                      					
+																					
+																						
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">10</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">10</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">6</td>
+										                      						
+																					
+																					
+																						
+										                      								<td align="left" border="1" rowspan="1" style="background-color:lightGreen" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98422437</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Skill development training</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">camping</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Technical training and vocational education</td>
+										                      					
+																					
+																						
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">10</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">10</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">7</td>
+										                      						
+																					
+																					
+																						
+										                      								<td align="left" border="1" rowspan="1" style="background-color:lightGreen" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98422689</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Incentivizing farmers through fair value of their produce</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">gram panchat</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Agriculture</td>
+										                      					
+																					
+																						
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">10</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">10</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">8</td>
+										                      						
+																					
+																					
+																						
+										                      								<td align="left" border="1" rowspan="1" style="background-color:lightGreen" tabindex="0">Theme 1 - Poverty Free and Enhanced Livelihoods Village</td>
+										                      							
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98423008</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Training under Pradhan Mantri Kaushal Vikas Yojana</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">camping</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Technical training and vocational education</td>
+										                      					
+																					
+																						
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">10</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">10</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">9</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 4 - Water Sufficient Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98325278</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Water Supply to villages</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">nala pond</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Drinking water</td>
+										                      					
+																					
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">Bohla (150)</td>
+																						
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">206330</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">206330</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">10</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 4 - Water Sufficient Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98325441</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Construction /upgradation of disable friendly in community toilet/Ramp</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">sanitation</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Sanitation</td>
+										                      					
+																					
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">Bohla (150)</td>
+																						
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">206330</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">206330</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">11</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 5 - Clean and Green Village </td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98414812</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Clean up drive</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">gram panchayt</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Health</td>
+										                      					
+																					
+																						
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">N/A</td>
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">206325</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">206325</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">12</td>
+										                      						
+																					
+																					
+																						
+										                      							
+										                      								<td align="left" border="1" rowspan="1" tabindex="0">Theme 6 - Self-sufficient Infrastructure in Village</td>
+										                      							
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">98325925</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Construction of Retaining Walls/ Fencing Work</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">gram panchayt</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">All</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Land improvement</td>
+										                      					
+																					
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">Bohla (150)</td>
+																						
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">400000</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">Own Funds</td>
+																				<td align="right" tabindex="0">400000</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																	<tr>
+																		
+																		
+																				
+																					<td align="left" border="1" colspan="8" tabindex="0"><strong>Total</strong></td>
+																				
+																				
+																		
+																		
+																				
+																		
+																		<td align="right" border="1" rowspan="1" tabindex="0">1087760</td>
+																		
+																		<td align="left" tabindex="0"></td>
+																		<td align="right" tabindex="0">1087760</td>
+																		<td align="right" tabindex="0">0</td>
+																		<td align="right" tabindex="0">0</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div></body></html>

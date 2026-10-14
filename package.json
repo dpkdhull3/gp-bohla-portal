@@ -1,0 +1,12 @@
+{
+  "name": "gp-bohla-portal",
+  "private": true,
+  "description": "Bohla Gram Panchayat transparency portal — static site + Python data import",
+  "scripts": {
+    "import": "python3 -m tools.importer run",
+    "test:data": "python3 -m pytest tools/importer/tests -q",
+    "dev": "npm run import && npm --prefix web run dev",
+    "build": "npm run import && npm --prefix web run build",
+    "preview": "npm --prefix web run preview"
+  }
+}

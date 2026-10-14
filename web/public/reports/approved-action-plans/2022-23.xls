@@ -1,0 +1,271 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><style>@page { size: A4; mso-page-orientation: landscape; margin: 1cm; mso-header-margin: .5in; mso-footer-margin: .5in; }table, th, td { border: 1px  black; border-collapse: collapse; width: 50%; table-layout: fixed; font-family: Times New Roman;}th, td { word-wrap: break-word; max-width: 100px; }</style><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Sheet 1</x:Name><x:WorksheetOptions><x:Panes></x:Panes></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><div class="table-responsive" id="dataList">
+															<table class="table table-bordered table-striped table-hover dataClass ">
+																<thead class="bg-dark text-white font10px">
+																	<tr>
+																		<th class="text-center" tabindex="0">S.No.</th>
+																		
+																		
+																		<th class="text-center" tabindex="0">Activity Code</th>
+																		<th class="text-center" tabindex="0">Activity Name</th>
+																		<th class="text-center" tabindex="0">Activity Description</th>
+																		
+																		<th class="text-center" tabindex="0">Activity For</th>
+																		<th class="text-center" tabindex="0">Sector</th>
+																		
+																		<th class="text-center" tabindex="0">Location of Asset</th>
+																		<th class="text-center" tabindex="0">Estimated Cost</th>
+																		
+																		
+																		<th class="text-center" tabindex="0">Scheme Name</th>
+																		<th class="text-center" tabindex="0">General Fund</th>
+																		<th class="text-center" tabindex="0">SC Fund</th>
+																		<th class="text-center" tabindex="0">ST Fund</th>
+																	</tr>
+																</thead>
+																<tbody>
+																
+																	
+																	
+																	
+																	
+																	
+																	
+		
+																	
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">1</td>
+										                      						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">62396273</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">development work</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">development work</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Gen</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Roads</td>
+										                      					
+																					
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">Bohla (150)</td>
+																						
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">275100</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">275100</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">2</td>
+										                      						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">62396488</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">drinking water</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">drinking water</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Gen</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Drinking water</td>
+										                      					
+																					
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">Bohla (150)</td>
+																						
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">206330</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">206330</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">3</td>
+										                      						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">62396658</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">sanitation</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">sanitation</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Gen</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Sanitation</td>
+										                      					
+																					
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">Bohla (150)</td>
+																						
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">206330</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">XV Finance Commission</td>
+																				<td align="right" tabindex="0">206330</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																		
+																		
+																		
+																			
+																		
+																			
+																				
+																				
+																			
+																		
+																			
+																		
+																			
+																		
+																		
+																		
+																		
+																		
+																		<tr>
+																			 
+										                      					
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">4</td>
+										                      						
+																					
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">62396972</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">development work</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">development work</td>
+										                      						
+										                      						
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Gen</td>
+										                      						<td align="left" border="1" rowspan="1" tabindex="0">Roads</td>
+										                      					
+																					
+																						
+																							<td align="left" border="1" rowspan="1" tabindex="0">Bohla (150)</td>
+																						
+																						
+																					
+																					<td align="right" border="1" rowspan="1" tabindex="0">200000</td>
+																					
+																					
+																					
+										                      					
+										                      					
+										                      					 
+											                      			
+																			
+																				<td align="left" tabindex="0">Own Funds</td>
+																				<td align="right" tabindex="0">200000</td>
+																				<td align="right" tabindex="0">0</td>
+																				<td align="right" tabindex="0">0</td>
+																			</tr>
+																		
+																	<tr>
+																		
+																		
+																				
+																				
+																					<td align="left" border="1" colspan="7" tabindex="0"><strong>Total</strong></td>
+																				
+																		
+																		
+																				
+																		
+																		<td align="right" border="1" rowspan="1" tabindex="0">887760</td>
+																		
+																		<td align="left" tabindex="0"></td>
+																		<td align="right" tabindex="0">887760</td>
+																		<td align="right" tabindex="0">0</td>
+																		<td align="right" tabindex="0">0</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div></body></html>
